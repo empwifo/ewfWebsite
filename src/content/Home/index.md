@@ -1,7 +1,7 @@
 ---
 title: Home
 layout: content.njk
-pageTitle: Empirische Wirtschaftsforschung
+pageTitle: Home
 tags: ["content"]
 permalink: index.html
 ---
