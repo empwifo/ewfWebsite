@@ -10,7 +10,7 @@ module.exports = (config) => {
     config.setTemplateFormats(["jpg", "png", "webp", "md", "njk"]);
     config.setBrowserSyncConfig({
         files: ["dist/**/*"],
-        open: true
+        open: false
     });
     config.setDataDeepMerge(true);
 
