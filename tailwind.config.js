@@ -8,7 +8,7 @@ module.exports = {
             height: {
                 headersm: '20rem', 
                 headerxl: '30rem',
-            },
+            }
         },
     },
     variants : {

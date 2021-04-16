@@ -1,3 +1,44 @@
 {% macro image(src, alt) %}
 <img class="rounded-md" src="{{src}}" alt="{{alt}}">
 {% endmacro %}
+
+{% macro icon(type) %}
+    {% set icon = "/assets/ui/home.svg" %}
+
+    {% if type == "home" %}
+        {% set icon = "/assets/ui/home.svg" %}
+    {% elif type == "research" %}
+        {% set icon = "/assets/ui/academic.svg" %}
+    {% elif type == "teach" %}
+        {% set icon = "/assets/ui/presentation.svg" %}
+    {% elif type == "contact" %}
+        {% set icon = "/assets/ui/mail.svg" %}
+    {% else %}
+        {% set icon = "/assets/ui/home.svg" %}
+    {% endif %}
+
+<img src={{icon}} width="20" height="20">
+{% endmacro %}
+
+{% macro menuItem(text, link) %}
+    <a href="/{{link}}" class="block ml-1 lg:inline-block lg:my-0 sm:my-2 text-xl text-teal-lighter hover:text-gray-400 mr-4">{{text}}</a>
+{% endmacro %}
+
+{% macro generate_contact_entry(data) %}
+<h3>{{data.title}}</h3>
+<div class="flex">
+<div>
+<table class="table-auto">
+<tr>
+<td>
+{{icon("home")}}
+</td>
+<td>
+{{data.adress | striptags(true) | escape | nl2br }}
+</td>
+</tr>
+</table>
+</div>
+</div>
+{% endmacro %}
+
