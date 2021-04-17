@@ -1,6 +1,6 @@
 ---
 title: Forschung
-layout: content.njk
+layout: contentMarkdown.njk
 pageTitle: Forschung
 tags: ["content"]
 permalink: forschung/index.html

@@ -2,7 +2,7 @@
 <img class="rounded-md" src="{{src}}" alt="{{alt}}">
 {% endmacro %}
 
-{% macro icon(type) %}
+{% macro icon(type, classes="") %}
     {% set icon = "/assets/ui/home.svg" %}
 
     {% if type == "home" %}
@@ -13,11 +13,17 @@
         {% set icon = "/assets/ui/presentation.svg" %}
     {% elif type == "contact" %}
         {% set icon = "/assets/ui/mail.svg" %}
+    {% elif type == "web" %}
+        {% set icon = "/assets/ui/web.svg" %}
+    {% elif type == "phone" %}
+        {% set icon = "/assets/ui/phone.svg" %}        
+    {% elif type == "mail" %}
+        {% set icon = "/assets/ui/mail.svg" %}
     {% else %}
         {% set icon = "/assets/ui/home.svg" %}
     {% endif %}
 
-<img src={{icon}} width="20" height="20">
+<img src={{icon}} class="h-6 w-6 {{classes}}">
 {% endmacro %}
 
 {% macro menuItem(text, link) %}
@@ -25,20 +31,48 @@
 {% endmacro %}
 
 {% macro generate_contact_entry(data) %}
-<h3>{{data.title}}</h3>
-<div class="flex">
-<div>
-<table class="table-auto">
+<div class="col-auto">
+    <h1 class="text-xl font-bold">{{data.title}}</h1>
+    <div class="flex mb-10">
+        <table class="table-auto mt-2 divide-y divide-gray-900">
+            <tbody class="bg-white divide-y divide-gray-300">
+                {% if data.adress %}
+                    {{ generateTableRow(data.adress, "home") }}
+                {% endif %}
+
+                {% if data.mail %}
+                    {{ generateTableRow(data.mail, "mail", "mail") }}
+                {% endif %}
+
+                {% if data.phone %}
+                    {{ generateTableRow(data.phone, "phone", "phone") }}
+                {% endif %}
+
+                {% if data.web %}
+                    {{ generateTableRow(data.web, "web", "web", "Website") }}
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endmacro %}
+
+{% macro generateTableRow(data, icon_type, link="", link_text="") %}
 <tr>
-<td>
-{{icon("home")}}
-</td>
-<td>
-{{data.adress | striptags(true) | escape | nl2br }}
-</td>
+    <td class="px-6 py-4 whitespace-nowrap">
+        <span class="flex">
+            {{ icon(icon_type, "mr-4 align-top") }}
+            {% if link == "web" %}
+                <a href="{{data | striptags(true) | escape | nl2br }}" class="underline hover:text-blue-700" target="_blank">{{link_text}}</a>
+            {% elif link == "phone" %}
+                <a href="tel: {{data | striptags(true) | escape | nl2br }}" class="underline hover:text-blue-700">{{data}}</a>
+            {% elif link == "mail" %}
+                <a href="mail-to: {{data | striptags(true) | escape | nl2br }}" class="underline hover:text-blue-700">{{data}}</a>
+            {% else %}
+                {{ data | striptags(true) | escape | nl2br}}
+            {% endif %}
+        </span>
+    </td>
 </tr>
-</table>
-</div>
-</div>
 {% endmacro %}
 

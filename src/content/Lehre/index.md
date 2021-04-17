@@ -1,6 +1,6 @@
 ---
 title: Lehre
-layout: content.njk
+layout: contentMarkdown.njk
 pageTitle: Lehre
 tags: ["content"]
 permalink: lehre/index.html

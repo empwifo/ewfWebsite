@@ -1,47 +1,50 @@
-
 <nav class="flex items-center justify-between flex-wrap bg-teal p-10 border-b z-10">
     <div class="flex flex-row flex-grow justify-between">
-    <div class="flex items-center flex-no-shrink mr-6">
-      <!--svg class="h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg!-->
-      <span class="font-semibold md:text-3xl sm:text-xl overflow-ellipsis tracking-tight">Empirische Wirtschaftsforschung</span>
-    </div>
-    <div class="block lg:hidden justify-end">
-        <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
-              <svg class="h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-        </button>
+        <div class="flex items-center flex-no-shrink mr-6">
+            <span class="font-semibold md:text-3xl sm:text-xl overflow-ellipsis tracking-tight">Empirische
+                Wirtschaftsforschung</span>
+        </div>
+        <div class="block xl:hidden justify-end">
+            <button id="nav-toggle"
+                class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
+                <svg class="h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+            </button>
         </div>
     </div>
-    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block" id="nav-content">
-        <ul class="list-reset lg:flex justify-end flex-1 items-center">
+    <div class="w-full block flex-grow xl:flex lg:items-center xl:w-auto hidden xl:block" id="nav-content">
+        <ul class="list-reset xl:flex justify-end flex-1 items-center ml-4 mt-2  divide-y divide-gray-300 xl:divide-y-0">
             <li class="mr-3">
-                <span class="flex">
+                <span class="flex items-center py-2">
                     {{ macros.icon() }}
                     {{ macros.menuItem("Home", "") }}
                 </span>
             </li>
             <li class="mr-3">
-                <span class="flex">
+                <span class="flex items-center py-2">
                     {{ macros.icon("research") }}
                     {{ macros.menuItem("Forschung", "forschung") }}
                 </span>
             </li>
             <li class="mr-3">
-                <span class="flex">
+                <span class="flex items-center py-2">
                     {{ macros.icon("teach") }}
                     {{ macros.menuItem("Lehre", "lehre") }}
                 </span>
             </li>
             <li class="mr-3">
-                <span class="flex">
+                <span class="flex items-center py-2">
                     {{ macros.icon("contact") }}
                     {{ macros.menuItem("Kontakt", "kontakt") }}
                 </span>
             </li>
         </ul>
     </div>
-  </nav>
-  <script>
-    document.getElementById('nav-toggle').onclick = function(){
+</nav>
+<script>
+    document.getElementById("nav-toggle").onclick = function () {
         document.getElementById("nav-content").classList.toggle("hidden");
-    }
+    };
 </script>
