@@ -26,8 +26,15 @@
 <img src={{icon}} class="h-6 w-6 {{classes}}">
 {% endmacro %}
 
-{% macro menuItem(text, link) %}
-    <a href="/{{link}}" class="block ml-1 lg:inline-block lg:my-0 sm:my-2 text-xl text-teal-lighter hover:text-gray-400 mr-4">{{text}}</a>
+{% macro menuItem2(text, link, icon_type) %}
+<a href="/{{link}}" class="block xl:ml-1 lg:inline-block lg:my-0 sm:my-2 text-xl text-teal-lighter md:hover:text-gray-400 xl:mr-4 w-full">
+    <span class="flex items-center py-2">
+        <div class="mr-4 xl:mr-1">
+            {{ icon(icon_type) }}
+        </div>
+        {{text}}
+    </span>
+</a>
 {% endmacro %}
 
 {% macro generate_contact_entry(data) %}

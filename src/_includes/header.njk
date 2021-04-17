@@ -1,4 +1,4 @@
-<nav class="flex items-center justify-between flex-wrap bg-teal p-10 border-b z-10">
+<nav class="flex items-center justify-between flex-wrap bg-teal p-6 border-b z-10">
     <div class="flex flex-row flex-grow justify-between">
         <div class="flex items-center flex-no-shrink mr-6">
             <span class="font-semibold md:text-3xl sm:text-xl overflow-ellipsis tracking-tight">Empirische
@@ -17,28 +17,16 @@
     <div class="w-full block flex-grow xl:flex lg:items-center xl:w-auto hidden xl:block" id="nav-content">
         <ul class="list-reset xl:flex justify-end flex-1 items-center ml-4 mt-2  divide-y divide-gray-300 xl:divide-y-0">
             <li class="mr-3">
-                <span class="flex items-center py-2">
-                    {{ macros.icon() }}
-                    {{ macros.menuItem("Home", "") }}
-                </span>
+                {{ macros.menuItem2("Home", "", "home") }}
             </li>
             <li class="mr-3">
-                <span class="flex items-center py-2">
-                    {{ macros.icon("research") }}
-                    {{ macros.menuItem("Forschung", "forschung") }}
-                </span>
+                {{ macros.menuItem2("Lehre", "lehre", "presentation") }}
             </li>
             <li class="mr-3">
-                <span class="flex items-center py-2">
-                    {{ macros.icon("teach") }}
-                    {{ macros.menuItem("Lehre", "lehre") }}
-                </span>
+                {{ macros.menuItem2("Forschung", "forschung", "research") }}
             </li>
             <li class="mr-3">
-                <span class="flex items-center py-2">
-                    {{ macros.icon("contact") }}
-                    {{ macros.menuItem("Kontakt", "kontakt") }}
-                </span>
+                {{ macros.menuItem2("Kontakt", "kontakt", "mail") }}
             </li>
         </ul>
     </div>
