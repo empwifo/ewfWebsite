@@ -74,7 +74,7 @@
             {% elif link == "phone" %}
                 <a href="tel: {{data | striptags(true) | escape | nl2br }}" class="underline hover:text-blue-700">{{data}}</a>
             {% elif link == "mail" %}
-                <a href="mail-to: {{data | striptags(true) | escape | nl2br }}" class="underline hover:text-blue-700">{{data}}</a>
+                <a href="mailto: {{data | striptags(true) | escape | nl2br }}" class="underline hover:text-blue-700">{{data}}</a>
             {% else %}
                 {{ data | striptags(true) | escape | nl2br}}
             {% endif %}
