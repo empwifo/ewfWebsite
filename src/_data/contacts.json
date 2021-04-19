@@ -12,29 +12,25 @@
             "title": "Kontakt 2",
             "adress": "Universitätsstraße 150\n44801 Bochum\nDeutschland",
             "phone": "123456",
-            "mail": "test@ruhr-uni-bochum.de",
-            "image": "/assets/images/RUB.jpg"
+            "mail": "test@ruhr-uni-bochum.de"
         },
         {
             "title": "Kontakt 3",
             "adress": "Universitätsstraße 150\n44801 Bochum\nDeutschland",
-            "web": "https://www.ruhr-uni-bochum.de/de",
-            "image": "/assets/images/RUB.jpg"
+            "web": "https://www.ruhr-uni-bochum.de/de"
         },
         {
             "title": "Kontakt 4",
             "adress": "Universitätsstraße 150\n44801 Bochum\nDeutschland",
             "web": "https://www.ruhr-uni-bochum.de/de",
-            "mail": "test@ruhr-uni-bochum.de",
-            "image": "/assets/images/RUB.jpg"
+            "mail": "test@ruhr-uni-bochum.de"
         },
         {
             "title": "Kontakt 5",
             "adress": "Universitätsstraße 150\n44801 Bochum\nDeutschland",
             "web": "https://www.ruhr-uni-bochum.de/de",
             "phone": "123456",
-            "mail": "test@ruhr-uni-bochum.de",
-            "image": "/assets/images/RUB.jpg"
+            "mail": "test@ruhr-uni-bochum.de"
         }
     ]
 }
