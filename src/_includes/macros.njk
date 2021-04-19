@@ -2,9 +2,9 @@
 {% set size_class = "" %}
 
 {% if size == "small" %}
-    {% set size_class = "h-32 float-right ml-8" %}
+    {% set size_class = "md:h-32 md:float-right md:ml-8" %}
 {% elif size == "medium" %}
-    {% set size_class = "h-60 float-right ml-8" %}
+    {% set size_class = "md:h-60 md:float-right md:ml-8" %}
 {% endif %}
 <img class="rounded-md {{size_class}}" src="{{src}}" alt="{{alt}}">
 {% endmacro %}
