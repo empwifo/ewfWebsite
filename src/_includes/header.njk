@@ -1,35 +1,66 @@
-<nav class="flex items-center justify-between flex-wrap bg-teal p-6 border-b z-10">
-    <div class="flex flex-row flex-grow justify-between">
-        <div class="flex items-center flex-no-shrink mr-6">
-            <span class="font-semibold md:text-3xl sm:text-xl overflow-ellipsis tracking-tight">
-                <a href="/">
-                    Empirische Wirtschaftsforschung
-                </a>
-            </span>
+<nav class="flex items-center justify-between flex-wrap border-b bg-teal p-6 z-10 lg:fixed w-full bg-white">
+    <div class="flex lg:flex-row justify-between w-full lg:w-auto">
+        <div class="flex items-center mr-6 ">
+            <a href="/{{locale}}">
+                <div class="flex flex-row">
+                    <img src="/assets/images/ewflogo.png" class="h-12 w-12 object-scale-down m-auto mr-4">
+                    <div class="font-semibold md:text-l sm:text-m overflow-ellipsis tracking-tight">
+                        Empirische<br>
+                        Wirtschaftsforschung
+                    </div>
+                </div>
+            </a>
         </div>
-        <div class="block xl:hidden justify-end">
+        <div class="flex lg:hidden justify-end my-auto">
             <button id="nav-toggle"
                 class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
                 <svg class="h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Menu</title>
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
                 </svg>
             </button>
         </div>
     </div>
-    <div class="w-full block flex-grow xl:flex lg:items-center xl:w-auto hidden xl:block" id="nav-content">
-        <ul class="list-reset xl:flex justify-end flex-1 items-center ml-4 mt-2  divide-y divide-gray-300 xl:divide-y-0">
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block" id="nav-content">
+        <ul class="list-reset lg:flex lg:justify-start justify-end flex-1 items-center ml-4 mt-2 divide-y divide-gray-300 lg:divide-y-0">
             <li class="mr-3">
-                {{ macros.menuItem2("Home", "", "home") }}
+                {{ macros.menuItem("home", "", "home") }}
             </li>
             <li class="mr-3">
-                {{ macros.menuItem2("Forschung", "forschung", "research") }}
+                {{ macros.menuItem("research", "research", "research") }}
             </li>
             <li class="mr-3">
-                {{ macros.menuItem2("Lehre", "lehre", "teaching") }}
+                {{ macros.menuItem("teaching", "teaching", "teaching") }}
             </li>
-            <li class="mr-3">
-                {{ macros.menuItem2("Kontakt", "kontakt", "mail") }}
+            <li class="mr-3 lg:hidden">
+                {{ macros.menuItem("contact", "contact", "mail") }}
+            </li>
+            <li class="lg:hidden">
+                {{macros.getUIelem("language", "language")}}
+                <ul class="list-reset justify-end flex-1 items-center ml-4">
+                    <li class="ml-4 mt-2">
+                        <a href="/de">Deutsch</a>
+                    </li>
+                    <li class="ml-4 mt-2">
+                        <a href="/en">English</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="hidden w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block" id="nav-content">
+        <ul class="list-reset lg:flex justify-end flex-1 items-center ml-4 mt-2 divide-y divide-gray-300 lg:divide-y-0">
+            <li class="dropdown relative mr-3">
+                {{ macros.icon("language") }}
+                <div class="dropdown-menu top-0 absolute left-0 hidden h-auto flex pt-6 mt-4">
+                    <ul class="block w-full bg-white text-gray-700 shadow divide-gray-300 divide-y p-b text-xl">
+                        <li class="mx-2 py-2 hover:text-gray-400"><a class="block" href="/de">Deutsch</a></li>
+                        <li class="mx-2 py-2 hover:text-gray-400"><a class="block" href="/en">English</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                {{ macros.menuItem("", "contact", "mail") }}
             </li>
         </ul>
     </div>

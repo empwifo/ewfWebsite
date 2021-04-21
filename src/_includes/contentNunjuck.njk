@@ -9,7 +9,7 @@ layout: layout.njk
     <div class="container mx-auto flex items-center justify-center mb-8 pt-6">
         <div class="">
             <div class="py-8 md:text-5xl text-2xl font-black text-gray-700 bg-white">
-                {{pageTitle}}
+                {{ translations[locale][title] }}
             </div>
             <div class="mt-6">
             {{content | safe}}

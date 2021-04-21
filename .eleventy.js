@@ -14,6 +14,9 @@ module.exports = (config) => {
         open: false
     });
     config.setDataDeepMerge(true);
+    config.addFilter("log", value => {
+        console.log(value);
+    })
 
     return {
         dir: {

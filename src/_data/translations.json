@@ -1,0 +1,20 @@
+{
+    "de": {
+        "research": "Forschung",
+        "teaching": "Lehre",
+        "contact": "Kontakt",
+        "home": "Home",
+        "imprint": "Impressum",
+        "privacypolicy": "Datenschutzerklärung",
+        "language": "Sprache"
+    },
+    "en": {
+        "research": "Research",
+        "teaching": "Teaching",
+        "contact": "Contact",
+        "home": "Home",
+        "imprint": "Imprint",
+        "privacypolicy": "Privacy Policy",
+        "language": "Language"
+    }
+}

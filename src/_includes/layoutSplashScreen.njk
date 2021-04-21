@@ -6,18 +6,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/assets/main.bundle.css">
+        <meta http-equiv="refresh" content="0; url=/de" />
         
         <script src="/scripts/logic.js"></script>
         <script src="/assets/main.bundle.js" defer></script>
-        <title>{{ translations[locale][title] }}</title>
+        <title>{{title}}</title>
     </head>
     <body>
-        <div class="flex flex-col h-screen justify-between">
-            <main class="flex-1 md:overflow-y-auto" id="mainContainer">
-                {% include 'header.njk' %}
-                {{ content | safe }}
-                {% include 'footer.njk' %}
-            </main>
-        </div>
+        {{ content | safe }}
     </body>
 </html>

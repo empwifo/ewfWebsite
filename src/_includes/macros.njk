@@ -9,6 +9,19 @@
 <img class="rounded-md {{size_class}}" src="{{src}}" alt="{{alt}}">
 {% endmacro %}
 
+{% macro getUIelem(slug, icon_type, textClass="") %}
+<span class="flex items-center py-2">
+    {% if icon_type != "None" %}
+    <div class="mr-1 lg:mr-1">
+        {{ icon(icon_type) }}
+    </div>
+    {% endif %}
+    <div class="block lg:my-0 sm:my-2 text-xl text-teal-lighter w-full {{textClass}}">
+        {{ getTranslation(slug) }}
+    </div>
+</span>
+{% endmacro %}
+
 {% macro icon(type, classes="") %}
     {% set icon = "/assets/ui/home.svg" %}
 
@@ -26,6 +39,8 @@
         {% set icon = "/assets/ui/phone.svg" %}        
     {% elif type == "mail" %}
         {% set icon = "/assets/ui/mail.svg" %}
+    {% elif type == "language" %}
+        {% set icon = "/assets/ui/language.svg" %}
     {% else %}
         {% set icon = "/assets/ui/home.svg" %}
     {% endif %}
@@ -33,13 +48,18 @@
 <img src={{icon}} class="h-6 w-6 {{classes}}">
 {% endmacro %}
 
-{% macro menuItem2(text, link, icon_type) %}
-<a href="/{{link}}" class="block xl:ml-1 lg:inline-block lg:my-0 sm:my-2 text-xl text-teal-lighter md:hover:text-gray-400 xl:mr-4 w-full">
+{% macro menuItem(name, link, icon_type, textClass="") %}
+{% set slug = getSlug(link)  | trim  %}
+<a href="/{{locale}}/{{slug}}" class="block xl:ml-1 lg:inline-block lg:my-0 sm:my-2 text-xl text-teal-lighter md:hover:text-gray-400 xl:mr-4 w-full">
     <span class="flex items-center py-2">
-        <div class="mr-4 xl:mr-1">
+        {% if icon_type != "None" %}
+        <div class="mr-1 lg:mr-1">
             {{ icon(icon_type) }}
         </div>
-        {{text}}
+        {% endif %}
+        <div class="{{textClass}}">
+            {{ getTranslation(name) }}
+        </div>
     </span>
 </a>
 {% endmacro %}
@@ -94,5 +114,21 @@
         </span>
     </td>
 </tr>
+{% endmacro %}
+
+{% macro getTranslation(key) %}
+    {% if translations[locale][key] %}
+        {{ translations[locale][key] }}
+    {% else %}
+        {{ key }}
+    {% endif %}
+{% endmacro %}
+
+{% macro getSlug(key) %}
+    {% if translations[locale][key] %}
+        {{slugs[locale][key] | trim }}
+    {% else %}
+        {{key | trim}}
+    {% endif %}
 {% endmacro %}
 

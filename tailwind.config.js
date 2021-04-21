@@ -6,8 +6,8 @@ module.exports = {
         },
         extend: {
             height: {
-                headersm: '20rem', 
-                headerxl: '30rem',
+                headersm: '25rem', 
+                headerxl: '40rem',
             }
         },
     },
