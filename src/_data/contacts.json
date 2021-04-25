@@ -2,35 +2,27 @@
     "contacts": [
         {
             "title": "Ruhr Universität Bochum",
-            "adress": "Universitätsstraße 150\n44801 Bochum\nDeutschland",
+            "adress": "Universitätsstraße 150\n44801 Bochum",
             "web": "https://www.ruhr-uni-bochum.de/de",
-            "phone": "123456",
-            "mail": "test@ruhr-uni-bochum.de",
-            "image": "/assets/images/RUB.jpg"
+            "phone": "0234 32201",
+            "mail": "webteam@uv.rub.de",
+            "image": "/assets/images/logos/RUB.jpg"
         },
         {
-            "title": "Kontakt 2",
-            "adress": "Universitätsstraße 150\n44801 Bochum\nDeutschland",
-            "phone": "123456",
-            "mail": "test@ruhr-uni-bochum.de"
+            "title": "Technische Universität Dortmund",
+            "phone": "(0231) 755-1",
+            "mail": "presse@tu-dortmund.de",
+            "adress": "August-Schmidt-Straße 1\n44227 Dortmund",
+            "web": "https://www.tu-dortmund.de/",
+            "image": "/assets/images/logos/tudortmundlogo.png"
         },
         {
-            "title": "Kontakt 3",
-            "adress": "Universitätsstraße 150\n44801 Bochum\nDeutschland",
-            "web": "https://www.ruhr-uni-bochum.de/de"
-        },
-        {
-            "title": "Kontakt 4",
-            "adress": "Universitätsstraße 150\n44801 Bochum\nDeutschland",
-            "web": "https://www.ruhr-uni-bochum.de/de",
-            "mail": "test@ruhr-uni-bochum.de"
-        },
-        {
-            "title": "Kontakt 5",
-            "adress": "Universitätsstraße 150\n44801 Bochum\nDeutschland",
-            "web": "https://www.ruhr-uni-bochum.de/de",
-            "phone": "123456",
-            "mail": "test@ruhr-uni-bochum.de"
+            "title": "Universität Duisburg-Essen",
+            "adress": "Campus Duisburg\nFortsthausweg 2\n47057 Duisburg\n\nCampus Essen\nUniverstätsstraße 2\n45141 Essen",
+            "phone": "+49(0)203 37-91800",
+            "mail": "webredaktion@uni-due.de",
+            "web": "https://www.uni-due.de/",
+            "image": "/assets/images/logos/unidulogo.png"
         }
     ]
 }

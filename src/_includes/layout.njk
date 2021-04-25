@@ -2,22 +2,28 @@
 
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/assets/main.bundle.css">
-        
-        <script src="/scripts/logic.js"></script>
-        <script src="/assets/main.bundle.js" defer></script>
-        <title>{{ translations[locale][title] }}</title>
-    </head>
-    <body>
-        <div class="flex flex-col h-screen justify-between">
-            <main class="flex-1 md:overflow-y-auto" id="mainContainer">
-                {% include 'header.njk' %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/main.bundle.css">
+
+    <script src="/scripts/logic.js"></script>
+    <script src="/assets/main.bundle.js" defer></script>
+    <title>{{ translations[locale][title] }}</title>
+</head>
+
+<body>
+    <div class="flex flex-col h-screen justify-between">
+        <main class="flex-1 md:overflow-y-auto" id="mainContainer">
+            {% include 'header.njk' %}
+            <div>
+                <div class="bg-top bg-cover bg-no-repeat bg-fixed overflow-auto md:h-headerxl h-headersm" style="background-image: url('{{ banner_images | makeBannerBackground }}');"></div>
+                    
                 {{ content | safe }}
-                {% include 'footer.njk' %}
-            </main>
-        </div>
-    </body>
+            </div>
+            {% include 'footer.njk' %}
+        </main>
+    </div>
+</body>
 </html>

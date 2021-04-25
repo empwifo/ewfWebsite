@@ -3,14 +3,12 @@ layout: layout.njk
 ---
 {% import 'macros.njk' as macros with context %}
 
-<div>
-    <div class="bg-top bg-cover bg-no-repeat bg-fixed overflow-auto md:h-headerxl h-headersm " style="background-image: url('/assets/images/banner_1.jpg');"></div>
-    <div class="container pb-24">
-        <div class="prose prose-lg px-8 pt-6 mx-auto bg-white">
-            <div class="py-8 md:text-5xl text-2xl font-black bg-white">
-                {{ translations[locale][title] }}
-            </div>
-            {{content | safe}}
-        </div/>
-    </div>
+
+<div class="container pb-24">
+    <div class="prose prose-lg px-8 pt-6 mx-auto bg-white">
+        <div class="py-8 md:text-5xl text-2xl font-black bg-white">
+            {{ translations[locale][title] }}
+        </div>
+        {{content | safe}}
+    </div />
 </div>

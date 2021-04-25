@@ -3,3 +3,8 @@
     * Generelles
     * Forschung
     * Lehre
+
+## Features
+* banner bilder:
+  * auswahl aus mehreren Bildern random geladen
+* 

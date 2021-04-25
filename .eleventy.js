@@ -18,6 +18,11 @@ module.exports = (config) => {
         console.log(value);
     })
 
+    config.addFilter("makeBannerBackground", function(banner){
+        var image = banner[Math.floor(Math.random() * banner.length)];
+        return image
+    });
+
     return {
         dir: {
             input: "src",
