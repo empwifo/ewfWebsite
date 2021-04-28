@@ -28,7 +28,17 @@ module.exports = (config) => {
         return image
     });
 
-    config.addNunjucksShortcode("markdown", content => `<div class="prose prose-lg">${md.render(content)}</div>`)
+    config.addNunjucksShortcode("markdown", content => {
+        return `
+        <div class="container mx-auto flex items-center justify-center mb-8 pt-6">
+            <div>  
+                <div class="mt-6">
+                    <div class="prose prose-lg">${md.render(content)}</div> 
+                </div>
+            </div/>
+        </div>
+        `
+    });
 
     return {
         dir: {

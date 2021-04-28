@@ -1,0 +1,11 @@
+---
+layout: layouts/layout.njk
+---
+{% import 'macros.njk' as macros with context %}
+
+<div class="container mx-auto flex items-center justify-center pt-8 md:text-5xl text-3xl font-black text-gray-700 bg-white">
+    {{ translations[locale][title] }}
+</div>
+
+
+{{ content | safe }}

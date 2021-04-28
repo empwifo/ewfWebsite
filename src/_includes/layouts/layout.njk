@@ -15,14 +15,14 @@
 
 <body>
     <div class="flex flex-col h-screen justify-between">
-        <main class="flex-1 md:overflow-y-auto" id="mainContainer">
-            {% include 'header.njk' %}
+        <main class="flex-initial md:overflow-y-auto" id="mainContainer">
+            {% include 'layouts/header.njk' %}
             <div>
                 <div class="bg-top bg-cover bg-no-repeat bg-fixed overflow-auto md:h-headerxl h-headersm" style="background-image: url('{{ banner_images | makeBannerBackground }}');"></div>
                     
                 {{ content | safe }}
             </div>
-            {% include 'footer.njk' %}
+            {% include 'layouts/footer.njk' %}
         </main>
     </div>
 </body>

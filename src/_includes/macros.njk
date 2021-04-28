@@ -1,3 +1,7 @@
+{# --------------------------- #}
+{# UI macros                   #}
+{# --------------------------- #}
+
 {% macro image(src, alt, size) %}
 {% set size_class = "" %}
 
@@ -48,6 +52,14 @@
 <img src={{icon}} class="h-6 w-6 {{classes}}">
 {% endmacro %}
 
+{# --------------------------- #}
+
+
+
+{# --------------------------- #}
+{# Header menu macros          #}
+{# --------------------------- #}
+
 {% macro menuItem(name, link, icon_type, textClass="") %}
 {% set slug = getSlug(link)  | trim  %}
 <a href="/{{locale}}/{{slug}}" class="block xl:ml-1 lg:inline-block lg:my-0 sm:my-2 text-xl text-teal-lighter md:hover:text-gray-400 xl:mr-4 w-full">
@@ -63,6 +75,14 @@
     </span>
 </a>
 {% endmacro %}
+
+{# --------------------------- #}
+
+
+
+{# --------------------------- #}
+{# Contact subsite macros      #}
+{# --------------------------- #}
 
 {% macro generate_contact_entry(data) %}
 <div class="col-auto"> 
@@ -116,6 +136,39 @@
 </tr>
 {% endmacro %}
 
+{# --------------------------- #}
+
+
+{# --------------------------- #}
+{# Research header macros      #}
+{# --------------------------- #}
+
+{% macro grid_short_info(data) %}
+{% set number_grid = data[locale] | length %}
+<div class="grid grid-flow-col gap-4 my-10 xl:mx-60 lg:mx-28 md:mx-12 mx-10 overflow-x-auto">
+    {% for item in data[locale] %}
+        <div class="border-2 rounded-md flex-col justify-center py-2">
+            <div class="flex justify-center">
+                <a href="{{item.href | trim }}" target="_blank">
+                    <img src="{{item.image}}" class="object-scale-down h-12">
+                </a>
+            </div>
+            <div class="flex justify-center px-4 py-5">
+                <p>{{item.short}}</p>    
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endmacro %}
+
+{# --------------------------- #}
+
+
+
+{# --------------------------- #}
+{# Slug and translation macros #}
+{# --------------------------- #}
+
 {% macro getTranslation(key) %}
     {% if translations[locale][key] %}
         {{ translations[locale][key] }}
@@ -132,3 +185,4 @@
     {% endif %}
 {% endmacro %}
 
+{# --------------------------- #}

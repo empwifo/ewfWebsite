@@ -1,0 +1,42 @@
+{
+    "de": [
+        {
+            "name": "Ruhr-Universität Bochum",
+            "image": "/assets/images/logos/RUB.jpg",
+            "href": "https://www.ruhr-uni-bochum.de/de",
+            "short": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+        },
+        {
+            "name": "TU Dortmund",
+            "image": "/assets/images/logos/tudortmundlogo.png",
+            "href": "https://www.tu-dortmund.de/",
+            "short": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+        },
+        {
+            "name": "Universität Duisburg Essen",
+            "image": "/assets/images/logos/unidulogo.png",
+            "href": "https://www.uni-due.de/",
+            "short": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+        }
+    ],
+    "en": [
+        {
+            "name": "Ruhr-Universität Bochum",
+            "image": "/assets/images/logos/RUB.jpg",
+            "href": "https://www.ruhr-uni-bochum.de/de",
+            "short": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+        },
+        {
+            "name": "TU Dortmund",
+            "image": "/assets/images/logos/tudortmundlogo.png",
+            "href": "https://www.tu-dortmund.de/",
+            "short": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+        },
+        {
+            "name": "Universität Duisburg Essen",
+            "image": "/assets/images/logos/unidulogo.png",
+            "href": "https://www.uni-due.de/",
+            "short": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+        }
+    ]
+}
