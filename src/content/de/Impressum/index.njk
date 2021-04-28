@@ -1,0 +1,11 @@
+---
+title: imprint
+layout: content.njk
+pageTitle: translations[locale]["imprint"]
+tags: ["content"]
+permalink: /{{locale}}/{{slugs[locale]["imprint"]}}/index.html
+---
+{% import 'macros.njk' as macros with context %}
+
+{% set websiteContent %}{% include './content.md'  %}{% endset %}
+{% markdown websiteContent %}

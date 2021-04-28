@@ -1,4 +1,5 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const markdownIt = require("markdown-it")
 
 module.exports = (config) => {
     config.addPlugin(syntaxHighlight);
@@ -18,10 +19,16 @@ module.exports = (config) => {
         console.log(value);
     })
 
+    const md = new markdownIt({
+        html: true
+    });
+
     config.addFilter("makeBannerBackground", function(banner){
         var image = banner[Math.floor(Math.random() * banner.length)];
         return image
     });
+
+    config.addNunjucksShortcode("markdown", content => `<div class="prose prose-lg">${md.render(content)}</div>`)
 
     return {
         dir: {

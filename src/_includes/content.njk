@@ -4,12 +4,12 @@ layout: layout.njk
 {% import 'macros.njk' as macros with context %}
 
 <div class="container mx-auto flex items-center justify-center mb-8 pt-6">
-    <div class="">
+    <div>
         <div class="py-8 md:text-5xl text-2xl font-black text-gray-700 bg-white">
             {{ translations[locale][title] }}
         </div>
         <div class="mt-6">
             {{content | safe}}
         </div>
-    </div />
+    </div/>
 </div>

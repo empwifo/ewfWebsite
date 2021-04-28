@@ -1,9 +1,11 @@
 ---
 title: privacypolicy
-layout: contentMarkdown.njk
+layout: content.njk
 pageTitle: translations[locale]["privacypolicy"]
 tags: ["content"]
 permalink: /{{locale}}/{{slugs[locale]["privacypolicy"]}}/index.html
 ---
+{% import 'macros.njk' as macros with context %}
 
-Hier könnte ihre Datenschutzerklärung stehen.
+{% set websiteContent %}{% include './content.md'  %}{% endset %}
+{% markdown websiteContent %}

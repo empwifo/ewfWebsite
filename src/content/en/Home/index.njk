@@ -1,0 +1,11 @@
+---
+title: home
+layout: content.njk
+pageTitle: Empirische Wirtschaftsforschung
+tags: ["content"]
+permalink: /{{locale}}/index.html
+---
+{% import 'macros.njk' as macros with context %}
+
+{% set websiteContent %}{% include './content.md'  %}{% endset %}
+{% markdown websiteContent %}
