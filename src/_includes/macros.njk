@@ -49,7 +49,7 @@
         {% set icon = "/assets/ui/home.svg" %}
     {% endif %}
 
-<img src={{icon}} class="h-6 w-6 {{classes}}">
+<img src={{icon}} class="h-6 w-6 {{classes}} hover:stroke-2">
 {% endmacro %}
 
 {# --------------------------- #}
@@ -140,14 +140,14 @@
 
 
 {# --------------------------- #}
-{# Research header macros      #}
+{# header card macros      #}
 {# --------------------------- #}
 
 {% macro grid_short_info(data) %}
 {% set number_grid = data[locale] | length %}
-<div class="grid grid-flow-col gap-4 my-10 xl:mx-60 lg:mx-28 md:mx-12 mx-10 overflow-x-auto">
+<div class="flex flex-row space-x-4 my-10 xl:mx-60 lg:mx-28 md:mx-12 mx-10 overflow-x-auto">
     {% for item in data[locale] %}
-        <div class="border-2 rounded-md flex-col justify-center py-2">
+        <div class="border-2 rounded-md flex flex-wrap flex-col justify-center pt-2 min-w-full sm:min-w-min	">
             <div class="flex justify-center">
                 <a href="{{item.href | trim }}" target="_blank">
                     <img src="{{item.image}}" class="object-scale-down h-12">
@@ -159,6 +159,7 @@
         </div>
     {% endfor %}
 </div>
+
 {% endmacro %}
 
 {# --------------------------- #}

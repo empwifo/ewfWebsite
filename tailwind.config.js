@@ -6,6 +6,7 @@ module.exports = {
         },
         extend: {
             height: {
+                headermb: '15rem',
                 headersm: '25rem', 
                 headerxl: '40rem',
             }
