@@ -9,6 +9,13 @@ module.exports = {
                 headermb: '15rem',
                 headersm: '25rem', 
                 headerxl: '40rem',
+            },
+            minWidth: {
+                '0': '0',
+                '1/5': '15%',
+                '1/4': '20%',
+                '1/3': '28%',
+                '1/2': '45%'
             }
         },
     },

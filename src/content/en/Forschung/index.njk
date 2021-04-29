@@ -7,5 +7,7 @@ permalink: /{{locale}}/{{slugs[locale]["research"]}}/index.html
 ---
 {% import 'macros.njk' as macros with context %}
 
+{{ macros.grid_short_info(research_short_info) }}
+
 {% set websiteContent %}{% include './content.md'  %}{% endset %}
 {% markdown websiteContent %}

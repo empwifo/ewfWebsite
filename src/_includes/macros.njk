@@ -45,11 +45,17 @@
         {% set icon = "/assets/ui/mail.svg" %}
     {% elif type == "language" %}
         {% set icon = "/assets/ui/language.svg" %}
+    {% elif type == "right_arrow" %}
+        {% set icon = "/assets/ui/right_arrow.svg" %}
+    {% elif type == "expand_arrow" %}
+        {% set icon = "/assets/ui/expand_arrow.svg" %}
+    {% elif type == "collapse_arrow" %}
+        {% set icon = "/assets/ui/collapse_arrow.svg" %}
     {% else %}
         {% set icon = "/assets/ui/home.svg" %}
     {% endif %}
 
-<img src={{icon}} class="h-6 w-6 {{classes}} hover:stroke-2">
+<img src={{icon}} class="h-6 w-6 {{classes}}">
 {% endmacro %}
 
 {# --------------------------- #}
@@ -145,9 +151,13 @@
 
 {% macro grid_short_info(data) %}
 {% set number_grid = data[locale] | length %}
-<div class="flex flex-row space-x-4 my-10 xl:mx-60 lg:mx-28 md:mx-12 mx-10 overflow-x-auto">
+<div class="flex flex-col sm:flex-row sm:space-x-4 sm:space-y-0 space-y-4 my-10 xl:mx-60 lg:mx-28 md:mx-12 mx-10 overflow-x-auto relative">
     {% for item in data[locale] %}
-        <div class="border-2 rounded-md flex flex-wrap flex-col justify-center pt-2 min-w-full sm:min-w-min	">
+        {% set hidden_class = "" %}
+        {% if loop.index > 1 %}
+            {% set hidden_class="hidden" %}
+        {% endif %}
+        <div class="border-2 rounded-md flex flex-wrap flex-col justify-center pt-2 min-w-full {{hidden_class}} sm:block min-h-full sm:min-w-1/3 sm:px-5" id="research_card-{{loop.index}}">
             <div class="flex justify-center">
                 <a href="{{item.href | trim }}" target="_blank">
                     <img src="{{item.image}}" class="object-scale-down h-12">
@@ -158,8 +168,16 @@
             </div>
         </div>
     {% endfor %}
+<div class="sm:hidden items-center justify-center flex-col">
+    <div class="flex justify-center items-center">
+        <a onclick="toggle_visibility(this, 'research_card', {{number_grid}} )" id="hello">
+            {{ icon("expand_arrow") }}
+            {{ icon("collapse_arrow", "hidden") }}
+        </a>
+    </div>
+    <p class="flex justify-center items-center text-gray-300 text-sm">more</p>
 </div>
-
+</div>
 {% endmacro %}
 
 {# --------------------------- #}
