@@ -7,8 +7,14 @@ permalink: /{{locale}}/{{slugs[locale]["contact"]}}/index.html
 ---
 {% import 'macros.njk' as macros with context %}
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-5 md:gap-y-10 grid-flow-row">
-{% for contact in contacts.contacts %}
-    {{ macros.generate_contact_entry(contact) }}
-{% endfor %}
+<div class="container mx-auto flex items-center justify-center mb-8 pt-6">
+    <div>  
+        <div class="mt-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-5 md:gap-y-10 grid-flow-row">
+                {% for contact in contacts.contacts %}
+                    {{ macros.generate_contact_entry(contact) }}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 </div>
