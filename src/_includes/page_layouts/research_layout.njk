@@ -1,5 +1,8 @@
 ---
 layout: base_layouts/content.njk
 ---
+{% import 'macros.njk' as macros with context %}
+
+{{ macros.grid_short_info(chairs_short_info) }}
 
 {{content | safe }}

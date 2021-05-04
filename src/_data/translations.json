@@ -1,20 +1,24 @@
 {
     "de": {
+        "title": "Empirische Wirtschaftsforschung",
         "research": "Forschung",
         "teaching": "Lehre",
         "contact": "Kontakt",
         "home": "Home",
         "imprint": "Impressum",
         "privacypolicy": "Datenschutzerklärung",
-        "language": "Sprache"
+        "language": "Sprache",
+        "more": "mehr"
     },
     "en": {
+        "title": "Empirical Economic-Research",
         "research": "Research",
         "teaching": "Teaching",
         "contact": "Contact",
         "home": "Home",
         "imprint": "Imprint",
         "privacypolicy": "Privacy Policy",
-        "language": "Language"
+        "language": "Language",
+        "more": "more"
     }
 }
