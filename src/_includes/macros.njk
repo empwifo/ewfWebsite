@@ -149,36 +149,50 @@
 {# header card macros      #}
 {# --------------------------- #}
 
-{% macro grid_short_info(data) %}
+{% macro grid_short_info(data) -%}
 {% set number_grid = data[locale] | length %}
-<div class="flex flex-col sm:flex-row sm:space-x-4 sm:space-y-0 space-y-4 my-10 xl:mx-60 lg:mx-28 md:mx-12 mx-10 overflow-x-auto relative">
-    {% for item in data[locale] %}
-        {% set hidden_class = "" %}
-        {% if loop.index > 1 %}
-            {% set hidden_class="hidden" %}
-        {% endif %}
-        <div class="border-2 rounded-md flex flex-wrap flex-col justify-center pt-2 min-w-full {{hidden_class}} sm:block min-h-full sm:min-w-1/3 sm:px-5" id="research_card-{{loop.index}}">
-            <div class="flex justify-center">
-                <a href="{{item.href | trim }}" target="_blank">
-                    <img src="{{item.image}}" class="object-scale-down h-12">
-                </a>
+{% set number_batch = data[locale] | batch(3) | length %}
+<div class="sm:flex sm:flex-col mt-10">
+{% set hidden_class_b = "" %}
+{% set hidden_class_i = "" %}
+{% set item_index = 0 %}
+{% for batch_items in data[locale] | batch(3) %}
+    <div class="flex flex-col sm:flex-row sm:space-x-4 sm:space-y-0 space-y-4 my-2 xl:mx-60 lg:mx-28 md:mx-12 mx-10 overflow-x-auto relative sm:{{hidden_class_b}}" id="batch-{{loop.index}}">
+        {% for item in batch_items %}
+            {% set item_index = item_index + 1 %}
+            <div class="border-2 rounded-md flex flex-wrap flex-col justify-center pt-2 min-w-full {{hidden_class_i}} sm:block min-h-full sm:min-w-1/3 sm:px-5" id="card-{{item_index}}">
+                <div class="flex justify-center">
+                    <a href="{{item.href | trim }}" target="_blank">
+                        <img src="{{item.image}}" class="object-scale-down h-12">
+                    </a>
+                </div>
+                <div class="flex justify-center px-4 py-5">
+                    <p>{{item.short}}</p>    
+                </div>
             </div>
-            <div class="flex justify-center px-4 py-5">
-                <p>{{item.short}}</p>    
-            </div>
-        </div>
-    {% endfor %}
-<div class="sm:hidden items-center justify-center flex-col">
-    <div class="flex justify-center items-center">
-        <a onclick="toggle_visibility(this, 'research_card', {{number_grid}} )" id="hello">
-            {{ icon("expand_arrow") }}
-            {{ icon("collapse_arrow", "hidden") }}
-        </a>
+            {% set hidden_class_i = "hidden" %}
+        {% endfor %}
     </div>
-    <p class="flex justify-center items-center text-gray-300 text-sm">more</p>
+    {% set hidden_class_b="hidden" %}
+{% endfor %}
 </div>
+<div class="items-center justify-center flex-col mt-2">
+    <div class="flex justify-center items-center">
+        {% if number_grid > 1 %}
+            <a class="sm:hidden" onclick="toggle_class(this, 'card', 'hidden', {{ number_grid }} )">
+                {{ icon("expand_arrow") }}
+                {{ icon("collapse_arrow", "hidden") }}
+            </a>
+        {% endif %}
+        {% if number_batch > 1 %}
+            <a class="hidden sm:block" onclick="toggle_class(this, 'batch', 'sm:hidden', {{ number_batch }} )">
+                {{ icon("expand_arrow") }}
+                {{ icon("collapse_arrow", "sm:hidden") }}
+            </a>
+        {% endif %}
+    </div>
 </div>
-{% endmacro %}
+{%- endmacro %}
 
 {# --------------------------- #}
 

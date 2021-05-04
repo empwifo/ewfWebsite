@@ -5,7 +5,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-function toggle_visibility(self, id, max_num=0, start=2){
+function toggle_class(self, id, tClass, max_num=0, start=2){
   /*
   Toggles the class attribute "hidden" on element with 
   given id.
@@ -19,15 +19,15 @@ function toggle_visibility(self, id, max_num=0, start=2){
 
   if (max_num <= 0){
     var element = document.getElementById(id)
-    element.classList.toggle("hidden")
+    element.classList.toggle(String(tClass))
   }else{
     for (i=start; i<= max_num; i++){
       var element = document.getElementById(id+`-${i}`);
-      element.classList.toggle("hidden");
+      element.classList.toggle(String(tClass));
     }
   }
 
   for (i=0; i<self.children.length; i++){
-    self.children[i].classList.toggle("hidden")
+    self.children[i].classList.toggle(String(tClass))
   }
 }
