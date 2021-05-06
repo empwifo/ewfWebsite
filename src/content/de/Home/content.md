@@ -8,6 +8,8 @@ Das Kompetenzfeld EWF bettet die vielfältigen bereits an den beteiligten Instit
 
 Alle beteiligten Forscherinnen und Forscher wenden ökonometrische Verfahren in der empirischen Analyse von wirtschaftlichen Zusammenhängen an und entwickeln diese problembezogen weiter. Dabei umspannen die Anwendungsfelder ein weites wirtschaftswissenschaftliches Spektrum. Die hierdurch gelebte Anwendungs- und Methodenvielfalt ermöglicht es, innerhalb des Kompetenzfelds hohe Synergien zu schöpfen. Forschungsfelder des Kompetenzfelds sind u.a. Arbeit, Gesundheit, Energie und Klima sowie Investitionen.
 
+{{ macros.grid_short_info(chairs_short_info) | trim }}
+
 ## Perspektiven in der empirischen Wirtschaftsforschung
 Das hier gebündelte Forscherkollektiv wendet ökonometrische Methoden aus drei übergreifenden Perspektiven an. Die erste Perspektive ist die mikroökonomische Sicht („Mikro“). Sie analysiert juristische und natürliche Individuen und erfasst so das Verhalten von Menschen oder Unternehmen sowie deren Zusammenwirken in Haushalten oder Industrien typischerweise in einem bottom-up-Ansatz. Aggregiert man ökonomische Akteure hinreichend, so gelangt man zur makroökonomischen Perspektive („Makro“), welche sich mit der Frage der Auswirkungen dieser Aggregate aufeinander und untereinander beschäftigt (top-down).
 

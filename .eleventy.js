@@ -1,7 +1,8 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it")
+let Nunjucks = require('nunjucks')
 
-module.exports = (config) => {
+module.exports = (config) => {    
     config.addPlugin(syntaxHighlight);
     config.addPassthroughCopy({"src/assests": "assets"});
     config.addPassthroughCopy({"src/scripts": "scripts"});
