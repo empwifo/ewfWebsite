@@ -146,10 +146,10 @@
 
 
 {# --------------------------- #}
-{# header card macros      #}
+{# header card macros          #}
 {# --------------------------- #}
 
-{% macro grid_short_info(data) -%}
+{% macro grid_short_info(data) %}
 {% set number_grid = data[locale] | length %}
 {% set number_batch = data[locale] | batch(3) | length %}
 <div class="sm:flex sm:flex-col mt-10">
@@ -160,12 +160,12 @@
     <div class="flex flex-col sm:flex-row sm:space-x-4 sm:space-y-0 space-y-4 my-2 xl:mx-60 lg:mx-28 md:mx-12 mx-10 overflow-x-auto relative sm:{{hidden_class_b}}" id="batch-{{loop.index}}">
         {% for item in batch_items %}
             {% set item_index = item_index + 1 %}
-            <div class="border-2 rounded-md pt-2 min-w-full {{hidden_class_i}} sm:block min-h-full sm:min-w-1/{{batch_items | length}} sm:px-5 relative" id="card-{{item_index}}">
-                <div class="flex justify-center">
+            <div class="rounded-md border-2 border-gray-100 pt-2 min-w-full {{hidden_class_i}} sm:block min-h-full sm:min-w-1/{{batch_items | length}} sm:px-5 relative" id="card-{{item_index}}">
+                <div class="flex justify-center mt-3">
                     {% if item.image %}
                         <a href="{{item.href | trim }}" target="_blank">
                             {% if item.href %}        
-                                <img src="{{item.image}}" class="object-scale-down h-12">
+                                <img src="{{item.image}}" class="object-scale-down h-12 {{anim_hover_grow(scale='scale-110') }}">
                             {% endif %}
                         </a>
                     {% endif %}
@@ -195,22 +195,36 @@
 <div class="items-center justify-center flex-col mt-2">
     <div class="flex justify-center items-center">
         {% if number_grid > 1 %}
-            <a class="sm:hidden" onclick="toggle_class(this, 'card', 'hidden', {{ number_grid }} )">
-                {{ icon("expand_arrow") }}
-                {{ icon("collapse_arrow", "hidden") }}
+            <a class="sm:hidden rounded-full {{anim_hover_grow('bg-gray-200')}}" onclick="toggle_class(this, 'card', 'hidden', {{ number_grid }} )">
+                {{ icon("expand_arrow", "rounded-full") }}
+                {{ icon("collapse_arrow", "hidden rounded-full") }}
             </a>
         {% endif %}
         {% if number_batch > 1 %}
-            <a class="hidden sm:block" onclick="toggle_class(this, 'batch', 'sm:hidden', {{ number_batch }} )">
-                {{ icon("expand_arrow") }}
-                {{ icon("collapse_arrow", "sm:hidden") }}
+            <a class="hidden sm:block rounded-full {{anim_hover_grow('bg-gray-200')}}" onclick="toggle_class(this, 'batch', 'sm:hidden', {{ number_batch }} )">
+                {{ icon("expand_arrow", "rounded-full") }}
+                {{ icon("collapse_arrow", "sm:hidden rounded-full") }}
             </a>
         {% endif %}
     </div>
 </div>
-{%- endmacro %}
+{% endmacro %}
 
 {# --------------------------- #}
+
+
+
+{# --------------------------- #}
+{# footer card macros          #}
+{# --------------------------- #}
+
+{% macro footer_link(data) %}
+
+{% endmacro %}
+
+{# --------------------------- #}
+
+
 
 
 
@@ -235,3 +249,17 @@
 {% endmacro %}
 
 {# --------------------------- #}
+
+
+
+{# --------------------------- #}
+{# css presets macros          #}
+{# --------------------------- #}
+
+{% macro anim_hover_grow(bg="", scale="scale-125") %}
+transition duration-500 ease-in-out transform hover:{{scale}} hover:{{bg}}
+{% endmacro %}
+
+{# --------------------------- #}
+
+

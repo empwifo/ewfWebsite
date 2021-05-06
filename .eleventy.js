@@ -41,6 +41,13 @@ module.exports = (config) => {
         `
     });
 
+    config.addFilter("extendTrim", function(str_arr){
+        console.log(str_arr.val);
+        for (let index = 0; index < str_arr.length; index++) {
+            //console.log(str_arr.val[index])
+        }
+    })
+
     return {
         dir: {
             input: "src",
