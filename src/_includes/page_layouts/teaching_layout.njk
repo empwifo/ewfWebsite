@@ -1,5 +1,10 @@
 ---
 layout: base_layouts/content.njk
 ---
+{% import 'macros.njk' as macros with context %}
+
+{{ macros.grid_short_info(header_infos.teaching_header_info) }}
 
 {{content | safe }}
+
+{{ macros.footer_link(footer_links.teaching_footer_links) }}

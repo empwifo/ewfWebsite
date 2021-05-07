@@ -26,7 +26,7 @@
 </span>
 {% endmacro %}
 
-{% macro icon(type, classes="") %}
+{% macro icon(type, classes="", size="small") %}
     {% set icon = "/assets/ui/home.svg" %}
 
     {% if type == "home" %}
@@ -51,11 +51,19 @@
         {% set icon = "/assets/ui/expand_arrow.svg" %}
     {% elif type == "collapse_arrow" %}
         {% set icon = "/assets/ui/collapse_arrow.svg" %}
+    {% elif type == "rss" %}
+        {% set icon = "/assets/ui/rss.svg" %}
     {% else %}
         {% set icon = "/assets/ui/home.svg" %}
     {% endif %}
 
-<img src={{icon}} class="h-6 w-6 {{classes}}">
+{% set size_ind = "6" %}
+{% if size == "medium" %}
+    {% set size_ind = "12" %}
+{% elif size == "large" %}
+    {% set size_ind = "20" %}
+{% endif %}
+<img src={{icon}} class="h-{{size_ind}} w-{{size_ind}} {{classes}}">
 {% endmacro %}
 
 {# --------------------------- #}
@@ -68,7 +76,7 @@
 
 {% macro menuItem(name, link, icon_type, textClass="") %}
 {% set slug = getSlug(link)  | trim  %}
-<a href="/{{locale}}/{{slug}}" class="block xl:ml-1 lg:inline-block lg:my-0 sm:my-2 text-xl text-teal-lighter md:hover:text-gray-400 xl:mr-4 w-full">
+<a href="/{{locale}}/{{slug}}" class="block lg:ml-1 lg:inline-block lg:my-0 sm:my-2 text-xl text-teal-lighter md:hover:text-gray-400 lg:mr-4 w-full">
     <span class="flex items-center py-2">
         {% if icon_type != "None" %}
         <div class="mr-1 lg:mr-1">
@@ -150,17 +158,28 @@
 {# --------------------------- #}
 
 {% macro grid_short_info(data) %}
-{% set number_grid = data[locale] | length %}
-{% set number_batch = data[locale] | batch(3) | length %}
-<div class="sm:flex sm:flex-col mt-10">
+{% set loc_data = data[locale] %}
+{% set margin_top = "10" %}
+
+{% if not data[locale] | length %}
+    {% if data[fallback] | length %}
+        {% set loc_data = data[fallback] %}
+    {% else %}
+        {% set margin_top = "0" %}
+    {% endif %}
+{% endif %}
+
+{% set number_grid = loc_data | length %}
+{% set number_batch = loc_data | batch(3) | length %}
+<div class="sm:flex sm:flex-col mt-{{margin_top}}">
 {% set hidden_class_b = "" %}
 {% set hidden_class_i = "" %}
 {% set item_index = 0 %}
-{% for batch_items in data[locale] | batch(3) %}
+{% for batch_items in loc_data | batch(3) %}
     <div class="flex flex-col sm:flex-row sm:space-x-4 sm:space-y-0 space-y-4 my-2 xl:mx-60 lg:mx-28 md:mx-12 mx-10 overflow-x-auto relative sm:{{hidden_class_b}}" id="batch-{{loop.index}}">
         {% for item in batch_items %}
             {% set item_index = item_index + 1 %}
-            <div class="rounded-md border-2 border-gray-100 pt-2 min-w-full {{hidden_class_i}} sm:block min-h-full sm:min-w-1/{{batch_items | length}} sm:px-5 relative" id="card-{{item_index}}">
+            <div class="rounded-md border-2 pt-2 min-w-full {{hidden_class_i}} sm:block min-h-full sm:min-w-1/{{batch_items | length}} sm:px-5 relative" id="card-{{item_index}}">
                 <div class="flex justify-center mt-3">
                     {% if item.image %}
                         <a href="{{item.href | trim }}" target="_blank">
@@ -218,8 +237,62 @@
 {# footer card macros          #}
 {# --------------------------- #}
 
-{% macro footer_link(data) %}
+{% macro footer_link(data, title="Links") %}
+{% set loc_data = data[locale] %}
+{% set visibility = "" %}
+{% if not data[locale] | length %}
+    {% if data[fallback] | length %}
+        {% set loc_data = data[fallback] %}
+    {% else %}
+        {% set visibility = "hidden" %}
+    {% endif %}
 
+{% endif %}
+
+<div class="container mx-auto flex items-center justify-center pt-8 md:text-3xl text-2xl font-black text-gray-700 bg-white {{visibility}}">
+    {{ title }}
+</div>
+<div class="flex flex-col justify-center items-center space-y-8 mx-8 my-8">
+    {% for item in loc_data %}
+        {% set positioning = "" %}
+        {% set margin_dir = "mr-4" %}
+        {% if loop.index | even %}
+            {% set positioning = "-reverse" %}
+            {% set margin_dir = "ml-4" %}
+        {% endif %}
+        <div class="flex flex-col border-2 rounded-lg px-4 py-4 items-center justify-center">
+            <div class="flex flex-row{{positioning}} ">
+                <a href="{{item.href}}" target="_blank" class="{{margin_dir}} justify-right {{anim_hover_grow(scale='scale-110') }}">
+                    {% if item.type == "research" %}
+                        {{ icon("research", size="large") }}
+                    {% elif item.type == "teaching" %}
+                        {{ icon("teaching", size="large") }}
+                    {% else %}
+                        {{ icon("rss", size="large") }}
+                    {% endif %}
+                </a>
+                <div class="flex flex-col">
+                    <div class="font-bold text-2xl">
+                        {{ item.title }}
+                    </div>
+                    <div class="text-lg max-w-md">
+                        {{ item.short }}
+                        <a href="{{item.href}}" target="_blank" class="underline hover:bg-gray-200 rounded-md">
+                            {{ getTranslation("more") | capitalize }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-2 flex flex-row justify-center flex-wrap max-w-md">
+                {% for tag in item.tags %}
+                    <div class="mt-2 mx-1 px-2 bg-gray-200 rounded-lg text-sm">
+                        {{tag}}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
 {% endmacro %}
 
 {# --------------------------- #}

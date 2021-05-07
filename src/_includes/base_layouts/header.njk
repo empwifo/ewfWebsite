@@ -22,25 +22,25 @@
     </div>
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block" id="nav-content">
         <ul class="list-reset lg:flex lg:justify-start justify-end flex-1 items-center ml-4 mt-2 divide-y divide-gray-300 lg:divide-y-0">
-            <li class="mr-3">
+            <li class="mr-3 {{macros.anim_hover_grow('scale-110')}}">
                 {{ macros.menuItem("home", "", "home") }}
             </li>
-            <li class="mr-3">
+            <li class="mr-3 {{macros.anim_hover_grow('scale-110')}}">
                 {{ macros.menuItem("research", "research", "research") }}
             </li>
-            <li class="mr-3">
+            <li class="mr-3 {{macros.anim_hover_grow('scale-110')}}">
                 {{ macros.menuItem("teaching", "teaching", "teaching") }}
             </li>
-            <li class="mr-3 lg:hidden">
+            <li class="mr-3 lg:hidden {{macros.anim_hover_grow('scale-110')}}">
                 {{ macros.menuItem("contact", "contact", "mail") }}
             </li>
             <li class="lg:hidden">
                 {{macros.getUIelem("language", "language")}}
                 <ul class="list-reset justify-end flex-1 items-center ml-4">
-                    <li class="ml-4 mt-2">
+                    <li class="ml-4 mt-2 {{macros.anim_hover_grow('scale-110')}}">
                         <a href="/de">Deutsch</a>
                     </li>
-                    <li class="ml-4 mt-2">
+                    <li class="ml-4 mt-2 {{macros.anim_hover_grow('scale-110')}}">
                         <a href="/en">English</a>
                     </li>
                 </ul>
@@ -49,7 +49,7 @@
     </div>
     <div class="hidden w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block" id="nav-content">
         <ul class="list-reset lg:flex justify-end flex-1 items-center ml-4 mt-2 divide-y divide-gray-300 lg:divide-y-0">
-            <li class="dropdown relative mr-3">
+            <li class="dropdown relative mr-6 {{macros.anim_hover_grow('scale-110')}}">
                 {{ macros.icon("language") }}
                 <div class="dropdown-menu top-0 absolute left-0 hidden h-auto flex pt-6 mt-4">
                     <ul class="block w-full bg-white text-gray-700 shadow divide-gray-300 divide-y p-b text-xl">
@@ -58,7 +58,7 @@
                     </ul>
                 </div>
             </li>
-            <li>
+            <li class="{{macros.anim_hover_grow('scale-110')}}">
                 {{ macros.menuItem("", "contact", "mail") }}
             </li>
         </ul>

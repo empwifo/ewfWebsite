@@ -48,6 +48,13 @@ module.exports = (config) => {
         }
     })
 
+    config.addFilter("even", function(i){
+        if(i % 2 == 0)
+            return true
+        else
+            return false
+    })
+
     return {
         dir: {
             input: "src",

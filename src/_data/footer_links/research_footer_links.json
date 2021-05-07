@@ -1,0 +1,38 @@
+{
+    "de": [
+        {
+            "type": "research",
+            "href": "",
+            "title": "Test Forschungs Link",
+            "short": "Hier kann eine kurze Zusammenfassung zu dem link geschrieben werden. Das icon zum Link beschreibt das Themengebiet, welches mit den Tags unten verfeinert werden kann. Ein Klick auf mehr führt zum hinterlegten link.",
+            "tags": [
+                "Forschung",
+                "Empirische Wirtschaftsforschung",
+                "EWF"
+            ]
+        },
+        {
+            "type": "teaching",
+            "href": "",
+            "title": "Test Lehre Link",
+            "short": "Hier kann eine kurze Zusammenfassung zu dem link geschrieben werden. Das icon zum Link beschreibt das Themengebiet, welches mit den Tags unten verfeinert werden kann. Ein Klick auf mehr führt zum hinterlegten link.",
+            "tags": [
+                "Lehre",
+                "neues Modul",
+                "Vorlesung"
+            ]
+        },
+        {
+            "type": "other",
+            "href": "",
+            "title": "Test Diverses Link",
+            "short": "Hier kann eine kurze Zusammenfassung zu dem link geschrieben werden. Das icon zum Link beschreibt das Themengebiet, welches mit den Tags unten verfeinert werden kann. Ein Klick auf mehr führt zum hinterlegten link.",
+            "tags": [
+                "anderes",
+                "News",
+                "Was gibt's neues"
+            ]
+        }
+    ],
+    "en": []
+}
