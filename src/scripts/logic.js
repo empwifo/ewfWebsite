@@ -15,6 +15,10 @@ function toggle_class(self, id, tClass, max_num=0, start=2){
   such that it is unique.
   Then on function call all elements (default starting from index 2
   since index one is already visible gets toggled the "hidden" attribute)
+  The toggles of the function (eg. arrow-down, arrow-up)
+  should be children of the element that holds the onClick method
+  that calls this function. The one that should be showed after
+  a click should be "hidden".
   */
 
   if (max_num <= 0){
@@ -26,6 +30,25 @@ function toggle_class(self, id, tClass, max_num=0, start=2){
       element.classList.toggle(String(tClass));
     }
   }
+
+  for (i=0; i<self.children.length; i++){
+    self.children[i].classList.toggle(String(tClass))
+  }
+}
+
+function expand_text(self, id_truncate, id_full, tClass){
+  /*
+  Function to expand/collapse text.
+  The toggles of the function (eg. arrow-down, arrow-up)
+  should be children of the element that holds the onClick method
+  that calls this function. The one that should be showed after
+  a click should be "hidden".
+  */
+  var el_trunc = document.getElementById(id_truncate);
+  var el_full = document.getElementById(id_full);
+
+  el_trunc.classList.toggle(String(tClass))
+  el_full.classList.toggle(String(tClass))
 
   for (i=0; i<self.children.length; i++){
     self.children[i].classList.toggle(String(tClass))

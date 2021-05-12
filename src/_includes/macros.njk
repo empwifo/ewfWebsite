@@ -76,10 +76,10 @@
 
 {% macro menuItem(name, link, icon_type, textClass="") %}
 {% set slug = getSlug(link)  | trim  %}
-<a href="/{{locale}}/{{slug}}" class="block lg:ml-1 lg:inline-block lg:my-0 sm:my-2 text-xl text-teal-lighter md:hover:text-gray-400 lg:mr-4 w-full">
+<a href="/{{locale}}/{{slug}}" class="block lg:ml-1 lg:inline-block lg:my-0 sm:my-3 text-xl text-teal-lighter md:hover:text-gray-400 lg:mr-4 w-full">
     <span class="flex items-center py-2">
         {% if icon_type != "None" %}
-        <div class="mr-1 lg:mr-1">
+        <div class="mr-1 lg:mr-1 w-6">
             {{ icon(icon_type) }}
         </div>
         {% endif %}
@@ -199,9 +199,11 @@
                 </div>
                 <div class="absolute bottom-0 right-0 mr-4 mb-4">
                     {% if item.href %}
-                        <a href="{{item.href | trim }}" target="_blank">
-                            {{ icon("web") }}
-                        </a>
+                        <div class="{{anim_hover_grow()}}">
+                            <a href="{{item.href | trim }}" target="_blank">
+                                {{ icon("web") }}
+                            </a>
+                        </div>
                     {% endif %}
                 </div>
             </div>
@@ -220,10 +222,10 @@
             </a>
         {% endif %}
         {% if number_batch > 1 %}
-            <a class="hidden sm:block rounded-full {{anim_hover_grow('bg-gray-200')}}" onclick="toggle_class(this, 'batch', 'sm:hidden', {{ number_batch }} )">
+            <div class="hidden sm:block rounded-full {{anim_hover_grow('bg-gray-200')}}" onclick="toggle_class(this, 'batch', 'sm:hidden', {{ number_batch }} )">
                 {{ icon("expand_arrow", "rounded-full") }}
                 {{ icon("collapse_arrow", "sm:hidden rounded-full") }}
-            </a>
+            </div>
         {% endif %}
     </div>
 </div>
@@ -252,17 +254,18 @@
 <div class="container mx-auto flex items-center justify-center pt-8 md:text-3xl text-2xl font-black text-gray-700 bg-white {{visibility}}">
     {{ title }}
 </div>
-<div class="flex flex-col justify-center items-center space-y-8 mx-8 my-8">
+{# "max-w-prose" -> use the same width as the prose container, that holds the markdown text #}
+<div class="flex flex-col space-y-4 mx-8 my-8 sm:mx-auto items-center justify-center sm:max-w-prose">
     {% for item in loc_data %}
         {% set positioning = "" %}
         {% set margin_dir = "mr-4" %}
         {% if loop.index | even %}
             {% set positioning = "-reverse" %}
-            {% set margin_dir = "ml-4" %}
+            {% set margin_dir = "mr-4" %}
         {% endif %}
-        <div class="flex flex-col border-2 rounded-lg px-4 py-4 items-center justify-center">
-            <div class="flex flex-row{{positioning}} ">
-                <a href="{{item.href}}" target="_blank" class="{{margin_dir}} justify-right {{anim_hover_grow(scale='scale-110') }}">
+        <div class="flex flex-col border-2 rounded-lg px-4 py-4 justify-center min-w-full">
+            <div class="flex flex-row">
+                <a href="{{item.href}}" target="_blank" class="{{margin_dir}} {{anim_hover_grow(scale='scale-110') }}">
                     {% if item.type == "research" %}
                         {{ icon("research", size="large") }}
                     {% elif item.type == "teaching" %}
@@ -272,18 +275,38 @@
                     {% endif %}
                 </a>
                 <div class="flex flex-col">
-                    <div class="font-bold text-2xl">
-                        {{ item.title }}
+                    <div class="flex flex-row justify-between">
+                        <div class="font-medium text-xl sm:text-2xl">
+                            {{ item.title }}
+                        </div>
+                        <div  class="{{anim_hover_grow() }}">
+                            <a href="{{item.href}}" target="_blank">
+                                {{ icon("web") }}
+                            </a>
+                        </div>
                     </div>
-                    <div class="text-lg max-w-md">
-                        {{ item.short }}
-                        <a href="{{item.href}}" target="_blank" class="underline hover:bg-gray-200 rounded-md">
-                            {{ getTranslation("more") | capitalize }}
-                        </a>
+                    <div class="sm:text-lg max-w-md">
+                        <div class="flex flex-row mt-1">
+                            <div class="mr-2">
+                                <div class="" id="link_truncate_{{loop.index}}">
+                                    {{ item.short | truncate(50) }}
+                                </div>
+                                <div class="hidden" id="link_full_{{loop.index}}">
+                                    {{ item.short }}
+                                </div>
+                            </div>
+                            <div class="flex-none">
+                                <div class="rounded-full {{anim_hover_grow('bg-gray-200')}}" 
+                                    onclick="expand_text(this, 'link_truncate_{{loop.index}}', 'link_full_{{loop.index}}', 'hidden')">
+                                    {{ icon("expand_arrow") }}
+                                    {{ icon("collapse_arrow", "hidden") }}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="mt-2 flex flex-row justify-center flex-wrap max-w-md">
+            <div class="mt-2 flex flex-row justify-center flex-wrap max-w-md mb-2">
                 {% for tag in item.tags %}
                     <div class="mt-2 mx-1 px-2 bg-gray-200 rounded-lg text-sm">
                         {{tag}}

@@ -16,7 +16,11 @@ module.exports = {
                 '1/4': '20%',
                 '1/3': '28%',
                 '1/2': '45%'
-            }
+            },
+            transitionProperty: {
+                'height': 'height',
+                'spacing': 'margin, padding',
+               }
         },
     },
     variants : {
