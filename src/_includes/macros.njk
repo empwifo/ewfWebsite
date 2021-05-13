@@ -169,22 +169,32 @@
     {% endif %}
 {% endif %}
 
+{% set batch_size = defaults.header_settings.init_show %}
+{% if data.settings.init_show %}
+    {% set batch_size = data.settings.init_show %}
+{% endif %}
+
 {% set number_grid = loc_data | length %}
-{% set number_batch = loc_data | batch(3) | length %}
+{% set number_batch = loc_data | batch(batch_size) | length %}
 <div class="sm:flex sm:flex-col mt-{{margin_top}}">
 {% set hidden_class_b = "" %}
 {% set hidden_class_i = "" %}
 {% set item_index = 0 %}
-{% for batch_items in loc_data | batch(3) %}
-    <div class="flex flex-col sm:flex-row sm:space-x-4 sm:space-y-0 space-y-4 my-2 xl:mx-60 lg:mx-28 md:mx-12 mx-10 overflow-x-auto relative sm:{{hidden_class_b}}" id="batch-{{loop.index}}">
+{% for batch_items in loc_data | batch(batch_size) %}
+    <div class="flex flex-col justify-center sm:flex-row sm:space-x-4 sm:space-y-0 space-y-4 my-2 xl:mx-60 
+                lg:mx-28 md:mx-12 mx-10 overflow-x-auto relative sm:{{hidden_class_b}} sm:px-10" id="batch-{{loop.index}}">
         {% for item in batch_items %}
             {% set item_index = item_index + 1 %}
-            <div class="rounded-md border-2 pt-2 min-w-full {{hidden_class_i}} sm:block min-h-full sm:min-w-1/{{batch_items | length}} sm:px-5 relative" id="card-{{item_index}}">
+            {% set min_w_css = "min-w-1/" + batch_items | length %}
+            {% if batch_items | length == 1 %}
+                {% set min_w_css = "" %}
+            {% endif %}
+            <div class="rounded-md border-2 pt-2 {{hidden_class_i}} sm:block min-h-full sm:{{min_w_css}} sm:max-w-1/2 sm:px-5 relative" id="card-{{item_index}}">
                 <div class="flex justify-center mt-3">
                     {% if item.image %}
                         <a href="{{item.href | trim }}" target="_blank">
                             {% if item.href %}        
-                                <img src="{{item.image}}" class="object-scale-down h-12 {{anim_hover_grow(scale='scale-110') }}">
+                                <img src="{{item.image}}" class="object-scale-down h-10 {{anim_hover_grow(scale='scale-110') }}">
                             {% endif %}
                         </a>
                     {% endif %}
@@ -236,7 +246,7 @@
 
 
 {# --------------------------- #}
-{# footer card macros          #}
+{# footer link card macros          #}
 {# --------------------------- #}
 
 {% macro footer_link(data, title="Links") %}

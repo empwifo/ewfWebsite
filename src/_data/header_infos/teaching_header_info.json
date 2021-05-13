@@ -1,4 +1,7 @@
 {
     "de": [],
-    "en": []
+    "en": [],
+    "settings": {
+        "init_show": 3
+    }
 }
