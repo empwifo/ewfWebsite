@@ -10,7 +10,7 @@
 {% elif size == "medium" %}
     {% set size_class = "md:h-60 md:float-right md:ml-8" %}
 {% endif %}
-<img class="rounded-md {{size_class}}" src="{{src}}" alt="{{alt}}">
+<img class="rounded-md {{size_class}}" src="{{src | correct_src_link}}" alt="{{alt}}">
 {% endmacro %}
 
 {% macro getUIelem(slug, icon_type, textClass="") %}

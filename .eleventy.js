@@ -29,6 +29,13 @@ module.exports = (config) => {
         return image
     });
 
+    config.addFilter("correct_src_link", function(src) {
+        if (!String(src).startsWith("/"))
+            return "/" + String(src)
+        else
+            return src
+    })
+
     config.addNunjucksShortcode("markdown", content => {
         return `
         <div class="container mx-auto flex items-center justify-center mb-8 pt-6">
