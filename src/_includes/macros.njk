@@ -176,20 +176,20 @@
 
 {% set number_grid = loc_data | length %}
 {% set number_batch = loc_data | batch(batch_size) | length %}
-<div class="sm:flex sm:flex-col mt-{{margin_top}} expand-trans">
-{% set hidden_class_b = "" %}
-{% set hidden_class_i = "" %}
+<div class="sm:flex sm:flex-col mt-{{margin_top}}">
+{% set invisible_b = "" %}
+{% set invisible_i = "" %}
+
 {% set item_index = 0 %}
 {% for batch_items in loc_data | batch(batch_size) %}
-    <div class="flex flex-col justify-center sm:flex-row sm:space-x-4 sm:space-y-0 space-y-4 my-2 xl:mx-60 
-                lg:mx-28 md:mx-12 mx-10 overflow-x-auto relative sm:{{hidden_class_b}} sm:px-10" id="batch-{{loop.index}}">
+    <div class="header-card-batch-style sm:{{invisible_b}}" id="header-batch-{{loop.index}}">
         {% for item in batch_items %}
             {% set item_index = item_index + 1 %}
             {% set min_w_css = "min-w-1/" + batch_items | length %}
             {% if batch_items | length == 1 %}
                 {% set min_w_css = "" %}
             {% endif %}
-            <div class="rounded-md border-2 pt-2 {{hidden_class_i}} sm:block min-h-full sm:{{min_w_css}} sm:max-w-1/2 sm:px-5 relative" id="card-{{item_index}}">
+            <div class="header-card-item-style sm:visible {{invisible_i}} sm:{{min_w_css}}" id="header-card-{{item_index}}">
                 <div class="flex justify-center mt-3">
                     {% if item.image %}
                         <a href="{{item.href | trim }}" target="_blank">
@@ -217,22 +217,22 @@
                     {% endif %}
                 </div>
             </div>
-            {% set hidden_class_i = "hidden" %}
+            {% set invisible_i = "hidden" %}
         {% endfor %}
     </div>
-    {% set hidden_class_b="hidden" %}
+    {% set invisible_b = "hidden" %}
 {% endfor %}
 </div>
 <div class="items-center justify-center flex-col mt-2">
     <div class="flex justify-center items-center">
         {% if number_grid > 1 %}
-            <a class="sm:hidden rounded-full {{anim_hover_grow('bg-gray-200')}}" onclick="toggle_class(this, 'card', 'hidden', {{ number_grid }} )">
+            <a class="sm:hidden rounded-full {{anim_hover_grow('bg-gray-200')}}" id="header-btn-mbl">
                 {{ icon("expand_arrow", "rounded-full") }}
                 {{ icon("collapse_arrow", "hidden rounded-full") }}
             </a>
         {% endif %}
         {% if number_batch > 1 %}
-            <div class="hidden sm:block rounded-full {{anim_hover_grow('bg-gray-200')}}" onclick="toggle_class(this, 'batch', 'sm:hidden', {{ number_batch }} )">
+            <div class="hidden sm:block rounded-full {{anim_hover_grow('bg-gray-200')}}" id="header-btn-dsk">
                 {{ icon("expand_arrow", "rounded-full") }}
                 {{ icon("collapse_arrow", "sm:hidden rounded-full") }}
             </div>
@@ -298,16 +298,15 @@
                     <div class="sm:text-lg max-w-md">
                         <div class="flex flex-row mt-1">
                             <div class="mr-2">
-                                <div class="collapse overflow-y-hidden" id="link_full_{{loop.index}}">
+                                <div class="collapseText overflow-y-hidden" id="full_link_{{loop.index}}">
                                     {{ item.short }}
                                 </div>
-                                <div class="" id="link_truncate_{{loop.index}}">
+                                <div class="placeholder" id="truncate_link_{{loop.index}}">
                                     ...
                                 </div>
                             </div>
                             <div class="flex-none">
-                                <div class="rounded-full {{anim_hover_grow('bg-gray-200')}}" 
-                                    onclick="expand_text(this, 'link_truncate_{{loop.index}}', 'link_full_{{loop.index}}')">
+                                <div class="rounded-full {{anim_hover_grow('bg-gray-200')}} expandLink" id="link_{{loop.index}}">
                                     {{ icon("expand_arrow") }}
                                     {{ icon("collapse_arrow", "hidden") }}
                                 </div>
