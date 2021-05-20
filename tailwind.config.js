@@ -27,12 +27,12 @@ module.exports = {
                 '1/1': '100%'
             },
             transitionProperty: {
-                'height': 'height',
-                'spacing': 'margin, padding',
+                'height': 'height'
                }
         },
     },
     variants : {
+        transitionProperty: ['responsive', 'motion-safe', 'motion-reduce'],
         extend: {}
     },
     plugins: [require("@tailwindcss/typography")],

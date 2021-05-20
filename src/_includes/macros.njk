@@ -176,7 +176,7 @@
 
 {% set number_grid = loc_data | length %}
 {% set number_batch = loc_data | batch(batch_size) | length %}
-<div class="sm:flex sm:flex-col mt-{{margin_top}}">
+<div class="sm:flex sm:flex-col mt-{{margin_top}} expand-trans">
 {% set hidden_class_b = "" %}
 {% set hidden_class_i = "" %}
 {% set item_index = 0 %}
@@ -298,16 +298,16 @@
                     <div class="sm:text-lg max-w-md">
                         <div class="flex flex-row mt-1">
                             <div class="mr-2">
-                                <div class="" id="link_truncate_{{loop.index}}">
-                                    {{ item.short | truncate(50) }}
-                                </div>
-                                <div class="hidden" id="link_full_{{loop.index}}">
+                                <div class="collapse overflow-y-hidden" id="link_full_{{loop.index}}">
                                     {{ item.short }}
+                                </div>
+                                <div class="" id="link_truncate_{{loop.index}}">
+                                    ...
                                 </div>
                             </div>
                             <div class="flex-none">
                                 <div class="rounded-full {{anim_hover_grow('bg-gray-200')}}" 
-                                    onclick="expand_text(this, 'link_truncate_{{loop.index}}', 'link_full_{{loop.index}}', 'hidden')">
+                                    onclick="expand_text(this, 'link_truncate_{{loop.index}}', 'link_full_{{loop.index}}')">
                                     {{ icon("expand_arrow") }}
                                     {{ icon("collapse_arrow", "hidden") }}
                                 </div>

@@ -20,9 +20,8 @@
             </button>
         </div>
     </div>
-    <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block relative" id="nav-content">
-        <ul class="lg:flex-row lg:flex divide-y divide-gray-300 lg:divide-y-0 absolute lg:relative bg-white px-4 z-20 
-                    lg:w-min min-w-full w-screen mt-4 lg:mt-0 lg:pb-0 pb-4 rounded-xl shadow-sm lg:shadow-none">
+    <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block relative">
+        <ul class="menu-list-style menu-fadeOut" id="nav-content">
             <li class="mr-3">
                 <div class="{{macros.anim_hover_grow('scale-110')}} w-min">
                     {{ macros.menuItem("home", "", "home") }}
@@ -79,6 +78,7 @@
 </nav>
 <script>
     document.getElementById("nav-toggle").onclick = function () {
-        document.getElementById("nav-content").classList.toggle("hidden");
+        document.getElementById("nav-content").classList.toggle("menu-fadeIn");
+        document.getElementById("nav-content").classList.toggle("menu-fadeOut");
     };
 </script>

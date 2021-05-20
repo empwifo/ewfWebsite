@@ -5,3 +5,28 @@
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+
+.menu-list-style {
+  @apply lg:flex-row lg:flex divide-y divide-gray-300 lg:divide-y-0 absolute lg:relative bg-white px-4 z-20 lg:visible lg:w-min min-w-full w-screen mt-4 lg:mt-0 lg:pb-0 pb-4 rounded-xl shadow-sm lg:shadow-none opacity-0;
+}
+
+.menu-fadeIn {
+  @apply transition-opacity duration-300 ease-in-out;
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu-fadeOut {
+  @apply transition-opacity duration-300 ease-in-out;
+  opacity: 0;
+}
+
+.expand {
+  @apply motion-reduce:transition-height duration-200 ease-in-out;
+  @apply h-full;
+}
+
+.collapse {
+  @apply motion-reduce:transition-height duration-200 ease-in-out;
+  @apply h-6;
+}

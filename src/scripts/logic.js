@@ -23,20 +23,20 @@ function toggle_class(self, id, tClass, max_num=0, start=2){
 
   if (max_num <= 0){
     var element = document.getElementById(id)
-    element.classList.toggle(String(tClass))
+    element.classList.toggle(String(tClass))  
   }else{
     for (i=start; i<= max_num; i++){
       var element = document.getElementById(id+`-${i}`);
-      element.classList.toggle(String(tClass));
+      element.classList.toggle(String(tClass))  
     }
   }
 
   for (i=0; i<self.children.length; i++){
-    self.children[i].classList.toggle(String(tClass))
+    self.children[i].classList.toggle(String("hidden"))
   }
 }
 
-function expand_text(self, id_truncate, id_full, tClass){
+function expand_text(self, id_truncate, id_full){
   /*
   Function to expand/collapse text.
   The toggles of the function (eg. arrow-down, arrow-up)
@@ -45,12 +45,13 @@ function expand_text(self, id_truncate, id_full, tClass){
   a click should be "hidden".
   */
   var el_trunc = document.getElementById(id_truncate);
-  var el_full = document.getElementById(id_full);
+  el_trunc.classList.toggle("hidden")
 
-  el_trunc.classList.toggle(String(tClass))
-  el_full.classList.toggle(String(tClass))
+  var el_full = document.getElementById(id_full);
+  el_full.classList.toggle("collapse")
+  el_full.classList.toggle("expand")
 
   for (i=0; i<self.children.length; i++){
-    self.children[i].classList.toggle(String(tClass))
+    self.children[i].classList.toggle("hidden")
   }
 }
