@@ -32,26 +32,47 @@ function toggle_class(self, id, tClass, max_num=0, start=2){
   }
 
   for (i=0; i<self.children.length; i++){
-    self.children[i].classList.toggle(String("hidden"))
+    self.children[i].classList.toggle(String(tClass))
   }
 }
 
-function expand_text(self, id_truncate, id_full){
-  /*
-  Function to expand/collapse text.
-  The toggles of the function (eg. arrow-down, arrow-up)
-  should be children of the element that holds the onClick method
-  that calls this function. The one that should be showed after
-  a click should be "hidden".
-  */
-  var el_trunc = document.getElementById(id_truncate);
-  el_trunc.classList.toggle("hidden")
-
-  var el_full = document.getElementById(id_full);
-  el_full.classList.toggle("collapse")
-  el_full.classList.toggle("expand")
-
-  for (i=0; i<self.children.length; i++){
-    self.children[i].classList.toggle("hidden")
+function expand_header(id, size="", num=0){
+  if (num <= 0){
+    var element = document.getElementById(id)
+    expand_header_class_toggle(element);
+  }else{
+    for (i=2; i<= num; i++){
+      var element = document.getElementById(id+`-${i}`);
+      expand_header_class_toggle(element, size);
+    }
   }
 }
+
+function expand_header_class_toggle(element, size){
+  element.classList.toggle(size+"hidden");
+}
+
+$(document).ready(function(){
+
+  $("#header-btn-dsk").click(function(){
+    var all_header_batches = $(".header-card-batch-style");
+    expand_header("header-batch", "sm:", all_header_batches.length)
+    $(this).children().toggle("hidden");
+  });
+
+  $("#header-btn-mbl").click(function(){
+    var all_header_batches = $(".header-card-item-style");
+    expand_header("header-card", "", all_header_batches.length)
+    $(this).children().toggle("hidden");
+  });
+
+  $(".expandLink").click(function(){
+    var id = $(this).attr("id")    
+    $("#truncate_"+id).toggleClass("hidden");
+    $("#full_"+id).toggleClass("collapseText");
+    $("#full_"+id).toggleClass("expandText");
+    
+    $(this).children().toggleClass("hidden");
+  })
+
+});

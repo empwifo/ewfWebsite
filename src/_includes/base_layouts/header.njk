@@ -1,6 +1,6 @@
 <nav class="flex items-center justify-between flex-wrap border-b bg-teal z-10 py-6 lg:fixed w-full bg-white">
     <div class="flex lg:flex-row justify-between w-full lg:w-auto pl-6">
-        <div class="flex items-center mr-6 ">
+        <div class="flex items-center mr-6 {{macros.anim_hover_grow(scale='scale-110')}}">
             <a href="/{{locale}}">
                 <div class="flex flex-row">
                     <img src="/assets/images/logos/ewflogo.png" class="h-12 w-12 object-scale-down m-auto mr-4">
@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block relative">
-        <ul class="menu-list-style menu-fadeOut" id="nav-content">
+        <ul class="menu-list-style lg:visible menu-fadeOut" id="nav-content">
             <li class="mr-3">
                 <div class="{{macros.anim_hover_grow('scale-110')}} w-min">
                     {{ macros.menuItem("home", "", "home") }}
