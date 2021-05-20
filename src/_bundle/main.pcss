@@ -7,7 +7,15 @@
 }
 
 .menu-list-style {
-  @apply lg:flex-row lg:flex divide-y divide-gray-300 lg:divide-y-0 absolute lg:relative bg-white px-4 z-20 lg:visible lg:w-min min-w-full w-screen mt-4 lg:mt-0 lg:pb-0 pb-4 rounded-xl shadow-sm lg:shadow-none opacity-0;
+  @apply lg:flex-row lg:flex divide-y divide-gray-300 lg:divide-y-0 absolute bg-white px-4 z-20 lg:visible lg:relative lg:w-min min-w-full w-screen mt-4 lg:mt-0 lg:pb-0 pb-4 rounded-xl shadow-sm lg:shadow-none opacity-0 lg:opacity-100;
+}
+
+.header-card-batch-style {
+  @apply flex flex-col justify-center sm:flex-row sm:space-x-4 sm:space-y-0 space-y-4 my-2 xl:mx-60 lg:mx-28 md:mx-12 mx-10 overflow-x-auto relative sm:px-10;
+}
+
+.header-card-item-style {
+  @apply rounded-md border-2 pt-2 sm:block min-h-full sm:max-w-1/2 sm:px-5 relative;
 }
 
 .menu-fadeIn {
@@ -18,15 +26,25 @@
 
 .menu-fadeOut {
   @apply transition-opacity duration-300 ease-in-out;
-  opacity: 0;
+  visibility: hidden;
 }
 
-.expand {
+.expandText {
   @apply motion-reduce:transition-height duration-200 ease-in-out;
   @apply h-full;
 }
 
-.collapse {
+.collapseText {
   @apply motion-reduce:transition-height duration-200 ease-in-out;
   @apply h-6;
+}
+
+.expandHeader {
+  @apply motion-reduce:transition-height duration-1000 ease-in-out;
+  @apply sm:h-full;
+}
+
+.collapseHeader {
+  @apply motion-reduce:transition-height duration-1000 ease-in-out;
+  @apply sm:h-0;
 }
