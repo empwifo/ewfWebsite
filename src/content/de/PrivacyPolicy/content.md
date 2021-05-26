@@ -70,11 +70,11 @@ Widerspruchsrecht - Ansprechpartner
 
 * * *
 
-## Änderung unserer Datenschutz-bestimmungen
+## Änderung unserer Datenschutzbestimmungen
 
 Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z.B. bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.
 
-## Fragen an den Datenschutz-beauftragten
+## Fragen an den Datenschutzbeauftragten
 
 Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an die für den Datenschutz verantwortliche Person in unserer Organisation:
 

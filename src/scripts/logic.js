@@ -52,6 +52,14 @@ function expand_header_class_toggle(element, size){
   element.classList.toggle(size+"hidden");
 }
 
+function randomQuote () {
+  var random_quote = quotes[Math.floor(Math.random() * quotes.length)]; 
+  var $rand = $('div#randomQuote');
+  $rand.append(random_quote);
+  $rand.hide();
+  $rand.fadeIn("500");
+}
+
 $(document).ready(function(){
 
   $("#header-btn-dsk").click(function(){
@@ -74,5 +82,7 @@ $(document).ready(function(){
     
     $(this).children().toggleClass("hidden");
   })
+
+  $("")
 
 });
