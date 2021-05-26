@@ -1,23 +1,23 @@
 Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:
 
-[Verantwortlicher]
+Verantwortlicher
 
 ## Ihre Betroffenenrechte
 
 Unter den angegebenen Kontaktdaten unseres Datenschutzbeauftragten können Sie jederzeit folgende Rechte ausüben:
 
-*   Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung (Art. 15 DSGVO),
-*   Berichtigung unrichtiger personenbezogener Daten (Art. 16 DSGVO),
-*   Löschung Ihrer bei uns gespeicherten Daten (Art. 17 DSGVO),
-*   Einschränkung der Datenverarbeitung, sofern wir Ihre Daten aufgrund gesetzlicher Pflichten noch nicht löschen dürfen (Art. 18 DSGVO),
-*   Widerspruch gegen die Verarbeitung Ihrer Daten bei uns (Art. 21 DSGVO) und
-*   Datenübertragbarkeit, sofern Sie in die Datenverarbeitung eingewilligt haben oder einen Vertrag mit uns abgeschlossen haben (Art. 20 DSGVO).
+* Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung (Art. 15 DSGVO),
+* Berichtigung unrichtiger personenbezogener Daten (Art. 16 DSGVO),
+* Löschung Ihrer bei uns gespeicherten Daten (Art. 17 DSGVO),
+* Einschränkung der Datenverarbeitung, sofern wir Ihre Daten aufgrund gesetzlicher Pflichten noch nicht löschen dürfen (Art. 18 DSGVO),
+* Widerspruch gegen die Verarbeitung Ihrer Daten bei uns (Art. 21 DSGVO) und
+* Datenübertragbarkeit, sofern Sie in die Datenverarbeitung eingewilligt haben oder einen Vertrag mit uns abgeschlossen haben (Art. 20 DSGVO).
 
 Sofern Sie uns eine Einwilligung erteilt haben, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen.
 
 Sie können sich jederzeit mit einer Beschwerde an eine Aufsichtsbehörde wenden, z. B. an die zuständige Aufsichtsbehörde des Bundeslands Ihres Wohnsitzes oder an die für uns als verantwortliche Stelle zuständige Behörde.
 
-Eine Liste der Aufsichtsbehörden (für den nichtöffentlichen Bereich) mit Anschrift finden Sie unter: [https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html](https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html).
+Eine Liste der Aufsichtsbehörden (für den nichtöffentlichen Bereich) mit Anschrift finden Sie unter dem folgenden [Link]([Link](https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html)).
 
 ## Erfassung allgemeiner Informationen beim Besuch unserer Website
 
@@ -27,10 +27,10 @@ Wenn Sie auf unsere Website zugreifen, d.h., wenn Sie sich nicht registrieren od
 
 Sie werden insbesondere zu folgenden Zwecken verarbeitet:
 
-*   Sicherstellung eines problemlosen Verbindungsaufbaus der Website,
-*   Sicherstellung einer reibungslosen Nutzung unserer Website,
-*   Auswertung der Systemsicherheit und -stabilität sowie
-*   zur Optimierung unserer Website.
+* Sicherstellung eines problemlosen Verbindungsaufbaus der Website,
+* Sicherstellung einer reibungslosen Nutzung unserer Website,
+* Auswertung der Systemsicherheit und -stabilität sowie
+* zur Optimierung unserer Website.
 
 Wir verwenden Ihre Daten nicht, um Rückschlüsse auf Ihre Person zu ziehen. Informationen dieser Art werden von uns ggfs. anonymisiert statistisch ausgewertet, um unseren Internetauftritt und die dahinterstehende Technik zu optimieren.
 
@@ -66,16 +66,16 @@ Legen Sie Widerspruch ein, werden wir Ihre personenbezogenen Daten nicht mehr ve
 
 ### Empfänger eines Widerspruchs
 
-[Widerspruchsrecht - Ansprechpartner]
+Widerspruchsrecht - Ansprechpartner
 
 * * *
 
-## Änderung unserer Datenschutzbestimmungen
+## Änderung unserer Datenschutz-bestimmungen
 
 Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z.B. bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.
 
-## Fragen an den Datenschutzbeauftragten
+## Fragen an den Datenschutz-beauftragten
 
 Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an die für den Datenschutz verantwortliche Person in unserer Organisation:
 
-[Kontakt-Datenschutzbeauftragter]
+Kontakt-Datenschutzbeauftragter
