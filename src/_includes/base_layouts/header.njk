@@ -1,10 +1,10 @@
 <nav class="flex items-center justify-between flex-wrap border-b bg-teal z-10 py-6 lg:fixed w-full bg-white">
     <div class="flex lg:flex-row justify-between w-full lg:w-auto pl-6">
-        <div class="flex items-center mr-6 {{macros.anim_hover_grow(scale='scale-110')}}">
+        <div class="flex items-center mr-6 {{macros.anim_hover_grow(scale='scale-110')}} overflow-y-hidden">
             <a href="/{{locale}}">
                 <div class="flex flex-row">
                     <img src="/assets/images/logos/ewflogo.png" class="h-12 w-12 object-scale-down m-auto mr-4">
-                    <div class="font-semibold md:text-l sm:text-m overflow-ellipsis tracking-tight">
+                    <div class="font-semibold text-base md:text-lg sm:text-sm overflow-ellipsis tracking-tight">
                         {{ macros.getTranslation("title") | trim | replace(" ", "<br>")}}
                     </div>
                 </div>

@@ -1,8 +1,6 @@
 function topFunction() {
-  var mainContainer = document.getElementById("mainContainer");
-  mainContainer.scrollTop = 0;
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  var body = $("html, body");
+  body.stop().animate({scrollTop:0}, 500, 'swing');
 }
 
 function toggle_class(self, id, tClass, max_num=0, start=2){
@@ -49,15 +47,22 @@ function expand_header(id, size="", num=0){
 }
 
 function expand_header_class_toggle(element, size){
-  element.classList.toggle(size+"hidden");
-}
-
-function randomQuote () {
-  var random_quote = quotes[Math.floor(Math.random() * quotes.length)]; 
-  var $rand = $('div#randomQuote');
-  $rand.append(random_quote);
-  $rand.hide();
-  $rand.fadeIn("500");
+  if ($(element).hasClass(size+"hidden")){
+    element.classList.toggle(size+"hidden");
+    $(element).height(0)
+    $(element).animate({
+      height: $(element).get(0).scrollHeight
+    }, 200, function(){
+      $(this).height("auto")
+    });
+  }else {
+    $(element).animate({
+      height: 0
+    }, 200, function(){
+      element.classList.toggle(size+"hidden");
+      $(this).height("auto")
+    });
+  }
 }
 
 $(document).ready(function(){
@@ -69,8 +74,8 @@ $(document).ready(function(){
   });
 
   $("#header-btn-mbl").click(function(){
-    var all_header_batches = $(".header-card-item-style");
-    expand_header("header-card", "", all_header_batches.length)
+    var all_header_items = $(".header-card-item-style");
+    expand_header("header-card", "", all_header_items.length)
     $(this).children().toggle("hidden");
   });
 
@@ -83,6 +88,15 @@ $(document).ready(function(){
     $(this).children().toggleClass("hidden");
   })
 
-  $("")
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 20 && !$("#button_up_dsk").hasClass("sm:block")){
+      $("#button_up_dsk").addClass("sm:block")
+      $("#button_up_dsk").css({opacity: 0}).animate({opacity: 1.0}, 500);
+    }else if($(document).scrollTop() == 0){
+      $("#button_up_dsk").css({opacity: 1.0}).animate({opacity: 0}, 500, function(){
+        $("#button_up_dsk").removeClass("sm:block")
+      });
+    }
+  })
 
 });

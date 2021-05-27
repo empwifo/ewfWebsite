@@ -1,5 +1,8 @@
-[
-    "/assets/images/banner/banner_1.jpg",
-    "/assets/images/banner/banner_2.jpg",
-    "/assets/images/banner/banner_3.jpg"
-]
+{
+    "home": "/assets/images/banner/banner_home.jpg",
+    "research": "/assets/images/banner/banner_research.jpg",
+    "teaching": "/assets/images/banner/banner_teaching.jpg",
+    "imprint": "/assets/images/banner/banner_fallback.jpg",
+    "contact": "/assets/images/banner/banner_fallback.jpg",
+    "privacypolicy": "/assets/images/banner/banner_fallback.jpg"
+}

@@ -7,8 +7,7 @@ module.exports = {
     entry: "./src/_bundle/main.js",
     mode: "production",
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.pcss$/i,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
             }
@@ -16,12 +15,12 @@ module.exports = {
     },
     optimization: {
         minimizer: [
-          // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
-          // `...`,
-          new CssMinimizerPlugin(),
+            // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+            // `...`,
+            new CssMinimizerPlugin(),
         ],
     },
-    output:{
+    output: {
         path: path.resolve(__dirname, "dist", "assets"),
         filename: "main.bundle.js"
     },

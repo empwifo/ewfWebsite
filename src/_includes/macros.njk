@@ -266,16 +266,10 @@
 </div>
 {# "max-w-prose" -> use the same width as the prose container, that holds the markdown text #}
 <div class="flex flex-col space-y-4 mx-8 my-8 sm:mx-auto items-center justify-center sm:max-w-prose">
-    {% for item in loc_data %}
-        {% set positioning = "" %}
-        {% set margin_dir = "mr-4" %}
-        {% if loop.index | even %}
-            {% set positioning = "-reverse" %}
-            {% set margin_dir = "mr-4" %}
-        {% endif %}
+    {% for item in loc_data %}    
         <div class="flex flex-col border-2 rounded-lg px-4 py-4 justify-center min-w-full">
             <div class="flex flex-row">
-                <a href="{{item.href}}" target="_blank" class="{{margin_dir}} {{anim_hover_grow(scale='scale-110') }}">
+                <a href="{{item.href}}" target="_blank" class="mr-4 {{anim_hover_grow(scale='scale-110') }}">
                     {% if item.type == "research" %}
                         {{ icon("research", size="large") }}
                     {% elif item.type == "teaching" %}
@@ -286,7 +280,7 @@
                 </a>
                 <div class="flex flex-col">
                     <div class="flex flex-row justify-between">
-                        <div class="font-medium text-xl sm:text-2xl">
+                        <div class="font-medium text-lg sm:text-xl">
                             {{ item.title }}
                         </div>
                         <div  class="{{anim_hover_grow() }}">
@@ -295,7 +289,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="sm:text-lg max-w-md">
+                    <div class="text-base sm:text-lg max-w-md">
                         <div class="flex flex-row mt-1">
                             <div class="mr-2">
                                 <div class="collapseText overflow-y-hidden" id="full_link_{{loop.index}}">

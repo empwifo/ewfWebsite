@@ -1,21 +1,24 @@
 <footer class="text-gray-700 bg-white border-t body-font">
     <div>
-      <div class="container flex flex-col flex-wrap px-5 py-6 lg:px-20 sm:flex-row">
-        <span class="inline-flex justify-center mb-2 sm:ml-auto sm:mt-0 sm:justify-start">
+      <div class="container flex flex-col justify-center flex-wrap px-5 py-6 lg:px-20 sm:flex-row">
+        <span class="flex flex-col justify-center mb-2 sm:mt-0 sm:mx-10">
           <p class="text-sm text-center text-gray-400">
             <a href="/{{locale}}/{{ macros.getSlug('imprint') | trim}}">{{macros.getTranslation("imprint")}}</a>
           </p>
-        </span>
-        <span class="inline-flex justify-center mb-2 sm:ml-auto sm:mt-0 sm:justify-start">
           <p class="text-sm text-center text-gray-400">
             <a href='/{{locale}}/{{ macros.getSlug("privacypolicy") | trim }}'>{{macros.getTranslation("privacypolicy")}}</a>
           </p>
         </span>
-        <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-end">
+        <span class="inline-flex justify-center mb-2 sm:mt-0  sm:mx-10">
+          <a href="https://www.uaruhr.de/", target="_blank">
+            <img src="/assets/images/logos/uaruhrlogo.png" width="100">
+          </a>
+        </span>
+        <div class="sm:hidden flex justify-center mt-4" id="button_up_mbl">
           <button class="bg-gray-300 hover:bg-gray-400 py-2 px-2 rounded-full focus:outline-none" id="topButton" onclick="topFunction()">
             <img src="/assets/ui/arrow_up.svg" width="15" height="15">
           </button>
-        </span>
+        </div>
       </div>
     </div>
   </footer>

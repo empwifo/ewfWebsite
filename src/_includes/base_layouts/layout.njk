@@ -15,16 +15,22 @@
 </head>
 
 <body>
-    <div class="flex flex-col h-screen justify-between">
+    <div class="flex flex-col justify-between">
         <main class="flex-initial md:overflow-y-auto" id="mainContainer">
             {% include 'base_layouts/header.njk' %}
-            <div>
-                <div class="bg-top bg-cover bg-no-repeat bg-fixed overflow-auto md:h-headerxl sm:h-headersm h-headermb" style="background-image: url('{{ banner_images | makeBannerBackground  | correct_src_link}}');"></div>
+            <div id="mainpage">
+                <div class="bg-top bg-cover bg-no-repeat bg-fixed overflow-auto md:h-headerxl sm:h-headersm h-headermb" 
+                style="background-image: url('{{ banner_images[title] | correct_src_link}}');"></div>
                     
                 {{ content | safe }}
             </div>
             {% include 'base_layouts/footer.njk' %}
         </main>
+    </div>
+    <div id="button_up_dsk" class="hidden fixed bottom-8 right-10 z-50">
+        <button class="bg-blue-300 hover:bg-blue-400 ring-4 ring-blue-200 py-2 px-2 rounded-full focus:outline-none" id="topButton" onclick="topFunction()">
+            <img src="/assets/ui/arrow_up.svg" width="25" height="25">
+        </button>
     </div>
 </body>
 </html>
