@@ -36,8 +36,5 @@ module.exports = {
         extend: {}
     },
     plugins: [require("@tailwindcss/typography")],
-    purge: {
-        enabled: true,
-        content: ["./dist/**/*.html"]
-    }
+    purge: ["./dist/**/*.html"]
 };
