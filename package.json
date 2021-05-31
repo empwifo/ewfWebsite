@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production npm-run-all clean -p build:*",
+    "build": "npm-run-all clean -p build:*",
     "build:eleventy": "eleventy",
     "build:webpack": "webpack",
     "clean": "rm -rf dist",
@@ -32,6 +32,7 @@
     "webpack-cli": "^4.6.0"
   },
   "devDependencies": {
-    "css-minimizer-webpack-plugin": "^3.0.0"
+    "css-minimizer-webpack-plugin": "^3.0.0",
+    "image-webpack-loader": "^7.0.1"
   }
 }

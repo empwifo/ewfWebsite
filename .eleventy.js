@@ -1,8 +1,7 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it")
+const fs = require('fs')
 let Nunjucks = require('nunjucks')
-require('dotenv').config()
-
 
 module.exports = (config) => {    
     config.addPlugin(syntaxHighlight);
@@ -18,24 +17,28 @@ module.exports = (config) => {
         open: false
     });
     config.setDataDeepMerge(true);
-    config.addFilter("log", value => {
-        console.log(value);
-    })
-
     const md = new markdownIt({
         html: true
     });
 
-    config.addFilter("makeBannerBackground", function(banner){
-        var image = banner[Math.floor(Math.random() * banner.length)];
-        return image
-    });
+    config.addFilter("log", value => {
+        console.log(value);
+    })    
 
     config.addFilter("correct_src_link", function(src) {
         if (!String(src).startsWith("/"))
             return "/" + String(src)
         else
             return src
+    })
+
+    config.addFilter("inlineSVG", function(src){
+        let data = fs.readFileSync("src/" + src, function(err, contents) {  
+            if (err) return err  
+            return contents  
+        });
+
+        return data.toString('utf8')
     })
 
     config.addNunjucksShortcode("markdown", content => {
@@ -49,20 +52,6 @@ module.exports = (config) => {
         </div>
         `
     });
-
-    config.addFilter("extendTrim", function(str_arr){
-        console.log(str_arr.val);
-        for (let index = 0; index < str_arr.length; index++) {
-            //console.log(str_arr.val[index])
-        }
-    })
-
-    config.addFilter("even", function(i){
-        if(i % 2 == 0)
-            return true
-        else
-            return false
-    })
 
     return {
         dir: {

@@ -49,6 +49,8 @@
         {% set icon = "/assets/ui/right_arrow.svg" %}
     {% elif type == "expand_arrow" %}
         {% set icon = "/assets/ui/expand_arrow.svg" %}
+    {% elif type == "arrow_up" %}
+        {% set icon = "/assets/ui/arrow_up.svg" %}
     {% elif type == "collapse_arrow" %}
         {% set icon = "/assets/ui/collapse_arrow.svg" %}
     {% elif type == "rss" %}
@@ -63,7 +65,9 @@
 {% elif size == "large" %}
     {% set size_ind = "20" %}
 {% endif %}
-<img src={{icon}} class="h-{{size_ind}} w-{{size_ind}} {{classes}}">
+<div class="h-{{size_ind}} w-{{size_ind}} {{classes}}">
+    {#{icon | inlineSVG | safe }#}
+</div>
 {% endmacro %}
 
 {# --------------------------- #}
