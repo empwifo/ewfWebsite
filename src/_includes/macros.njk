@@ -10,7 +10,7 @@
 {% elif size == "medium" %}
     {% set size_class = "md:h-60 md:float-right md:ml-8" %}
 {% endif %}
-<img class="rounded-md {{size_class}}" src="{{src | correct_src_link}}" alt="{{alt}}">
+<img class="rounded-md {{size_class}}" src="{{ src | correct_src_link }}" alt="{{alt}}">
 {% endmacro %}
 
 {% macro getUIelem(slug, icon_type, textClass="") %}
@@ -66,7 +66,7 @@
     {% set size_ind = "20" %}
 {% endif %}
 <div class="h-{{size_ind}} w-{{size_ind}} {{classes}}">
-    {#{icon | inlineSVG | safe }#}
+    {{icon | inlineSVG | safe }}
 </div>
 {% endmacro %}
 
@@ -106,7 +106,7 @@
 <div class="col-auto"> 
     <div class="flex flex-row">
         {% if data.image %}
-            <img src="{{data.image}}" class="object-scale-down h-10 object-left">
+            <img src="{{ data.image }}" class="object-scale-down h-10 object-left">
         {% else %}
             <h1 class="lg:text-2xl text-xl font-bold">{{data.title}}</h1>
         {% endif %}
@@ -195,10 +195,10 @@
             {% endif %}
             <div class="header-card-item-style sm:visible {{invisible_i}} sm:{{min_w_css}}" id="header-card-{{item_index}}">
                 <div class="flex justify-center mt-3">
-                    {% if item.image %}
+                    {% if item.href %}
                         <a href="{{item.href | trim }}" target="_blank">
-                            {% if item.href %}        
-                                <img src="{{item.image}}" class="object-scale-down h-10 {{anim_hover_grow(scale='scale-110') }}">
+                            {% if item.image %}
+                                <img src="{{ item.image }}" class="object-scale-down h-10 {{anim_hover_grow(scale='scale-110') }}">
                             {% endif %}
                         </a>
                     {% endif %}

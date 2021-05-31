@@ -23,7 +23,7 @@ module.exports = {
                     },
                   },
                 ],
-              }
+            }
         ]
     },
     optimization: {
@@ -35,6 +35,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, "dist", "assets"),
+        publicPath: path.resolve(__dirname, "dist", "assets"),
         filename: "main.bundle.js"
     },
     plugins: [

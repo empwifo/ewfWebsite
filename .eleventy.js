@@ -1,7 +1,7 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it")
 const fs = require('fs')
-let Nunjucks = require('nunjucks')
+const Image = require("@11ty/eleventy-img");
 
 module.exports = (config) => {    
     config.addPlugin(syntaxHighlight);
@@ -52,6 +52,23 @@ module.exports = (config) => {
         </div>
         `
     });
+
+    config.addNunjucksAsyncShortcode("Image", async (src) => {    
+        
+        if (!src.startsWith("/src") || src.startsWith("src"))
+            src = "src" + src
+
+        let stats = await Image(src, {
+          widths: [null],
+          formats: ["jpeg", "webp", "png"],
+          urlPath: "/assets/images/",
+          outputDir: "./dist/assets/images/",
+        });
+        
+        let srcOut = stats["webp"][0];   
+    
+        return srcOut.url;
+      });
 
     return {
         dir: {
