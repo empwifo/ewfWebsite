@@ -174,6 +174,12 @@
     {% set batch_size = data.settings.init_show %}
 {% endif %}
 
+{% if not data.settings.show_all %}
+    {% set show_all = false %}
+{% else %}
+    {% set show_all = data.settings.show_all %}
+{% endif %}
+
 {% set number_grid = loc_data | length %}
 {% set number_batch = loc_data | batch(batch_size) | length %}
 <div class="sm:flex sm:flex-col mt-{{margin_top}}">
@@ -219,24 +225,45 @@
                     {% endif %}
                 </div>
             </div>
-            {% set invisible_i = "hidden" %}
+            {% if not show_all %}
+                {% set invisible_i = "hidden" %}
+            {% endif %}
         {% endfor %}
     </div>
-    {% set invisible_b = "hidden" %}
+    {% if not show_all %}
+        {% set invisible_b = "hidden" %}
+    {% endif %}
 {% endfor %}
 </div>
+{% if show_all %}
+    {% set hidden_exp = "hidden" %}
+    {% set hidden_coll = "" %}
+{% else %}
+    {% set hidden_exp = "" %}
+    {% set hidden_coll = "hidden" %}
+{% endif %}
 <div class="items-center justify-center flex-col mt-2">
     <div class="flex justify-center items-center">
         {% if number_grid > 1 %}
             <a class="sm:hidden rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="header-btn-mbl">
-                {{ icon("expand_arrow", "rounded-full") }}
-                {{ icon("collapse_arrow", "hidden rounded-full") }}    
+                {% if show_all %}
+                    {{ icon("expand_arrow",  "hidden rounded-full") }}
+                    {{ icon("collapse_arrow", "rounded-full") }}    
+                {% else %}
+                    {{ icon("expand_arrow",  "rounded-full") }}
+                    {{ icon("collapse_arrow", "hidden rounded-full") }}    
+                {% endif %}
             </a>
         {% endif %}
         {% if number_batch > 1 %}
             <div class="hidden sm:block rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="header-btn-dsk">
-                {{ icon("expand_arrow", "rounded-full") }}
-                {{ icon("collapse_arrow", "sm:hidden rounded-full") }}
+                {% if show_all %}
+                    {{ icon("expand_arrow",  "sm:hidden rounded-full") }}
+                    {{ icon("collapse_arrow", "rounded-full") }}    
+                {% else %}
+                    {{ icon("expand_arrow",  "rounded-full") }}
+                    {{ icon("collapse_arrow", "sm:hidden rounded-full") }}    
+                {% endif %}
             </div>
         {% endif %}
     </div>
