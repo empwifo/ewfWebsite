@@ -4,51 +4,51 @@
             "name": "Ruhr-Universität Bochum",
             "image": "/assets/images/logos/RUB.jpg",
             "href": "https://www.ruhr-uni-bochum.de/de",
-            "short": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+            "short": "Mitten in der dynamischen Metropolregion Ruhrgebiet im Herzen Europas gelegen ist die RUB mit ihren 20 Fakultäten Heimat von über 43.000 Studierenden aus über 130 Ländern."
         },
         {
             "name": "TU Dortmund",
             "image": "/assets/images/logos/tudortmundlogo.png",
             "href": "https://www.tu-dortmund.de/",
-            "short": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, "
+            "short": "Die TU Dortmund ist eine junge Universität, die rund 80 Studiengänge anbietet. Innovation, Interdisziplinarität und Internationalität prägen ihr Profil."
         },
         {
             "name": "Universität Duisburg Essen",
             "image": "/assets/images/logos/unidulogo.png",
             "href": "https://www.uni-due.de/",
-            "short": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+            "short": "Die Uni Duisburg Essen ist eine der jüngsten und größten Universitäten Deutschlands, mit einem breiten Fächerspektrum in allen Bereichen."
         },
         {
-            "name": "Universitätsallianz Ruhr ",
+            "name": "UA Ruhr ",
             "image": "/assets/images/logos/uaruhrlogo.png",
             "href": "https://www.uaruhr.de/",
-            "short": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+            "short": "In der Universitätsallianz Ruhr arbeiten die Ruhr-Universität Bochum, die Technische Universität Dortmund und die Universität Duisburg-Essen seit 2007 strategisch eng zusammen. Mit mehr als 120.000 Studierenden und nahezu 1.300 Professorinnen und Professoren gehört die UA Ruhr zu den größten und leistungsstärksten Wissenschaftsstandorten Deutschlands."
         }
     ],
     "en": [
         {
-            "name": "Ruhr-Universität Bochum",
+            "name": "Ruhr-University Bochum",
             "image": "/assets/images/logos/RUB.jpg",
-            "href": "https://www.ruhr-uni-bochum.de/de",
-            "short": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+            "href": "https://www.ruhr-uni-bochum.de/en",
+            "short": "Located in the middle of the dynamic Ruhr metropolitan region in the heart of Europe, the RUB with its 20 faculties is home to more than 43,000 students from over 130 countries. "
         },
         {
             "name": "TU Dortmund",
             "image": "/assets/images/logos/tudortmundlogo.png",
             "href": "https://www.tu-dortmund.de/",
-            "short": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+            "short": "TU Dortmund University is a young university offering around 80 degree programs. Innovation, interdisciplinarity and internationality characterize its profile."
         },
         {
-            "name": "Universität Duisburg Essen",
+            "name": "University of Duisburg Essen",
             "image": "/assets/images/logos/unidulogo.png",
             "href": "https://www.uni-due.de/",
-            "short": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+            "short": "The University of Duisburg Essen is one of the youngest and largest universities in Germany, with a wide range of subjects in all areas."
         },
         {
-            "name": "Universitätsallianz Ruhr ",
+            "name": "UA Ruhr ",
             "image": "/assets/images/logos/uaruhrlogo.png",
             "href": "https://www.uaruhr.de/",
-            "short": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+            "short": "The UA Ruhr is an alliance between Ruhr University Bochum, TU Dortmund University, and the University of Duisburg-Essen, the three largest universities in Germany’s thriving Ruhr Area. Each of our institutions has a strong tradition of breaking down walls between disciplines. We believe in the benefits of collaboration on all levels of scholarship and research, which is one of the reasons we came together in this unique university alliance."
         }
     ],
     "settings": {
