@@ -202,8 +202,7 @@ Die Konfigurationsdateien für die Link-Sammlungen der drei Hauptseiten liegen u
 Neben diesen Hauptinhalten gibt es noch ein paar weitere Inhalte die angepasst werden können. Dazu zählen die Banner Bilder die auf jeder Seite angezeigt werden und die Kontaktinformationen. 
 
 ### Banner Bilder
-Hier können alle Bilder eingebunden werden, die man sich wünscht. Nur wäre es gut, wenn diese eine gewisse Größe haben, damit das ganze auch ansprechend wirkt. Wieder empfehle ich diese Bilder unter **src/assets/images/banner/** abzulegen. 
-Am besten ist es wenn die Banner Bilder eine höhe von 640 Pixeln haben, da so keine Bildinformationen abgeschnitten werden.
+Hier können alle Bilder eingebunden werden, die man sich wünscht. Wieder empfehle ich diese Bilder unter **src/assets/images/banner/** abzulegen. Ich empfehle Bilder so zuzuschneiden, dass diese eine Höhe von ungefähr 320 Pixeln haben. So nehmen sie nicht zuviel Platz auf der Seite ein.
 
 Welche Bilder als Banner Kandidaten genutzt werden sollen, ist in der JSON Datei *banner_images* in dem Ordner **src/_data/** definiert. Dort können für jede Seite die ein Banner hat, das Bild festgelegt werden. Wichtig hier ist wieder, dass das führende **src** aus dem link entfernt wird. Je **kleiner** die Bilder sind die dafür ausgewählt werden, desto schneller lädt die Website! Also ist es nicht unbedingt zu empfehlen ein 10 MB Bild dort einzubinden.
 
