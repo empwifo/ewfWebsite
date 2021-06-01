@@ -3,63 +3,32 @@ function topFunction() {
   body.stop().animate({scrollTop:0}, 500, 'swing');
 }
 
-function toggle_class(self, id, tClass, max_num=0, start=2){
-  /*
-  Toggles the class attribute "hidden" on element with 
-  given id.
-  For header cards we can define the number of cards
-  (on mobile only the first one is visible an the other hidden)
-  Each of the header cards should have an id, like "{id}-{number}"
-  such that it is unique.
-  Then on function call all elements (default starting from index 2
-  since index one is already visible gets toggled the "hidden" attribute)
-  The toggles of the function (eg. arrow-down, arrow-up)
-  should be children of the element that holds the onClick method
-  that calls this function. The one that should be showed after
-  a click should be "hidden".
-  */
-
-  if (max_num <= 0){
-    var element = document.getElementById(id)
-    element.classList.toggle(String(tClass))  
-  }else{
-    for (i=start; i<= max_num; i++){
-      var element = document.getElementById(id+`-${i}`);
-      element.classList.toggle(String(tClass))  
-    }
-  }
-
-  for (i=0; i<self.children.length; i++){
-    self.children[i].classList.toggle(String(tClass))
-  }
-}
-
 function expand_header(id, size="", num=0){
   if (num <= 0){
-    var element = document.getElementById(id)
+    var element = $(`#${id}`);
     expand_header_class_toggle(element);
   }else{
     for (i=2; i<= num; i++){
-      var element = document.getElementById(id+`-${i}`);
+      var element = $(`#${id}-${i}`);
       expand_header_class_toggle(element, size);
     }
   }
 }
 
-function expand_header_class_toggle(element, size){
-  if ($(element).hasClass(size+"hidden")){
-    element.classList.toggle(size+"hidden");
-    $(element).height(0)
-    $(element).animate({
-      height: $(element).get(0).scrollHeight
+function expand_header_class_toggle(element, size=""){
+  if (element.hasClass(size+"hidden")){
+    element.toggleClass(size+"hidden");
+    element.height(0)
+    element.animate({
+      height: element.get(0).scrollHeight
     }, 200, function(){
       $(this).height("auto")
     });
   }else {
-    $(element).animate({
+    element.animate({
       height: 0
     }, 200, function(){
-      element.classList.toggle(size+"hidden");
+      element.toggleClass(size+"hidden");
       $(this).height("auto")
     });
   }
@@ -80,10 +49,10 @@ $(document).ready(function(){
   });
 
   $(".expandLink").click(function(){
-    var id = $(this).attr("id")    
-    $("#truncate_"+id).toggleClass("hidden");
-    $("#full_"+id).toggleClass("collapseText");
-    $("#full_"+id).toggleClass("expandText");
+    var id = $(this).attr("id")
+    $("#truncate_"+id).toggle("hidden");
+    var link_text = $("#full_"+id);
+    expand_header_class_toggle(link_text)
     
     $(this).children().toggleClass("hidden");
   })

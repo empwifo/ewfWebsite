@@ -62,7 +62,9 @@
     <div class="hidden w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block pr-10" id="nav-content">
         <ul class="list-reset lg:flex justify-end flex-1 items-center ml-4 mt-2 divide-y divide-gray-300 lg:divide-y-0">
             <li class="dropdown relative mr-6 {{macros.anim_hover_grow('scale-110')}}">
-                {{ macros.icon("language") }}
+                <div class="w-6 h-6">
+                    {{ macros.icon("language") }}
+                </div>
                 <div class="dropdown-menu top-0 absolute left-0 hidden h-auto flex pt-6 mt-4">
                     <ul class="block w-full bg-white text-gray-700 shadow divide-gray-300 divide-y p-b text-xl">
                         <li class="mx-2 py-2 hover:text-gray-400"><a class="block" href="/de">Deutsch</a></li>

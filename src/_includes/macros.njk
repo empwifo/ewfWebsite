@@ -26,7 +26,7 @@
 </span>
 {% endmacro %}
 
-{% macro icon(type, classes="", size="small") %}
+{% macro icon(type, classes="") %}
     {% set icon = "/assets/ui/home.svg" %}
 
     {% if type == "home" %}
@@ -59,13 +59,7 @@
         {% set icon = "/assets/ui/home.svg" %}
     {% endif %}
 
-{% set size_ind = "6" %}
-{% if size == "medium" %}
-    {% set size_ind = "12" %}
-{% elif size == "large" %}
-    {% set size_ind = "20" %}
-{% endif %}
-<div class="h-{{size_ind}} w-{{size_ind}} {{classes}}">
+<div class="{{classes}}">
     {{icon | inlineSVG | safe }}
 </div>
 {% endmacro %}
@@ -83,7 +77,7 @@
 <a href="/{{locale}}/{{slug}}" class="block lg:ml-1 lg:inline-block lg:my-0 sm:my-3 text-xl text-teal-lighter md:hover:text-gray-400 lg:mr-4 w-full">
     <span class="flex items-center py-2">
         {% if icon_type != "None" %}
-        <div class="mr-1 lg:mr-1 w-6">
+        <div class="mr-1 lg:mr-1 w-6 h-6">
             {{ icon(icon_type) }}
         </div>
         {% endif %}
@@ -139,7 +133,9 @@
 <tr>
     <td class="px-6 py-4 whitespace-nowrap">
         <span class="flex">
-            {{ icon(icon_type, "mr-4 align-top") }}
+            <div class="w-6 h-6 mr-4 align-top">
+                {{ icon(icon_type) }}
+            </div>
             {% if link == "web" %}
                 <a href="{{data | striptags(true) | escape | nl2br }}" class="underline hover:text-blue-700" target="_blank">{{link_text}}</a>
             {% elif link == "phone" %}
@@ -215,7 +211,9 @@
                     {% if item.href %}
                         <div class="{{anim_hover_grow()}}">
                             <a href="{{item.href | trim }}" target="_blank">
-                                {{ icon("web") }}
+                                <div class="w-6 h-6">
+                                    {{ icon("web") }}
+                                </div>
                             </a>
                         </div>
                     {% endif %}
@@ -230,13 +228,13 @@
 <div class="items-center justify-center flex-col mt-2">
     <div class="flex justify-center items-center">
         {% if number_grid > 1 %}
-            <a class="sm:hidden rounded-full {{anim_hover_grow('bg-gray-200')}}" id="header-btn-mbl">
+            <a class="sm:hidden rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="header-btn-mbl">
                 {{ icon("expand_arrow", "rounded-full") }}
-                {{ icon("collapse_arrow", "hidden rounded-full") }}
+                {{ icon("collapse_arrow", "hidden rounded-full") }}    
             </a>
         {% endif %}
         {% if number_batch > 1 %}
-            <div class="hidden sm:block rounded-full {{anim_hover_grow('bg-gray-200')}}" id="header-btn-dsk">
+            <div class="hidden sm:block rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="header-btn-dsk">
                 {{ icon("expand_arrow", "rounded-full") }}
                 {{ icon("collapse_arrow", "sm:hidden rounded-full") }}
             </div>
@@ -274,40 +272,44 @@
         <div class="flex flex-col border-2 rounded-lg px-4 py-4 justify-center min-w-full">
             <div class="flex flex-row">
                 <a href="{{item.href}}" target="_blank" class="mr-4 {{anim_hover_grow(scale='scale-110') }}">
-                    {% if item.type == "research" %}
-                        {{ icon("research", size="large") }}
-                    {% elif item.type == "teaching" %}
-                        {{ icon("teaching", size="large") }}
-                    {% else %}
-                        {{ icon("rss", size="large") }}
-                    {% endif %}
+                    <div class="h-12 w-12 md:h-20 md:w-20">
+                        {% if item.type == "research" %}
+                            {{ icon("research", size="None") }}
+                        {% elif item.type == "teaching" %}
+                            {{ icon("teaching", size="None") }}
+                        {% else %}
+                            {{ icon("rss", size="None") }}
+                        {% endif %}
+                    </div>
                 </a>
-                <div class="flex flex-col">
+                <div class="flex flex-col w-full">
                     <div class="flex flex-row justify-between">
                         <div class="font-medium text-lg sm:text-xl">
                             {{ item.title }}
                         </div>
-                        <div  class="{{anim_hover_grow() }}">
+                        <div  class=" justify-end {{anim_hover_grow() }}">
                             <a href="{{item.href}}" target="_blank">
-                                {{ icon("web") }}
+                                <div class="w-6 h-6">
+                                    {{ icon("web") }}
+                                </div>
                             </a>
                         </div>
                     </div>
-                    <div class="text-base sm:text-lg max-w-md">
-                        <div class="flex flex-row mt-1">
+                    <div class="flex flex-row mt-1 justify-between">
+                        <div class="text-base sm:text-lg max-w-md">
                             <div class="mr-2">
-                                <div class="collapseText overflow-y-hidden" id="full_link_{{loop.index}}">
+                                <div class="hidden" id="full_link_{{loop.index}}">
                                     {{ item.short }}
                                 </div>
-                                <div class="placeholder" id="truncate_link_{{loop.index}}">
-                                    ...
+                                <div class="placeholder overflow-clip overflow-y-hidden h-6" id="truncate_link_{{loop.index}}">
+                                    {{ item.short }}
                                 </div>
                             </div>
-                            <div class="flex-none">
-                                <div class="rounded-full {{anim_hover_grow('bg-gray-200')}} expandLink" id="link_{{loop.index}}">
-                                    {{ icon("expand_arrow") }}
-                                    {{ icon("collapse_arrow", "hidden") }}
-                                </div>
+                        </div>
+                        <div class="justify-end">
+                            <div class="rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}} expandLink" id="link_{{loop.index}}">
+                                {{ icon("expand_arrow") }}
+                                {{ icon("collapse_arrow", "hidden") }}
                             </div>
                         </div>
                     </div>
@@ -315,7 +317,7 @@
             </div>
             <div class="mt-2 flex flex-row justify-center flex-wrap max-w-md mb-2">
                 {% for tag in item.tags %}
-                    <div class="mt-2 mx-1 px-2 bg-gray-200 rounded-lg text-sm">
+                    <div class="mt-2 mx-1 px-2 bg-blue-100 rounded-lg text-sm">
                         {{tag}}
                     </div>
                 {% endfor %}
