@@ -6,16 +6,16 @@ function topFunction() {
 function expand_header(id, size="", num=0){
   if (num <= 0){
     var element = $(`#${id}`);
-    expand_header_class_toggle(element);
+    expand_element_toggle(element);
   }else{
     for (i=2; i<= num; i++){
       var element = $(`#${id}-${i}`);
-      expand_header_class_toggle(element, size);
+      expand_element_toggle(element, size);
     }
   }
 }
 
-function expand_header_class_toggle(element, size=""){
+function expand_element_toggle(element, size=""){
   if (element.hasClass(size+"hidden")){
     element.toggleClass(size+"hidden");
     element.height(0)
@@ -52,7 +52,7 @@ $(document).ready(function(){
     var id = $(this).attr("id")
     $("#truncate_"+id).toggle("hidden");
     var link_text = $("#full_"+id);
-    expand_header_class_toggle(link_text)
+    expand_element_toggle(link_text)
     
     $(this).children().toggleClass("hidden");
   })
