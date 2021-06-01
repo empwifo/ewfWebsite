@@ -118,12 +118,13 @@ Folgend könnte eine Konfigurationsdatei für die Karten auf *Home* aussehen:
     "en": [],
 
     "settings": {
-        "init_show": 3
+        "init_show": 3,
+        "show_all": false
     }
 ```
 Da hier zb. die englische Liste leer ist, würde auf der englischen Seite, die deutschen Karten angezeigt werden.
 
-Unter **settings** und **init_show** kann defniert werden wieviele Karten in einer Reihe angezeigt werden sollen. Es wird standardmäßig nur die erste Reihe angezeigt und der rest ausgeblendet. Die ausgeblendeten Karten können per Knopfdruck angezeigt werden.
+Unter **settings** und **init_show** kann defniert werden wieviele Karten in einer Reihe angezeigt werden sollen. Es wird standardmäßig nur die erste Reihe angezeigt und der rest ausgeblendet. Die ausgeblendeten Karten können per Knopfdruck angezeigt werden. Falls man aber direkt alle Karten anzeigen möchte, die dann auf Bedarf eingeklappt werden können muss man den Wert **show_all** auf **true** setzen. Standartwert ist für diese Einstellung **false**.
 
 Die Konfigurationsdateien für die Informationskarten liegen unter **src/_data/header_infos/**. In diesem Ordner sind drei verschiedene JSON Dateien abgelegt, die entsprechend ihren Namens nach die Inhalte der Karten für die entsprechende Seite steuern.
 
