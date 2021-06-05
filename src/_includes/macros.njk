@@ -6,9 +6,9 @@
 {% set size_class = "" %}
 
 {% if size == "small" %}
-    {% set size_class = "md:h-32 md:float-right md:ml-8" %}
+    {% set size_class = "md:h-32 md:float-right md:ml-8 px-12 sm:px-0" %}
 {% elif size == "medium" %}
-    {% set size_class = "md:h-60 md:float-right md:ml-8" %}
+    {% set size_class = "md:h-60 md:float-right md:ml-8 px-12 sm:px-0" %} 
 {% endif %}
 
 {% set src_opt %}{% ImageSync src %}{% endset %}
@@ -18,7 +18,7 @@
 {% macro getUIelem(slug, icon_type, textClass="") %}
 <span class="flex items-center py-2">
     {% if icon_type != "None" %}
-    <div class="mr-1 lg:mr-1">
+    <div class="mr-1 lg:mr-1"> 
         {{ icon(icon_type) }}
     </div>
     {% endif %}
@@ -280,7 +280,7 @@
 {# footer link card macros          #}
 {# --------------------------- #}
 
-{% macro footer_link(data, title="Links") %}
+{% macro footer_link(data) %}
 {% set loc_data = data[locale] %}
 {% set visibility = "" %}
 {% if not data[locale] | length %}
@@ -289,7 +289,12 @@
     {% else %}
         {% set visibility = "hidden" %}
     {% endif %}
+{% endif %}
 
+{% if data.settings.title[locale] %}
+    {% set title = data.settings.title[locale] %}
+{% else %}
+    {% set title = "Links" %}
 {% endif %}
 
 <div class="container mx-auto flex items-center justify-center pt-8 md:text-3xl text-2xl font-black text-gray-700 bg-white {{visibility}}">
@@ -300,21 +305,23 @@
     {% for item in loc_data %}    
         <div class="flex flex-col border-2 rounded-lg px-4 py-4 justify-center min-w-full">
             <div class="flex flex-row">
-                <a href="{{item.href}}" target="_blank" class="mr-4 {{anim_hover_grow(scale='scale-110') }}">
-                    <div class="h-12 w-12 md:h-20 md:w-20">
+                <a href="{{item.href}}" target="_blank" class="hidden sm:block mr-4 {{anim_hover_grow(scale='scale-110') }}">
+                    <div class="h-6 w-6 sm:h-12 sm:w-12">
                         {% if item.type == "research" %}
-                            {{ icon("research", size="None") }}
+                            {{ icon("research") }}
                         {% elif item.type == "teaching" %}
-                            {{ icon("teaching", size="None") }}
+                            {{ icon("teaching") }}
                         {% else %}
-                            {{ icon("rss", size="None") }}
+                            {{ icon("rss") }}
                         {% endif %}
                     </div>
                 </a>
                 <div class="flex flex-col w-full">
                     <div class="flex flex-row justify-between">
-                        <div class="font-medium text-lg sm:text-xl">
-                            {{ item.title }}
+                        <div class="flex flex-row justify-start">
+                            <div class="font-medium text-lg sm:text-xl">
+                                {{ item.title }}
+                            </div>
                         </div>
                         <div  class=" justify-end {{anim_hover_grow() }}">
                             <a href="{{item.href}}" target="_blank">
@@ -330,8 +337,8 @@
                                 <div class="hidden" id="full_link_{{loop.index}}">
                                     {{ item.short }}
                                 </div>
-                                <div class="placeholder overflow-clip overflow-y-hidden h-6" id="truncate_link_{{loop.index}}">
-                                    {{ item.short }}
+                                <div class="placeholder" id="truncate_link_{{loop.index}}">
+                                    {{ item.short | truncate(50) }}
                                 </div>
                             </div>
                         </div>

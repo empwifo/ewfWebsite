@@ -2,39 +2,77 @@
     "de": [
         {
             "type": "research",
-            "href": "",
-            "title": "Test Forschungs Link",
-            "short": "Hier kann eine kurze Zusammenfassung zu dem link geschrieben werden. Das icon zum Link beschreibt das Themengebiet, welches mit den Tags unten verfeinert werden kann. Ein Klick auf die Weltkugel oben führt zum hinterlegten link. ",
+            "href": "https://www.statistik.tu-dortmund.de/sfb823.html",
+            "title": "SFB 823",
+            "short": "Im Zen­trum des Sonderforschungsbereichs 823 stehen zeitvariable, dynamische Prozesse in den Wirtschafts- und In­ge­ni­eur­wis­sen­schaf­ten. Die statistische Modellbildung in diesen Be­rei­chen sieht sich mit vielfältigen, voneinander abhängigen Variablen und komplexen Prozessen mit zum Teil unübersichtlichen Abhängigkeiten konfrontiert.",
+            "tags": [
+                "Statistik",
+                "Forschung",
+                "TU Dortmund"
+            ]
+        },
+        {
+            "type": "research",
+            "href": "https://lscr.rwi-essen.de/de/",
+            "title": "Leibniz Science Campus Ruhr",
+            "short": "Der Leibniz Science Campus Ruhr (LSCR) ist eine Forschungskooperation, die von der Leibniz-Gemeinschaft gefördert wird. Im Fokus stehen das deutsche Gesundheitswesen und dessen Herausforderungen aufgrund des demografischen Wandels. Diese Veränderungen betreffen jedoch nicht alle Gegenden Deutschlands in gleichem Maße. Einige Regionen haben besondere Schwierigkeiten angesichts einer rapide alternden Bevölkerung und schwindendem Personal im Pflegebereich. Am Campus wird dieses Phänomen untersucht. Ziel ist es, Handlungsempfehlungen für die zukünftige Gesundheitsversorgung abzuleiten.",
             "tags": [
                 "Forschung",
-                "Empirische Wirtschaftsforschung",
-                "EWF",
-                "other one",
-                "and another one"
+                "LSCR",
+                "Gesundheit"
             ]
         },
         {
-            "type": "teaching",
-            "href": "",
-            "title": "Test Lehre Link",
-            "short": "Hier kann eine kurze Zusammenfassung zu dem link geschrieben werden. Das icon zum Link beschreibt das Themengebiet, welches mit den Tags unten verfeinert werden kann. Ein Klick auf die Weltkugel oben führt zum hinterlegten link.",
+            "type": "research",
+            "href": "https://cinch.uni-due.de/de/",
+            "title": "CINCH",
+            "short": "Kompetenz in den Bereichen Wettbewerb und Gesundheit ist gleichermaßen Motto wie Anspruch des gesundheitsökonomischen Forschungszentrums CINCH – competent in competition and health in Essen. Die gesellschaftliche Diskussion um das Gesundheitswesen in Deutschland dreht sich um den Zielkonflikt zwischen um­fassender und qualitativ hochwertiger medizinischer Versorgung einerseits und Begrenzung von Kosten und Beiträgen andererseits. Mehr Wettbewerb auf Gesundheits- und Krankenversicherungsmärkten kann diesen Zielkonflikt ent­schärfen. Fragen zum Wettbewerb im Gesundheitswesen liegen daher im Kernbereich gesundheitsökonomischer Forschung und werden im Rahmen von CINCH von zwei Nachwuchsgruppen und in ergänzenden Projekten untersucht.",
             "tags": [
-                "Lehre",
-                "neues Modul",
-                "Vorlesung"
-            ]
-        },
-        {
-            "type": "other",
-            "href": "",
-            "title": "Test Diverses Link",
-            "short": "Hier kann eine kurze Zusammenfassung zu dem link geschrieben werden. Das icon zum Link beschreibt das Themengebiet, welches mit den Tags unten verfeinert werden kann. Ein Klick auf die Weltkugel oben führt zum hinterlegten link.",
-            "tags": [
-                "anderes",
-                "News",
-                "Was gibt's neues"
+                "Gesundheitsökonomik",
+                "Gesundheitswesen",
+                "Forschung"
             ]
         }
     ],
-    "en": []
+    "en": [
+        {
+            "type": "research",
+            "href": "https://www.statistik.tu-dortmund.de/sfb823.html",
+            "title": "SFB 823",
+            "short": "The Collaborative Research Center 823 focuses on time-varying, dynamic processes in economics and engineering. Statistical modeling in these areas is confronted with multiple, interdependent variables and complex processes with sometimes unclear dependencies.",
+            "tags": [
+                "statistic",
+                "Research",
+                "TU Dortmund"
+            ]
+        },
+        {
+            "type": "research",
+            "href": "https://lscr.rwi-essen.de/de/",
+            "title": "Leibniz Science Campus Ruhr",
+            "short": "Leibniz Science Campus Ruhr is a research collaboration focused on “Health care challenges in regions with declining and ageing populations”. Its aim is to analyse the causes and consequences of regional differences in health care, to derive policies to address the impending under-provision of health care and to evaluate selected measures to improve the efficiency of health-care provision.",
+            "tags": [
+                "Research",
+                "LSCR",
+                "Health"
+            ]
+        },
+        {
+            "type": "research",
+            "href": "https://cinch.uni-due.de/de/",
+            "title": "CINCH",
+            "short": "\"Competent in competition and health\" – both claim and aspiration of the health economic research center CINCH in Essen. The current public debate on health care in Germany revolves around the conflict between providing comprehensive and high-quality medical services on the one hand and curbing the costs of health care on the other. More competition in the markets for health care and insurance can help mitigate this trade-off. Issues of competition in health care are therefore at the core of health economics research at CINCH, which is organized within two junior research groups and several complementary projects.",
+            "tags": [
+                "health economic research",
+                "medical services",
+                "research"
+            ]
+        }
+    ],
+    "settings": {
+        "title": {
+            "en": "Research Projects",
+            "de": "Forschungsprojekte"
+        }
+    }
 }

@@ -23,6 +23,12 @@
             "image": "/assets/images/logos/uaruhrlogo.png",
             "href": "https://www.uaruhr.de/",
             "short": "In der Universitätsallianz Ruhr arbeiten die Ruhr-Universität Bochum, die Technische Universität Dortmund und die Universität Duisburg-Essen seit 2007 strategisch eng zusammen. Mit mehr als 120.000 Studierenden und nahezu 1.300 Professorinnen und Professoren gehört die UA Ruhr zu den größten und leistungsstärksten Wissenschaftsstandorten Deutschlands."
+        },
+        {
+            "name": "RWI Essen ",
+            "image": "/assets/images/logos/rwi_logo.jpg",
+            "href": "https://www.rwi-essen.de/",
+            "short": "Das RWI - Leibniz-Institut für Wirtschaftsforschung (vormals Rheinisch-Westfälisches Institut für Wirtschaftsforschung) ist ein führendes Zentrum für wissenschaftliche Forschung und evidenzbasierte Politikberatung in Deutschland und Mitglied der Leibniz-Gemeinschaft. Es wurde 1926 gegründet und arbeitet seit 1943 in rechtlicher Selbständigkeit als eingetragener Verein; es dient ausschließlich gemeinnützigen Zwecken."
         }
     ],
     "en": [
@@ -49,6 +55,12 @@
             "image": "/assets/images/logos/uaruhrlogo.png",
             "href": "https://www.uaruhr.de/",
             "short": "The UA Ruhr is an alliance between Ruhr University Bochum, TU Dortmund University, and the University of Duisburg-Essen, the three largest universities in Germany’s thriving Ruhr Area. Each of our institutions has a strong tradition of breaking down walls between disciplines. We believe in the benefits of collaboration on all levels of scholarship and research, which is one of the reasons we came together in this unique university alliance."
+        },
+        {
+            "name": "RWI Essen ",
+            "image": "/assets/images/logos/rwi_logo.jpg",
+            "href": "https://www.rwi-essen.de/",
+            "short": "RWI - Leibniz Institute for Economic Research (formerly Rheinisch-Westfälisches Institut für Wirtschaftsforschung) is a leading centre for economic research and evidence-based policy advice in Germany. Through its research work, RWI provides information on economic developments and their underlying catalysts, assists economic policy decision-making and fosters economic literacy among the wider public."
         }
     ],
     "settings": {
