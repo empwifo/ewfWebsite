@@ -188,14 +188,14 @@
 
 {% set item_index = 0 %}
 {% for batch_items in loc_data | batch(batch_size) %}
-    <div class="header-card-batch-style sm:{{invisible_b}}" id="header-batch-{{loop.index}}">
+    <div class="header-card-batch-style md:{{invisible_b}}" id="header-batch-{{loop.index}}">
         {% for item in batch_items %}
             {% set item_index = item_index + 1 %}
             {% set min_w_css = "min-w-1/" + batch_items | length %}
             {% if batch_items | length == 1 %}
                 {% set min_w_css = "" %}
             {% endif %}
-            <div class="header-card-item-style sm:visible {{invisible_i}} sm:{{min_w_css}}" id="header-card-{{item_index}}">
+            <div class="header-card-item-style md:visible {{invisible_i}} md:{{min_w_css}}" id="header-card-{{item_index}}">
                 <div class="flex justify-center mt-3">
                     {% if item.href %}
                         <a href="{{item.href | trim }}" target="_blank">
@@ -245,7 +245,7 @@
 <div class="items-center justify-center flex-col mt-2">
     <div class="flex justify-center items-center">
         {% if number_grid > 1 %}
-            <a class="sm:hidden rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="header-btn-mbl">
+            <a class="md:hidden rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="header-btn-mbl">
                 {% if show_all %}
                     {{ icon("expand_arrow",  "hidden rounded-full") }}
                     {{ icon("collapse_arrow", "rounded-full") }}    
@@ -256,7 +256,7 @@
             </a>
         {% endif %}
         {% if number_batch > 1 %}
-            <div class="hidden sm:block rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="header-btn-dsk">
+            <div class="hidden md:block rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="header-btn-dsk">
                 {% if show_all %}
                     {{ icon("expand_arrow",  "sm:hidden rounded-full") }}
                     {{ icon("collapse_arrow", "rounded-full") }}    
@@ -342,7 +342,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-2 flex flex-row justify-center flex-wrap max-w-md mb-2">
+            <div class="mt-2 flex flex-row justify-center flex-wrap w-full mb-2">
                 {% for tag in item.tags %}
                     <div class="mt-2 mx-1 px-2 bg-blue-100 rounded-lg text-sm">
                         {{tag}}
