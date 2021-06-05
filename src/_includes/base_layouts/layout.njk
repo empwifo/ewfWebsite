@@ -19,10 +19,7 @@
         <main class="flex-initial md:overflow-y-auto" id="mainContainer">
             {% include 'base_layouts/header.njk' %}
             <div id="mainpage">
-                <!--div class="bg-center bg-cover bg-auto overflow-auto h-80" 
-                style="background-image: url('{{ banner_images[title] | correct_src_link}}');"></div!-->
-
-                <img src="{{ banner_images[title] | correct_src_link}}" class="lg:pt-24 w-full">
+                <img src="{% ImageAsync banner_images[title] %}" class="lg:pt-24 w-full">
                     
                 {{ content | safe }}
             </div>

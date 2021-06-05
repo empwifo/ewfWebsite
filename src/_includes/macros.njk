@@ -10,7 +10,9 @@
 {% elif size == "medium" %}
     {% set size_class = "md:h-60 md:float-right md:ml-8" %}
 {% endif %}
-<img class="rounded-md {{size_class}}" src="{{ src | correct_src_link }}" alt="{{alt}}">
+
+{% set src_opt %}{% ImageSync src %}{% endset %}
+<img class="rounded-md {{size_class}}" src="{{ src_opt }}" alt="{{alt}}">
 {% endmacro %}
 
 {% macro getUIelem(slug, icon_type, textClass="") %}
@@ -100,7 +102,7 @@
 <div class="col-auto"> 
     <div class="flex flex-row">
         {% if data.image %}
-            <img src="{{ data.image }}" class="object-scale-down h-10 object-left">
+            <img src="{% ImageSync data.image %}" class="object-scale-down h-10 object-left">
         {% else %}
             <h1 class="lg:text-2xl text-xl font-bold">{{data.title}}</h1>
         {% endif %}
@@ -188,19 +190,19 @@
 
 {% set item_index = 0 %}
 {% for batch_items in loc_data | batch(batch_size) %}
-    <div class="header-card-batch-style sm:{{invisible_b}}" id="header-batch-{{loop.index}}">
+    <div class="header-card-batch-style md:{{invisible_b}}" id="header-batch-{{loop.index}}">
         {% for item in batch_items %}
             {% set item_index = item_index + 1 %}
             {% set min_w_css = "min-w-1/" + batch_items | length %}
             {% if batch_items | length == 1 %}
                 {% set min_w_css = "" %}
             {% endif %}
-            <div class="header-card-item-style sm:visible {{invisible_i}} sm:{{min_w_css}}" id="header-card-{{item_index}}">
+            <div class="header-card-item-style md:visible {{invisible_i}} md:{{min_w_css}}" id="header-card-{{item_index}}">
                 <div class="flex justify-center mt-3">
                     {% if item.href %}
                         <a href="{{item.href | trim }}" target="_blank">
                             {% if item.image %}
-                                <img src="{{ item.image }}" class="object-scale-down h-10 {{anim_hover_grow(scale='scale-110') }}">
+                                <img src="{% ImageSync item.image %}" class="object-scale-down h-10 {{anim_hover_grow(scale='scale-110') }}">
                             {% endif %}
                         </a>
                     {% endif %}
@@ -245,7 +247,7 @@
 <div class="items-center justify-center flex-col mt-2">
     <div class="flex justify-center items-center">
         {% if number_grid > 1 %}
-            <a class="sm:hidden rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="header-btn-mbl">
+            <a class="md:hidden rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="header-btn-mbl">
                 {% if show_all %}
                     {{ icon("expand_arrow",  "hidden rounded-full") }}
                     {{ icon("collapse_arrow", "rounded-full") }}    
@@ -256,13 +258,13 @@
             </a>
         {% endif %}
         {% if number_batch > 1 %}
-            <div class="hidden sm:block rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="header-btn-dsk">
+            <div class="hidden md:block rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="header-btn-dsk">
                 {% if show_all %}
-                    {{ icon("expand_arrow",  "sm:hidden rounded-full") }}
+                    {{ icon("expand_arrow",  "md:hidden rounded-full") }}
                     {{ icon("collapse_arrow", "rounded-full") }}    
                 {% else %}
                     {{ icon("expand_arrow",  "rounded-full") }}
-                    {{ icon("collapse_arrow", "sm:hidden rounded-full") }}    
+                    {{ icon("collapse_arrow", "md:hidden rounded-full") }}    
                 {% endif %}
             </div>
         {% endif %}
@@ -342,9 +344,9 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-2 flex flex-row justify-center flex-wrap max-w-md mb-2">
+            <div class="mt-2 flex flex-row justify-center flex-wrap w-full mb-2">
                 {% for tag in item.tags %}
-                    <div class="mt-2 mx-1 px-2 bg-blue-100 rounded-lg text-sm">
+                    <div class="mt-2 mx-1 px-2 bg-blue-100 rounded-lg text-sm select-none">
                         {{tag}}
                     </div>
                 {% endfor %}

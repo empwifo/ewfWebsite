@@ -38,7 +38,7 @@ $(document).ready(function(){
 
   $("#header-btn-dsk").click(function(){
     var all_header_batches = $(".header-card-batch-style");
-    expand_header("header-batch", "sm:", all_header_batches.length)
+    expand_header("header-batch", "md:", all_header_batches.length)
     $(this).children().toggle("hidden");
   });
 

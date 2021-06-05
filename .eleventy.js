@@ -5,7 +5,7 @@ const Image = require("@11ty/eleventy-img");
 
 module.exports = (config) => {    
     config.addPlugin(syntaxHighlight);
-    config.addPassthroughCopy({"src/assests": "assets"});
+    //config.addPassthroughCopy({"src/assests": "assets"});
     config.addPassthroughCopy({"src/scripts": "scripts"});
     config.addPassthroughCopy({"src/_redirects": ""});
     config.setFrontMatterParsingOptions({
@@ -54,22 +54,51 @@ module.exports = (config) => {
         `
     });
 
-    config.addNunjucksAsyncShortcode("Image", async (src) => {    
+    config.addNunjucksAsyncShortcode("ImageAsync", async function(src, callback) {    
         
         if (!src.startsWith("/src") || src.startsWith("src"))
             src = "src" + src
-
+        
+        
         let stats = await Image(src, {
           widths: [null],
-          formats: ["jpeg", "webp", "png"],
+          formats: ["webp"],
           urlPath: "/assets/images/",
           outputDir: "./dist/assets/images/",
+          sharpWebpOptions: {
+              "quality": 80
+          }
         });
         
         let srcOut = stats["webp"][0];   
     
-        return srcOut.url;
+        return srcOut.url
       });
+    
+    config.addNunjucksShortcode("ImageSync", function imageShortcode(src) {
+        if (!src.startsWith("/src") || src.startsWith("src"))
+            src = "src" + src
+        
+        let options = {
+            widths: [null],
+            formats: ["webp"],
+            urlPath: "/assets/images/",
+            outputDir: "./dist/assets/images/",
+            sharpWebpOptions: {
+                "quality": 80
+            }
+        }
+        // generate images, while this is async we don’t wait
+        Image(src, options);
+      
+        let imageAttributes = {
+          loading: "lazy",
+          decoding: "async",
+        };
+        // get metadata even the images are not fully generated
+        metadata = Image.statsSync(src, options);
+        return metadata["webp"][0].url;
+    });
 
     return {
         dir: {
