@@ -1,6 +1,32 @@
 {
-    "de": [],
-    "en": [],
+    "de": [
+        {
+            "name": "Regional Disparities & Economie Policy",
+            "image": "/assets/images/logos/regional_disparities.png",
+            "href": "https://www.regional-disparities.de/",
+            "short": "Das übergeordnete Ziel des Graduiertenkollegs \"Regionale Disparitäten und Wirtschaftspolitik\" ist es, eine hervorragende Ausbildung für Doktoranden zu bieten und gleichzeitig einen Beitrag zur Pionierforschung auf dem spannenden und dynamischen Gebiet der Regionalökonomie zu leisten. Durch die Kombination der Expertise von Wissenschaftlern mit unterschiedlichen ökonomischen Hintergründen (z.B. Arbeit, Staat, Makro) und damit unterschiedlichen methodischen Fähigkeiten, institutionellem Wissen und Datenzugang, etablieren wir ein Graduiertenprogramm, das international sichtbaren wissenschaftlichen Output und ein exzellentes akademisches Ausbildungsumfeld für Doktoranden verspricht."
+        },
+        {
+            "name": "Ruhr Gradiate School in Economics",
+            "image": "/assets/images/logos/logo_rgs.gif",
+            "href": "http://rgs-econ.org/",
+            "short": "Die Ruhr Graduate School in Economics (RGS Econ) ist ein Zentrum für Forschung und Hochschulbildung in den Wirtschaftswissenschaften. Sie verbindet die Expertise von drei wirtschaftswissenschaftlichen Fakultäten der Universitäten im Ruhrgebiet (Bochum, Dortmund, Essen und Duisburg) mit der des RWI - Leibniz-Institut für Wirtschaftsforschung, einem der führenden Wirtschaftsforschungsinstitute in Deutschland. Über einen Zeitraum von drei Jahren erhalten die Doktoranden eine Betreuung, die zu einem Doktortitel in Wirtschaftswissenschaften führt, der höchsten internationalen Standards entspricht."
+        }
+    ],
+    "en": [
+        {
+            "name": "Regional Disparities & Economie Policy",
+            "image": "/assets/images/logos/regional_disparities.png",
+            "href": "https://www.regional-disparities.de/",
+            "short": "The overarching goal of the RTG “Regional Disparities and Economic Policy” is to provide an outstanding education for doctoral students while at the same time contributing to frontier research in the exciting and dynamic field of regional economics. Combining the expertise of scholars from distinct economic backgrounds (e.g. labor, public, macro) and thus different methodological skills, institutional knowledge, and data access, we establish a graduate program that promises internationally visible scientific output and an excellent academic training environment for PhD candidates."
+        },
+        {
+            "name": "Ruhr Gradiate School in Economics",
+            "image": "/assets/images/logos/logo_rgs.gif",
+            "href": "http://rgs-econ.org/",
+            "short": "The Ruhr Graduate School in Economics (RGS Econ) is a center for research and higher education in Economics. It combines the expertise of three economics departments at the universities in the Ruhr Area (Bochum, Dortmund Essen, and Duisburg) with that of the RWI - Leibniz Institute for Economic Research, one of Germany‘s leading economic research institutes. Over a period of three years, graduate students receive guidance that leads to a Ph.D. in economics, complying with the highest international standards."
+        }
+    ],
     "settings": {
         "init_show": 3
     }

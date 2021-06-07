@@ -18,7 +18,7 @@
 {% macro getUIelem(slug, icon_type, textClass="") %}
 <span class="flex items-center py-2">
     {% if icon_type != "None" %}
-    <div class="mr-1 lg:mr-1"> 
+    <div class="mr-1 lg:mr-1">
         {{ icon(icon_type) }}
     </div>
     {% endif %}
@@ -190,19 +190,19 @@
 
 {% set item_index = 0 %}
 {% for batch_items in loc_data | batch(batch_size) %}
-    <div class="header-card-batch-style md:{{invisible_b}}" id="header-batch-{{loop.index}}">
+    <div class="header-card-batch-style lg:{{invisible_b}}" id="header-batch-{{loop.index}}">
         {% for item in batch_items %}
             {% set item_index = item_index + 1 %}
             {% set min_w_css = "min-w-1/" + batch_items | length %}
             {% if batch_items | length == 1 %}
                 {% set min_w_css = "" %}
             {% endif %}
-            <div class="header-card-item-style md:visible {{invisible_i}} md:{{min_w_css}}" id="header-card-{{item_index}}">
-                <div class="flex justify-center mt-3">
+            <div class="header-card-item-style lg:visible {{invisible_i}} lg:{{min_w_css}}" id="header-card-{{item_index}}">
+                <div class="flex justify-start px-4 mt-3">
                     {% if item.href %}
                         <a href="{{item.href | trim }}" target="_blank">
                             {% if item.image %}
-                                <img src="{% ImageSync item.image %}" class="object-scale-down h-10 {{anim_hover_grow(scale='scale-110') }}">
+                                <img src="{% ImageSync item.image %}" class="object-scale-down h-12 {{anim_hover_grow(scale='scale-110') }}">
                             {% endif %}
                         </a>
                     {% endif %}
@@ -244,10 +244,10 @@
     {% set hidden_exp = "" %}
     {% set hidden_coll = "hidden" %}
 {% endif %}
-<div class="items-center justify-center flex-col mt-2">
+<div class="items-center justify-center flex-col mt-6">
     <div class="flex justify-center items-center">
         {% if number_grid > 1 %}
-            <a class="md:hidden rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="header-btn-mbl">
+            <a class="lg:hidden rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="header-btn-mbl">
                 {% if show_all %}
                     {{ icon("expand_arrow",  "hidden rounded-full") }}
                     {{ icon("collapse_arrow", "rounded-full") }}    
@@ -258,7 +258,7 @@
             </a>
         {% endif %}
         {% if number_batch > 1 %}
-            <div class="hidden md:block rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="header-btn-dsk">
+            <div class="hidden lg:block rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="header-btn-dsk">
                 {% if show_all %}
                     {{ icon("expand_arrow",  "md:hidden rounded-full") }}
                     {{ icon("collapse_arrow", "rounded-full") }}    
@@ -305,16 +305,14 @@
     {% for item in loc_data %}    
         <div class="flex flex-col border-2 rounded-lg px-4 py-4 justify-center min-w-full">
             <div class="flex flex-row">
-                <a href="{{item.href}}" target="_blank" class="hidden sm:block mr-4 {{anim_hover_grow(scale='scale-110') }}">
-                    <div class="h-6 w-6 sm:h-12 sm:w-12">
-                        {% if item.type == "research" %}
-                            {{ icon("research") }}
-                        {% elif item.type == "teaching" %}
-                            {{ icon("teaching") }}
-                        {% else %}
-                            {{ icon("rss") }}
-                        {% endif %}
-                    </div>
+                <a href="{{item.href}}" target="_blank" class="hidden sm:block mr-4 {{anim_hover_grow(scale='scale-110') }} h-6 w-6 sm:h-12 sm:w-12">
+                    {% if item.type == "research" %}
+                        {{ icon("research") }}
+                    {% elif item.type == "teaching" %}
+                        {{ icon("teaching") }}
+                    {% else %}
+                        {{ icon("rss") }}
+                    {% endif %}
                 </a>
                 <div class="flex flex-col w-full">
                     <div class="flex flex-row justify-between">

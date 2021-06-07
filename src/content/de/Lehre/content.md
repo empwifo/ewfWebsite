@@ -1,15 +1,9 @@
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+{% import 'macros.njk' as macros with context %}
+***
+Econometrics ist ein viersemestriger, englischsprachiger Masterstudiengang der TU Dortmund (TUDO), der Ruhr-Universität Bochum (RUB) und der Universität Duisburg-Essen (UDE). Das Programm wird gemeinsam von den wirtschaftswissenschaftlichen Fakultäten der drei Universitäten und der Fakultät für Statistik der TU Dortmund angeboten. Es verbindet die Expertise und Breite der beteiligten Fakultäten in empirischer Wirtschaftsforschung und Volkswirtschaftslehre mit der methodisch orientierten Ausbildung der Statistiker und Ökonometriker an Deutschlands einziger Fakultät für Statistik. Diese einzigartige Kombination von Ausbildungs- und Forschungskompetenz ermöglicht es, ein spezialisiertes Curriculum für quantitativ orientierte Studierende anzubieten, das ein breites Spektrum an Themen der Ökonometrie und der angewandten Wirtschaftswissenschaften abdeckt.
 
-* * *
+Die Studierenden erwerben die Fähigkeit, methodische Kompetenz mit wirtschaftswissenschaftlichen Kenntnissen zu verbinden. Sie erwerben umfangreiche Kenntnisse ökonometrischer Methoden und Modelle sowie ein vertieftes Verständnis zentraler ökonomischer Wirkungszusammenhänge und daraus resultierender ökonometrischer Fragestellungen. Der Studiengang unterstützt insbesondere forschungsinteressierte Studierende bei der Entwicklung analytischer Fähigkeiten im Hinblick auf spezifische wirtschaftswissenschaftliche Forschungsfragen und bereitet so optimal auf eine Promotion in Ökonometrie oder benachbarten Disziplinen vor. Der Masterstudiengang Ökonometrie bereitet somit gut auf eine Karriere in der Ökonometrie, empirischen Wirtschaftsforschung und evidenzbasierten Politikberatung vor.
 
-## Generische Liste
+Die Absolventen erhalten einen gemeinsamen MSc-Abschluss der vier beteiligten Fakultäten. Weiterführende Informationen sind unter [econometrics.ruhr](https://www.econometrics.ruhr/) zufinden.
 
-* Eintrag 1
-* Eintrag 2
-* Eintrag 3
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+***

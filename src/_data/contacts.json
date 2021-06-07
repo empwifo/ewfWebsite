@@ -23,6 +23,22 @@
             "mail": "webredaktion@uni-due.de",
             "web": "https://www.uni-due.de/",
             "image": "/assets/images/logos/unidulogo.png"
+        },
+        {
+            "title": "UA Ruhr",
+            "adress": "Dr. Hans Stallmann\nUV/Raum 344\nUniversitätsstraße 150\n44780 Bochum",
+            "phone": "+49(0)234/32-27892",
+            "mail": "hans.stallmann@uaruhr.de",
+            "web": "https://www.uaruhr.de/kontakt.html.de",
+            "image": "/assets/images/logos/uaruhrlogo.png"
+        },
+        {
+            "title": "RWI Essen",
+            "adress": "Hohenzollernstraße 1-3\n45128 Essen",
+            "phone": "0201 / 81 49-0",
+            "mail": "rwi@rwi-essen.de",
+            "web": "https://www.rwi-essen.de/",
+            "image": "/assets/images/logos/rwi_logo.jpg"
         }
     ]
 }
