@@ -28,6 +28,10 @@
         }
     ],
     "settings": {
-        "init_show": 3
+        "init_show": 3,
+        "title": {
+            "de": "Beteiligte Institute",
+            "en": "Involved Institutes"
+        }
     }
 }

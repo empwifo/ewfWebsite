@@ -160,6 +160,13 @@
 {# --------------------------- #}
 
 {% macro grid_short_info(data) %}
+{% set title = "" %}
+{% if data.settings.title %}
+    {% if data.settings.title[locale] %}
+        {% set title = data.settings.title[locale] %}
+    {% endif %}
+{% endif %}
+
 {% set loc_data = data[locale] %}
 {% set margin_top = "10" %}
 
@@ -185,6 +192,12 @@
 {% set number_grid = loc_data | length %}
 {% set number_batch = loc_data | batch(batch_size) | length %}
 <div class="sm:flex sm:flex-col mt-{{margin_top}}">
+{% if title != "" and number_grid > 0 %}
+    <div class="container mx-auto flex items-center justify-center pt-8 md:text-3xl text-2xl font-black text-gray-700 bg-white {{visibility}}">
+        {{ title }}
+    </div>
+{% endif %}
+
 {% set invisible_b = "" %}
 {% set invisible_i = "" %}
 

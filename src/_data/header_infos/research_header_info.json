@@ -65,6 +65,10 @@
     ],
     "settings": {
         "init_show": 3,
-        "show_all": true
+        "show_all": true,
+        "title": {
+            "de": "Beteiligte Lehrstühle",
+            "en": "Involved Research Chairs"
+        }
     }
 }
