@@ -156,10 +156,10 @@
 
 
 {# --------------------------- #}
-{# header card macros          #}
+{# info card macros          #}
 {# --------------------------- #}
 
-{% macro grid_short_info(data) %}
+{% macro info_cards(data) %}
 {% set title = "" %}
 {% if data.settings.title %}
     {% if data.settings.title[locale] %}
@@ -178,7 +178,7 @@
     {% endif %}
 {% endif %}
 
-{% set batch_size = defaults.header_settings.init_show %}
+{% set batch_size = defaults.card_settings.init_show %}
 {% if data.settings.init_show %}
     {% set batch_size = data.settings.init_show %}
 {% endif %}
@@ -203,14 +203,14 @@
 
 {% set item_index = 0 %}
 {% for batch_items in loc_data | batch(batch_size) %}
-    <div class="header-card-batch-style lg:{{invisible_b}}" id="header-batch-{{loop.index}}">
+    <div class="info-card-batch-style lg:{{invisible_b}}" id="info-batch-{{loop.index}}">
         {% for item in batch_items %}
             {% set item_index = item_index + 1 %}
             {% set min_w_css = "min-w-1/" + batch_items | length %}
             {% if batch_items | length == 1 %}
                 {% set min_w_css = "" %}
             {% endif %}
-            <div class="header-card-item-style lg:visible {{invisible_i}} lg:{{min_w_css}}" id="header-card-{{item_index}}">
+            <div class="info-card-item-style lg:visible {{invisible_i}} lg:{{min_w_css}}" id="info-card-{{item_index}}">
                 <div class="flex justify-start px-4 mt-3">
                     {% if item.href %}
                         <a href="{{item.href | trim }}" target="_blank">
@@ -222,7 +222,7 @@
                 </div>
                 <div class="flex flex-col justify-center px-4 py-5 mb-8">
                     {% if item.name %}
-                        <h1 class="font-medium pb-2">{{item.name}}</h1>
+                        <h1 class="font-black pb-2">{{item.name}}</h1>
                     {% endif %}
                     {% if item.name %}
                         <p>{{item.short}}</p>    
@@ -260,7 +260,7 @@
 <div class="items-center justify-center flex-col mt-6">
     <div class="flex justify-center items-center">
         {% if number_grid > 1 %}
-            <a class="lg:hidden rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="header-btn-mbl">
+            <a class="lg:hidden rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="info-btn-mbl">
                 {% if show_all %}
                     {{ icon("expand_arrow",  "hidden rounded-full") }}
                     {{ icon("collapse_arrow", "rounded-full") }}    
@@ -271,7 +271,7 @@
             </a>
         {% endif %}
         {% if number_batch > 1 %}
-            <div class="hidden lg:block rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="header-btn-dsk">
+            <div class="hidden lg:block rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="info-btn-dsk">
                 {% if show_all %}
                     {{ icon("expand_arrow",  "md:hidden rounded-full") }}
                     {{ icon("collapse_arrow", "rounded-full") }}    
@@ -333,7 +333,7 @@
                 <div class="flex flex-col w-full">
                     <div class="flex flex-row justify-between">
                         <div class="flex flex-row justify-start">
-                            <div class="font-medium text-lg sm:text-xl">
+                            <div class="font-black mr-4 text-lg sm:text-xl">
                                 {{ item.title }}
                             </div>
                         </div>

@@ -19,12 +19,6 @@
             "short": "Die Uni Duisburg Essen ist eine der jüngsten und größten Universitäten Deutschlands, mit einem breiten Fächerspektrum in allen Bereichen."
         },
         {
-            "name": "UA Ruhr ",
-            "image": "/assets/images/logos/uaruhrlogo.png",
-            "href": "https://www.uaruhr.de/",
-            "short": "In der Universitätsallianz Ruhr arbeiten die Ruhr-Universität Bochum, die Technische Universität Dortmund und die Universität Duisburg-Essen seit 2007 strategisch eng zusammen. Mit mehr als 120.000 Studierenden und nahezu 1.300 Professorinnen und Professoren gehört die UA Ruhr zu den größten und leistungsstärksten Wissenschaftsstandorten Deutschlands."
-        },
-        {
             "name": "RWI Essen ",
             "image": "/assets/images/logos/rwi_logo.jpg",
             "href": "https://www.rwi-essen.de/",
@@ -51,12 +45,6 @@
             "short": "The University of Duisburg Essen is one of the youngest and largest universities in Germany, with a wide range of subjects in all areas."
         },
         {
-            "name": "UA Ruhr ",
-            "image": "/assets/images/logos/uaruhrlogo.png",
-            "href": "https://www.uaruhr.de/",
-            "short": "The UA Ruhr is an alliance between Ruhr University Bochum, TU Dortmund University, and the University of Duisburg-Essen, the three largest universities in Germany’s thriving Ruhr Area. Each of our institutions has a strong tradition of breaking down walls between disciplines. We believe in the benefits of collaboration on all levels of scholarship and research, which is one of the reasons we came together in this unique university alliance."
-        },
-        {
             "name": "RWI Essen ",
             "image": "/assets/images/logos/rwi_logo.jpg",
             "href": "https://www.rwi-essen.de/",
@@ -65,9 +53,11 @@
     ],
     "settings": {
         "init_show": 3,
+        "show_all": true,
         "title": {
             "de": "Beteiligte Institute",
             "en": "Involved Institutes"
-        }
+        },
+        "position": "top"
     }
 }

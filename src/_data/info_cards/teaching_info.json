@@ -30,8 +30,9 @@
     "settings": {
         "init_show": 3,
         "title": {
-            "de": "Beteiligte Institute",
-            "en": "Involved Institutes"
-        }
+            "de": "Graduiertenkolleg",
+            "en": "Graduate College"
+        },
+        "position": "top"
     }
 }

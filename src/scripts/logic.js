@@ -36,15 +36,15 @@ function expand_element_toggle(element, size=""){
 
 $(document).ready(function(){
 
-  $("#header-btn-dsk").click(function(){
-    var all_header_batches = $(".header-card-batch-style");
-    expand_header("header-batch", "lg:", all_header_batches.length)
+  $("#info-btn-dsk").click(function(){
+    var all_info_batches = $(".info-card-batch-style");
+    expand_header("info-batch", "lg:", all_info_batches.length)
     $(this).children().toggle("hidden");
   });
 
-  $("#header-btn-mbl").click(function(){
-    var all_header_items = $(".header-card-item-style");
-    expand_header("header-card", "", all_header_items.length)
+  $("#info-btn-mbl").click(function(){
+    var all_info_items = $(".info-card-item-style");
+    expand_header("info-card", "", all_info_items.length)
     $(this).children().toggle("hidden");
   });
 

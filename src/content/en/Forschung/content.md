@@ -1,5 +1,5 @@
 {% import 'macros.njk' as macros with context %}
-***
+
 Empirical economic research is becoming increasingly important within the economic sciences. Current debates on the causes and consequences of social and economic developments as well as on the orientation of economic policy are increasingly based on the results of empirical research. In the Competence Field Empirical Economic Research (EWF), around one hundred researchers from the three UA Ruhr universities and RWI - Leibniz Institute for Economic Research, as well as roughly the same number of doctoral students, are currently working on topics relevant to empirical economic research. The strategic goal of this cooperation is to establish the competence field EWF as an internationally visible center for empirical economic research by bundling excellent research.
 
 {{ macros.image("/assets/images/logos/ewflogo.png", "ewf logo", "medium") }}
