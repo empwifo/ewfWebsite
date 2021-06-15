@@ -75,10 +75,20 @@ $(document).ready(function(){
     current_visible_card.prev().toggleClass("active");
 
     if ($("#info_card_container > .active").prev().length == 0)
-      $(this).addClass("invisible");
+      $('#info_card_left').addClass("invisible");
     
     if ($("#info_card_container > .active").next().length > 0)
       $("#info_card_right").removeClass("invisible");
   })
+
+  $(window).resize(function(){
+    // handle jump between screen classes and the translation 
+    // of the info cards. Simply reset the cards on each resize
+    $('#info_card_container').children().css({right: `0%`});
+    $('#info_card_left').addClass("invisible");
+    $('#info_card_container').children().removeClass("active");
+    $('#infocard-1').addClass("active");
+  });
+  
 
 });

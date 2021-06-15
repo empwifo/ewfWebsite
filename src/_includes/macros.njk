@@ -214,8 +214,8 @@
             {% set active = "" %}
         {% endif %}
 
-        <div class="info-card-item-style lg:{{min_w_css_lg}} xl:{{min_w_css_xl}} px-2 {{active}}" id="infocard-{{item_index}}">
-            <div class="border-2 rounded-md relative min-h-full px-4 pt-4">
+        <div class="info-card-item-style lg:{{min_w_css_lg}} xl:{{min_w_css_xl}} px-2 pb-10 {{active}}" id="infocard-{{item_index}}">
+            <div class="box_style relative min-h-full px-4 pt-4">
                 <div class="flex justify-start px-4 mt-3">
                     {% if item.href %}
                         <a href="{{item.href | trim }}" target="_blank">
@@ -293,7 +293,7 @@
 {# "max-w-prose" -> use the same width as the prose container, that holds the markdown text #}
 <div class="flex flex-col space-y-4 mx-8 my-8 sm:mx-auto items-center justify-center sm:max-w-prose">
     {% for item in loc_data %}    
-        <div class="flex flex-col border-2 rounded-lg px-4 py-4 justify-center min-w-full">
+        <div class="flex flex-col box_style px-4 py-4 justify-center min-w-full">
             <div class="flex flex-row">
                 <a href="{{item.href}}" target="_blank" class="hidden sm:block mr-4 {{anim_hover_grow(scale='scale-110') }} h-6 w-6 sm:h-12 sm:w-12">
                     {% if item.type == "research" %}
