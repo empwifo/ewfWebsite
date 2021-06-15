@@ -1,0 +1,75 @@
+{
+    "de": [
+        {
+            "name": "Lehrstuhl 1",
+            "image": "/assets/images/logos/RUB.jpg",
+            "href": "https://www.ruhr-uni-bochum.de/de",
+            "short": ""
+        },
+        {
+            "name": "Lehrstuhl 2",
+            "image": "/assets/images/logos/tudortmundlogo.png",
+            "href": "https://www.tu-dortmund.de/",
+            "short": ""
+        },
+        {
+            "name": "Lehrstuhl 3",
+            "image": "/assets/images/logos/unidulogo.png",
+            "href": "https://www.uni-due.de/",
+            "short": ""
+        },
+        {
+            "name": "Lehrstuhl 4",
+            "image": "/assets/images/logos/tudortmundlogo.png",
+            "href": "https://www.tu-dortmund.de/",
+            "short": ""
+        },
+        {
+            "name": "Lehrstuhl 5",
+            "image": "/assets/images/logos/unidulogo.png",
+            "href": "https://www.uni-due.de/",
+            "short": ""
+        }
+    ],
+    "en": [
+        {
+            "name": "Research Chair 1",
+            "image": "/assets/images/logos/RUB.jpg",
+            "href": "https://www.ruhr-uni-bochum.de/de",
+            "short": ""
+        },
+        {
+            "name": "Research Chair 2",
+            "image": "/assets/images/logos/tudortmundlogo.png",
+            "href": "https://www.tu-dortmund.de/",
+            "short": ""
+        },
+        {
+            "name": "Research Chair 3",
+            "image": "/assets/images/logos/unidulogo.png",
+            "href": "https://www.uni-due.de/",
+            "short": ""
+        },
+        {
+            "name": "Research Chair 4",
+            "image": "/assets/images/logos/tudortmundlogo.png",
+            "href": "https://www.tu-dortmund.de/",
+            "short": ""
+        },
+        {
+            "name": "Research Chair 5",
+            "image": "/assets/images/logos/unidulogo.png",
+            "href": "https://www.uni-due.de/",
+            "short": ""
+        }
+    ],
+    "settings": {
+        "init_show": 5,
+        "show_all": true,
+        "title": {
+            "de": "Beteiligte Lehrstühle",
+            "en": "Involved Research Chairs"
+        },
+        "position": "bottom"
+    }
+}

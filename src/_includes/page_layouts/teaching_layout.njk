@@ -3,8 +3,15 @@ layout: base_layouts/content.njk
 ---
 {% import 'macros.njk' as macros with context %}
 
-{{ macros.grid_short_info(header_infos.teaching_header_info) }}
+{% if info_cards.teaching_info.settings.position == "top" %}
+{{ macros.info_cards(info_cards.teaching_info) }}
+{% endif %}
 
 {{content | safe }}
 
 {{ macros.footer_link(footer_links.teaching_footer_links) }}
+
+{% if info_cards.teaching_info.settings.position == "bottom" %}
+{{ macros.info_cards(info_cards.teaching_info) }}
+{% endif %}
+
