@@ -23,6 +23,8 @@ function expand_element_toggle(element, size=""){
 }
 
 $(document).ready(function(){
+  var prev_window_width = $(window).width();
+
   $(".expandLink").click(function(){
     var id = $(this).attr("id")
     $("#truncate_"+id).toggle("hidden");
@@ -81,14 +83,19 @@ $(document).ready(function(){
       $("#info_card_right").removeClass("invisible");
   })
 
-  $(window).resize(function(){
+  $(window).resize(function(e){
     // handle jump between screen classes and the translation 
     // of the info cards. Simply reset the cards on each resize
-    /*$('#info_card_container').children().css({right: `0%`});
+    if (!(prev_window_width < 1024 && $(this).width() >= 1024)){
+      prev_window_width = $(this).width();
+      return
+    }
+    prev_window_width = $(this).width();
+    $('#info_card_container').children().css({right: `0%`});
     $('#info_card_left').addClass("invisible");
     $('#info_card_right').removeClass("invisible");
     $('#info_card_container').children().removeClass("active");
-    $('#infocard-1').addClass("active");*/
+    $('#infocard-1').addClass("active");
   });
   
 
