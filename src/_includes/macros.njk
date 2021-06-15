@@ -250,10 +250,10 @@
 {% endfor %}
 </div>
 <div class="lg:hidden flex flex-row justify-center mt-5 space-x-16 mb-{{margin_bottom}}">
-    <div class="w-6 h-6 invisible" id="info_card_left">
+    <div class="w-6 h-6 invisible rounded-full {{anim_hover_grow('bg-blue-200')}}" id="info_card_left">
         {{ icon("arrow_left") }}
     </div>
-    <div class="w-6 h-6" id="info_card_right">
+    <div class="w-6 h-6 rounded-full {{anim_hover_grow('bg-blue-200')}}" id="info_card_right">
         {{ icon("arrow_right") }}
     </div>
 </div>
