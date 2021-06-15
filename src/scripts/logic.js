@@ -86,6 +86,7 @@ $(document).ready(function(){
     // of the info cards. Simply reset the cards on each resize
     $('#info_card_container').children().css({right: `0%`});
     $('#info_card_left').addClass("invisible");
+    $('#info_card_right').removeClass("invisible");
     $('#info_card_container').children().removeClass("active");
     $('#infocard-1').addClass("active");
   });
