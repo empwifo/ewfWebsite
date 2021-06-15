@@ -36,24 +36,12 @@
         {
             "type": "other",
             "href": "https://www.uaruhr.de/news/2020/news00945.html.de",
-            "title": "UA Ruhr Professur - Digitale Daten der sozial- und wirtschaftswissenschaftlichen Forschung",
+            "title": "UA Ruhr Professur - Digitale Daten der sozial- und wirtschafts-wissenschaftlichen Forschung",
             "short": "Der renommierte Ökonom Prof. Dr. Thomas Bauer erhält eine standortübergreifende Professur in der Universitätsallianz Ruhr für „Digitale Daten in der sozial- und wirtschaftswissenschaftlichen Forschung“. Das Mercator Research Center Ruhr (Mercur) fördert die Professur mit rund 900.000 Euro für eine Laufzeit von vier Jahren.",
             "tags": [
                 "Big Data",
                 "Forschung",
                 "Professur",
-                "UA Ruhr"
-            ]
-        },
-        {
-            "type": "other",
-            "href": "https://www.uaruhr.de/news/2020/news00945.html.de",
-            "title": "Big Data Professorship",
-            "short": "The renowned economist Prof. Dr. Thomas Bauer has been awarded a cross-location professorship in the University Alliance Ruhr for \"Digital Data in Social and Economic Research\". The Mercator Research Center Ruhr (Mercur) is funding the professorship with around 900,000 euros for a term of four years.",
-            "tags": [
-                "Big Data",
-                "Research",
-                "Professorship",
                 "UA Ruhr"
             ]
         }
@@ -90,6 +78,18 @@
                 "health economic research",
                 "medical services",
                 "research"
+            ]
+        },
+        {
+            "type": "other",
+            "href": "https://www.uaruhr.de/news/2020/news00945.html.de",
+            "title": "UA Ruhr Professorship - Digital Data in Social and Economic Research",
+            "short": "The renowned economist Prof. Dr. Thomas Bauer has been awarded a cross-location professorship in the University Alliance Ruhr for \"Digital Data in Social and Economic Research\". The Mercator Research Center Ruhr (Mercur) is funding the professorship with around 900,000 euros for a term of four years.",
+            "tags": [
+                "Big Data",
+                "Research",
+                "Professorship",
+                "UA Ruhr"
             ]
         }
     ],
