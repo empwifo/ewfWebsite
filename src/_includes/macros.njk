@@ -57,6 +57,10 @@
         {% set icon = "/assets/ui/collapse_arrow.svg" %}
     {% elif type == "rss" %}
         {% set icon = "/assets/ui/rss.svg" %}
+    {% elif type == "arrow_right" %}
+        {% set icon = "/assets/ui/arrow_right.svg" %}
+    {% elif type == "arrow_left" %}
+        {% set icon = "/assets/ui/arrow_left.svg" %}
     {% else %}
         {% set icon = "/assets/ui/home.svg" %}
     {% endif %}
@@ -168,7 +172,7 @@
 {% endif %}
 
 {% set loc_data = data[locale] %}
-{% set margin_top = "10" %}
+{% set margin_top = "2" %}
 
 {% if not data[locale] | length %}
     {% if data[fallback] | length %}
@@ -178,39 +182,40 @@
     {% endif %}
 {% endif %}
 
-{% set batch_size = defaults.card_settings.init_show %}
-{% if data.settings.init_show %}
-    {% set batch_size = data.settings.init_show %}
-{% endif %}
-
-{% if not data.settings.show_all %}
-    {% set show_all = false %}
+{% if data.settings.position == "bottom" %}
+    {% set margin_bottom = 5 %}
 {% else %}
-    {% set show_all = data.settings.show_all %}
+    {% set margin_bottom = 0 %}
 {% endif %}
 
-{% if title != "" and number_grid > 0 %}
+{% set batch_size = 3 %}
+{% if data.settings.items_per_row %}
+    {% set batch_size = data.settings.items_per_row %}
+{% endif %}
+
+{% if title != "" and loc_data | length > 0 %}
     <div class="container mx-auto flex items-center justify-center pt-8 md:text-3xl text-2xl font-black text-gray-700 bg-white {{visibility}}">
         {{ title }}
     </div>
 {% endif %}
 
-{% set number_grid = loc_data | length %}
-{% set number_batch = loc_data | batch(batch_size) | length %}
-<div class="flex lg:flex-wrap flex-nowrap mt-{{margin_top}} mx-10 md:mx-28">
-{% set invisible_b = "" %}
-{% set invisible_i = "" %}
-
+<div class="flex lg:flex-wrap flex-grow flex-nowrap justify-start lg:justify-center mt-{{margin_top}} mb-{{margin_bottom}} mb-5 mx-10 md:mx-28 overflow-x-hidden"
+    id="info_card_container">
 {% set item_index = 0 %}
-{# % for batch_items in loc_data | batch(batch_size) % #}
-    <!--div class="info-card-batch-style lg:{{invisible_b}} min-w-full lg:min-w-min" id="info-batch-{{loop.index}}"!-->
-        {% for item in loc_data %}
-            {% set item_index = item_index + 1 %}
-            {% set min_w_css = "min-w-1/" + batch_size %}
-            {% if batch_items | length == 1 %}
-                {% set min_w_css = "" %}
-            {% endif %}
-            <div class="info-card-item-style lg:visible {{invisible_i}} lg:{{min_w_css}}" id="info-card-{{item_index}}">
+
+{% for batch_data in loc_data | batch(batch_size) %}
+    {% for item in batch_data %}
+        {% set item_index = item_index + 1 %}
+        {% set min_w_css_xl = "max-w-1/" + batch_size %}
+        {% set min_w_css_lg = "max-w-1/" + batch_data | length %}
+        {% if item_index == 1 %}
+            {% set active = "active" %}
+        {% else %}
+            {% set active = "" %}
+        {% endif %}
+
+        <div class="info-card-item-style lg:{{min_w_css_lg}} xl:{{min_w_css_xl}} px-2 {{active}}" id="infocard-{{item_index}}">
+            <div class="border-2 rounded-md relative min-h-full px-4 pt-4">
                 <div class="flex justify-start px-4 mt-3">
                     {% if item.href %}
                         <a href="{{item.href | trim }}" target="_blank">
@@ -220,16 +225,16 @@
                         </a>
                     {% endif %}
                 </div>
-                <div class="flex flex-col justify-center px-4 py-5 mb-8">
+                <div class="flex flex-col justify-center px-4 py-5">
                     {% if item.name %}
-                        <h1 class="font-black pb-2">{{item.name}}</h1>
+                        <h1 class="font-black text-xl pb-2">{{item.name}}</h1>
                     {% endif %}
-                    {% if item.name %}
-                        <p>{{item.short}}</p>    
+                    {% if item.short %}
+                        <p class="mb-8">{{item.short}}</p>
                     {% endif %}
                 </div>
-                <div class="absolute bottom-0 right-0 mr-4 mb-4">
-                    {% if item.href %}
+                <div class="absolute bottom-0 right-0 mr-4 mb-4 hidden lg:block">
+                    {% if item.href and item.short %}
                         <div class="{{anim_hover_grow()}}">
                             <a href="{{item.href | trim }}" target="_blank">
                                 <div class="w-6 h-6">
@@ -240,43 +245,16 @@
                     {% endif %}
                 </div>
             </div>
-            {% if not show_all %}
-                {% set invisible_i = "hidden" %}
-            {% endif %}
-        {% endfor %}
-{# % endfor % #}
+        </div>
+    {% endfor %}
+{% endfor %}
 </div>
-{% if show_all %}
-    {% set hidden_exp = "hidden" %}
-    {% set hidden_coll = "" %}
-{% else %}
-    {% set hidden_exp = "" %}
-    {% set hidden_coll = "hidden" %}
-{% endif %}
-<div class="items-center justify-center flex-col mt-6">
-    <div class="flex justify-center items-center">
-        {% if number_grid > 1 %}
-            <a class="lg:hidden rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="info-btn-mbl">
-                {% if show_all %}
-                    {{ icon("expand_arrow",  "hidden rounded-full") }}
-                    {{ icon("collapse_arrow", "rounded-full") }}    
-                {% else %}
-                    {{ icon("expand_arrow",  "rounded-full") }}
-                    {{ icon("collapse_arrow", "hidden rounded-full") }}    
-                {% endif %}
-            </a>
-        {% endif %}
-        {% if number_batch > 1 %}
-            <div class="hidden lg:block rounded-full w-6 h-6 {{anim_hover_grow('bg-blue-200')}}" id="info-btn-dsk">
-                {% if show_all %}
-                    {{ icon("expand_arrow",  "md:hidden rounded-full") }}
-                    {{ icon("collapse_arrow", "rounded-full") }}    
-                {% else %}
-                    {{ icon("expand_arrow",  "rounded-full") }}
-                    {{ icon("collapse_arrow", "md:hidden rounded-full") }}    
-                {% endif %}
-            </div>
-        {% endif %}
+<div class="lg:hidden flex flex-row justify-center mt-5 space-x-16 mb-{{margin_bottom}}">
+    <div class="w-6 h-6 invisible" id="info_card_left">
+        {{ icon("arrow_left") }}
+    </div>
+    <div class="w-6 h-6" id="info_card_right">
+        {{ icon("arrow_right") }}
     </div>
 </div>
 {% endmacro %}

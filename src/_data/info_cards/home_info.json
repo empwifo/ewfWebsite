@@ -1,6 +1,12 @@
 {
     "de": [
         {
+            "name": "RWI Essen ",
+            "image": "/assets/images/logos/rwi_logo.jpg",
+            "href": "https://www.rwi-essen.de/",
+            "short": "Das RWI - Leibniz-Institut für Wirtschaftsforschung (vormals Rheinisch-Westfälisches Institut für Wirtschaftsforschung) ist ein führendes Zentrum für wissenschaftliche Forschung und evidenzbasierte Politikberatung in Deutschland und Mitglied der Leibniz-Gemeinschaft."
+        },
+        {
             "name": "Ruhr-Universität Bochum",
             "image": "/assets/images/logos/RUB.jpg",
             "href": "https://www.ruhr-uni-bochum.de/de",
@@ -17,15 +23,15 @@
             "image": "/assets/images/logos/unidulogo.png",
             "href": "https://www.uni-due.de/",
             "short": "Die Uni Duisburg Essen ist eine der jüngsten und größten Universitäten Deutschlands, mit einem breiten Fächerspektrum in allen Bereichen."
-        },
+        }
+    ],
+    "en": [
         {
             "name": "RWI Essen ",
             "image": "/assets/images/logos/rwi_logo.jpg",
             "href": "https://www.rwi-essen.de/",
-            "short": "Das RWI - Leibniz-Institut für Wirtschaftsforschung (vormals Rheinisch-Westfälisches Institut für Wirtschaftsforschung) ist ein führendes Zentrum für wissenschaftliche Forschung und evidenzbasierte Politikberatung in Deutschland und Mitglied der Leibniz-Gemeinschaft. Es wurde 1926 gegründet und arbeitet seit 1943 in rechtlicher Selbständigkeit als eingetragener Verein; es dient ausschließlich gemeinnützigen Zwecken."
-        }
-    ],
-    "en": [
+            "short": "RWI - Leibniz Institute for Economic Research (formerly Rheinisch-Westfälisches Institut für Wirtschaftsforschung) is a leading centre for economic research and evidence-based policy advice in Germany."
+        },
         {
             "name": "Ruhr-University Bochum",
             "image": "/assets/images/logos/RUB.jpg",
@@ -43,17 +49,10 @@
             "image": "/assets/images/logos/unidulogo.png",
             "href": "https://www.uni-due.de/",
             "short": "The University of Duisburg Essen is one of the youngest and largest universities in Germany, with a wide range of subjects in all areas."
-        },
-        {
-            "name": "RWI Essen ",
-            "image": "/assets/images/logos/rwi_logo.jpg",
-            "href": "https://www.rwi-essen.de/",
-            "short": "RWI - Leibniz Institute for Economic Research (formerly Rheinisch-Westfälisches Institut für Wirtschaftsforschung) is a leading centre for economic research and evidence-based policy advice in Germany. Through its research work, RWI provides information on economic developments and their underlying catalysts, assists economic policy decision-making and fosters economic literacy among the wider public."
         }
     ],
     "settings": {
-        "init_show": 3,
-        "show_all": true,
+        "items_per_row": 3,
         "title": {
             "de": "Beteiligte Institute",
             "en": "Involved Institutes"
