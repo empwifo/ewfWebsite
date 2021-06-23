@@ -1,53 +1,71 @@
 {
     "de": [
         {
-            "name": "Lehrstuhl 1",
-            "image": "/assets/images/logos/RUB.jpg",
-            "href": "https://www.ruhr-uni-bochum.de/de",
+            "name": "Empirische Wirtschaftsforschung",
+            "image": "/assets/images/logos/wiwi_logo.gif",
+            "href": "https://www.wiwi.ruhr-uni-bochum.de/empwifo/index.html.de",
             "short": ""
         },
         {
-            "name": "Lehrstuhl 2",
-            "image": "/assets/images/logos/tudortmundlogo.png",
-            "href": "https://www.tu-dortmund.de/",
-            "short": ""
-        },
-        {
-            "name": "Lehrstuhl 3",
+            "name": "Statisitk",
             "image": "/assets/images/logos/unidulogo.png",
-            "href": "https://www.uni-due.de/",
+            "href": "https://www.stat.wiwi.uni-due.de/",
             "short": ""
         },
         {
-            "name": "Lehrstuhl 4",
-            "image": "/assets/images/logos/tudortmundlogo.png",
-            "href": "https://www.tu-dortmund.de/",
-            "short": ""
-        },
-        {
-            "name": "Lehrstuhl 5",
+            "name": "Empirische Gesundheitsökonomik",
             "image": "/assets/images/logos/unidulogo.png",
-            "href": "https://www.uni-due.de/",
+            "href": "https://www.hcm.wiwi.uni-due.de/",
+            "short": ""
+        },
+        {
+            "name": "Verhaltensbasierte Sozialpolitik",
+            "image": "/assets/images/logos/uni_mag_logo.png",
+            "href": "https://www.bsp.ovgu.de/",
+            "short": ""
+        },
+        {
+            "name": "Internationale Wirtschaftsbeziehungen",
+            "image": "/assets/images/logos/wiwi_logo.gif",
+            "href": "https://www.wiwi.ruhr-uni-bochum.de/iwb/index.html.de",
+            "short": ""
+        },
+        {
+            "name": "Internationale Wirtschaftsbeziehungen",
+            "image": "/assets/images/logos/unidulogo.png",
+            "href": "https://www.iwb.wiwi.uni-due.de/",
+            "short": ""
+        },
+        {
+            "name": "Ökonometrie",
+            "image": "/assets/images/logos/unidulogo.png",
+            "href": "https://www.oek.wiwi.uni-due.de/",
+            "short": ""
+        },
+        {
+            "name": "Technologiemanagement",
+            "image": "/assets/images/logos/tuM_logo.png",
+            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/tm/de/einrichtung/",
             "short": ""
         }
     ],
     "en": [
         {
-            "name": "Research Chair 1",
-            "image": "/assets/images/logos/RUB.jpg",
-            "href": "https://www.ruhr-uni-bochum.de/de",
+            "name": "Empirical Econmics",
+            "image": "/assets/images/logos/wiwi_logo.gif",
+            "href": "https://www.wiwi.ruhr-uni-bochum.de/empwifo/index.html.en",
             "short": ""
         },
         {
-            "name": "Research Chair 2",
-            "image": "/assets/images/logos/tudortmundlogo.png",
-            "href": "https://www.tu-dortmund.de/",
-            "short": ""
-        },
-        {
-            "name": "Research Chair 3",
+            "name": "Statistics",
             "image": "/assets/images/logos/unidulogo.png",
-            "href": "https://www.uni-due.de/",
+            "href": "https://www.stat.wiwi.uni-due.de/",
+            "short": ""
+        },
+        {
+            "name": "Empirical Health Care Management",
+            "image": "/assets/images/logos/unidulogo.png",
+            "href": "https://www.hcm.wiwi.uni-due.de/",
             "short": ""
         },
         {
