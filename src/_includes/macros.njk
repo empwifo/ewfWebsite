@@ -143,11 +143,11 @@
                 {{ icon(icon_type) }}
             </div>
             {% if link == "web" %}
-                <a href="{{data | striptags(true) | escape | nl2br }}" class="underline hover:text-blue-700" target="_blank">{{link_text}}</a>
+                <a href="{{data | striptags(true) | escape | nl2br }}" class="underline sm:hover:text-blue-700" target="_blank">{{link_text}}</a>
             {% elif link == "phone" %}
-                <a href="tel: {{data | striptags(true) | escape | nl2br }}" class="underline hover:text-blue-700">{{data}}</a>
+                <a href="tel: {{data | striptags(true) | escape | nl2br }}" class="underline sm:hover:text-blue-700">{{data}}</a>
             {% elif link == "mail" %}
-                <a href="mailto: {{data | striptags(true) | escape | nl2br }}" class="underline hover:text-blue-700">{{data}}</a>
+                <a href="mailto: {{data | striptags(true) | escape | nl2br }}" class="underline sm:hover:text-blue-700">{{data}}</a>
             {% else %}
                 {{ data | striptags(true) | escape | nl2br}}
             {% endif %}
@@ -227,7 +227,7 @@
                 </div>
                 <div class="flex flex-col justify-center px-4 py-5">
                     {% if item.name %}
-                        <h1 class="font-black text-xl pb-2">{{item.name}}</h1>
+                        <h1 class="font-black pb-2">{{item.name}}</h1>
                     {% endif %}
                     {% if item.short %}
                         <p class="mb-8">{{item.short}}</p>
@@ -264,7 +264,69 @@
 
 
 {# --------------------------- #}
-{# footer link card macros          #}
+{# Bottom collection for many  #}
+{# datapoints                  #}
+{# --------------------------- #}
+
+{% macro bottom_data_collection(data) %}
+{% set title = "" %}
+{% if data.settings.title %}
+    {% if data.settings.title[locale] %}
+        {% set title = data.settings.title[locale] %}
+    {% endif %}
+{% endif %}
+
+{% set loc_data = data[locale] %}
+{% set margin_top = "2" %}
+
+{% if not data[locale] | length %}
+    {% if data[fallback] | length %}
+        {% set loc_data = data[fallback] %}
+    {% else %}
+        {% set margin_top = "0" %}
+    {% endif %}
+{% endif %}
+
+{% set batch_size = 3 %}
+{% if data.settings.items_per_row %}
+    {% set batch_size = data.settings.number_columns %}
+{% endif %}
+
+{% if title != "" and loc_data | length > 0 %}
+    <div class="container mx-auto flex items-center justify-center pt-8 md:text-3xl text-2xl font-black text-gray-700 bg-white {{visibility}}">
+        {{ title }}
+    </div>
+{% endif %}
+
+{% set number_cols = 1 %}
+{% if data.settings.number_columns %}
+    {% set number_cols = data.settings.number_columns %}
+{% endif %}
+
+{% set batch_size %} {{(loc_data | length / number_cols) | ceil }} {% endset%}
+
+<div class="grid-rows-{{number_cols}} mt-{{margin_top}} mb-{{margin_bottom}} mb-5 mx-4 md:mx-28"
+    id="info_card_container">
+
+    {% set min_w_css = "min-w-1/" + number_cols %}
+    {% for batch_data in loc_data | batch(batch_size) %}
+        <div class="">
+            <ul class="list-inside list-disc">
+            {% for item in batch_data %}
+                <li><a href="{{item.href}}">{{item.name}}</a></li>    
+            {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+
+{% endmacro %}
+
+{# --------------------------- #}
+
+
+
+{# --------------------------- #}
+{# footer link card macros     #}
 {# --------------------------- #}
 
 {% macro footer_link(data) %}
@@ -386,7 +448,7 @@
 {# --------------------------- #}
 
 {% macro anim_hover_grow(bg="", scale="scale-125") %}
-transition duration-500 ease-in-out transform hover:{{scale}} hover:{{bg}}
+transition duration-500 ease-in-out transform sm:hover:{{scale}} sm:hover:{{bg}}
 {% endmacro %}
 
 {# --------------------------- #}

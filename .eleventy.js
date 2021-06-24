@@ -54,6 +54,10 @@ module.exports = (config) => {
         `
     });
 
+    config.addFilter("ceil", function(i){
+        return Math.ceil(i)
+    });
+
     config.addNunjucksAsyncShortcode("ImageAsync", async function(src, callback) {    
         
         if (!src.startsWith("/src") || src.startsWith("src"))
