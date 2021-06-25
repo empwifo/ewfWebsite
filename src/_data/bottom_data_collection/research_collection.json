@@ -82,7 +82,7 @@
         }
     ],
     "settings": {
-        "number_columns": 4,
+        "number_columns": 3,
         "title": {
             "de": "Beteiligte Lehrstühle",
             "en": "Involved Research Chairs"

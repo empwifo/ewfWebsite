@@ -61,6 +61,8 @@
         {% set icon = "/assets/ui/arrow_right.svg" %}
     {% elif type == "arrow_left" %}
         {% set icon = "/assets/ui/arrow_left.svg" %}
+    {% elif type == "external_link" %}
+        {% set icon = "/assets/ui/external_link.svg" %}
     {% else %}
         {% set icon = "/assets/ui/home.svg" %}
     {% endif %}
@@ -238,7 +240,7 @@
                         <div class="{{anim_hover_grow()}}">
                             <a href="{{item.href | trim }}" target="_blank">
                                 <div class="w-6 h-6">
-                                    {{ icon("web") }}
+                                    {{ icon("external_link") }}
                                 </div>
                             </a>
                         </div>
@@ -249,6 +251,7 @@
     {% endfor %}
 {% endfor %}
 </div>
+{% if loc_data | length > 0 %}
 <div class="lg:hidden flex flex-row justify-center mt-5 space-x-16 mb-{{margin_bottom}}">
     <div class="w-6 h-6 invisible rounded-full {{anim_hover_grow('bg-blue-200')}}" id="info_card_left">
         {{ icon("arrow_left") }}
@@ -257,6 +260,7 @@
         {{ icon("arrow_right") }}
     </div>
 </div>
+{% endif %}
 {% endmacro %}
 
 {# --------------------------- #}
@@ -304,21 +308,18 @@
 {% endif %}
 
 {% set batch_size %} {{(loc_data | length / number_cols) | ceil }} {% endset%}
-
-<div class="grid-rows-{{number_cols}} mt-{{margin_top}} mb-{{margin_bottom}} mb-5 mx-4 md:mx-28"
+<div class="flex flex-row justify-center flex-wrap mx-auto mt-{{margin_top}} mb-{{margin_bottom}} mb-5 mx-4 max-w-max px-4 py-4"
     id="info_card_container">
-
     {% set min_w_css = "min-w-1/" + number_cols %}
-    {% for batch_data in loc_data | batch(batch_size) %}
-        <div class="">
-            <ul class="list-inside list-disc">
-            {% for item in batch_data %}
-                <li><a href="{{item.href}}">{{item.name}}</a></li>    
-            {% endfor %}
-            </ul>
+    {% for item in loc_data %}
+        <div class="flex box_style px-2 py-2 my-1 mx-1">
+            <a class="font-bold underline" href="{{item.href}}" target="_blank">{{item.name}}</a>
+            <div class="ml-1 w-6 h-6">
+                {{ icon("external_link") }}
+            </div>
         </div>
     {% endfor %}
-
+</div>
 {% endmacro %}
 
 {# --------------------------- #}
@@ -376,7 +377,7 @@
                         <div  class=" justify-end {{anim_hover_grow() }}">
                             <a href="{{item.href}}" target="_blank">
                                 <div class="w-6 h-6">
-                                    {{ icon("web") }}
+                                    {{ icon("external_link") }}
                                 </div>
                             </a>
                         </div>
