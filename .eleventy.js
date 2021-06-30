@@ -58,6 +58,18 @@ module.exports = (config) => {
         return Math.ceil(i)
     });
 
+    config.addFilter("filterAfterKey", function(data, key){
+        filtered = {}
+        data.forEach(element => {
+            value_key = element[key]
+            if (!(value_key in filtered))
+                filtered[value_key] = []                
+            filtered[value_key].push(element)
+        });
+
+        return filtered
+    });
+
     config.addNunjucksAsyncShortcode("ImageAsync", async function(src, callback) {    
         
         if (!src.startsWith("/src") || src.startsWith("src"))

@@ -4,49 +4,49 @@
             "name": "Empirische Wirtschaftsforschung",
             "image": "/assets/images/logos/wiwi_logo.gif",
             "href": "https://www.wiwi.ruhr-uni-bochum.de/empwifo/index.html.de",
-            "short": ""
+            "category": "Ruhr-Universität Bochum"
         },
         {
             "name": "Statisitk",
             "image": "/assets/images/logos/unidulogo.png",
             "href": "https://www.stat.wiwi.uni-due.de/",
-            "short": ""
+            "category": "Universität Duisburg Essen"
         },
         {
             "name": "Empirische Gesundheitsökonomik",
             "image": "/assets/images/logos/unidulogo.png",
             "href": "https://www.hcm.wiwi.uni-due.de/",
-            "short": ""
+            "category": "Universität Duisburg Essen"
         },
         {
             "name": "Verhaltensbasierte Sozialpolitik",
             "image": "/assets/images/logos/uni_mag_logo.png",
             "href": "https://www.bsp.ovgu.de/",
-            "short": ""
+            "category": "Otto-von-Guericke-Universität Magdeburg"
         },
         {
             "name": "Internationale Wirtschaftsbeziehungen",
             "image": "/assets/images/logos/wiwi_logo.gif",
             "href": "https://www.wiwi.ruhr-uni-bochum.de/iwb/index.html.de",
-            "short": ""
+            "category": "Ruhr-Universität Bochum"
         },
         {
             "name": "Internationale Wirtschaftsbeziehungen",
             "image": "/assets/images/logos/unidulogo.png",
             "href": "https://www.iwb.wiwi.uni-due.de/",
-            "short": ""
+            "category": "Universität Duisburg Essen"
         },
         {
             "name": "Ökonometrie",
             "image": "/assets/images/logos/unidulogo.png",
             "href": "https://www.oek.wiwi.uni-due.de/",
-            "short": ""
+            "category": "Universität Duisburg Essen"
         },
         {
             "name": "Technologiemanagement",
             "image": "/assets/images/logos/tuM_logo.png",
             "href": "https://www.wiwi2.tu-dortmund.de/wiwi/tm/de/einrichtung/",
-            "short": ""
+            "category": "TU Dortmund"
         }
     ],
     "en": [
@@ -54,31 +54,31 @@
             "name": "Empirical Econmics",
             "image": "/assets/images/logos/wiwi_logo.gif",
             "href": "https://www.wiwi.ruhr-uni-bochum.de/empwifo/index.html.en",
-            "short": ""
+            "category": "Ruhr-Universität Bochum"
         },
         {
             "name": "Statistics",
             "image": "/assets/images/logos/unidulogo.png",
             "href": "https://www.stat.wiwi.uni-due.de/",
-            "short": ""
+            "category": "Universität Duisburg Essen"
         },
         {
             "name": "Empirical Health Care Management",
             "image": "/assets/images/logos/unidulogo.png",
             "href": "https://www.hcm.wiwi.uni-due.de/",
-            "short": ""
+            "category": "Universität Duisburg Essen"
         },
         {
             "name": "Research Chair 4",
             "image": "/assets/images/logos/tudortmundlogo.png",
             "href": "https://www.tu-dortmund.de/",
-            "short": ""
+            "category": "TU Dortmund"
         },
         {
             "name": "Research Chair 5",
             "image": "/assets/images/logos/unidulogo.png",
             "href": "https://www.uni-due.de/",
-            "short": ""
+            "category": "Universität Duisburg Essen"
         }
     ],
     "settings": {

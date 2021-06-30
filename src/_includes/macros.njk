@@ -297,8 +297,13 @@
 {% endif %}
 
 {% if title != "" and loc_data | length > 0 %}
-    <div class="container mx-auto flex items-center justify-center pt-8 md:text-3xl text-2xl font-black text-gray-700 bg-white {{visibility}}">
-        {{ title }}
+    <div class="flex container mx-auto flex items-center justify-center pt-8 md:text-3xl text-2xl font-black text-gray-700 bg-white {{visibility}}">
+        <div>
+            {{ title }}
+        </div>
+        <div class="w-6 h-6 ">
+            {{ icon("expand_arrow") }}
+        </div>
     </div>
 {% endif %}
 
@@ -306,20 +311,29 @@
 {% if data.settings.number_columns %}
     {% set number_cols = data.settings.number_columns %}
 {% endif %}
+{% set loc_data = loc_data | filterAfterKey("category") %}
 
-{% set batch_size %} {{(loc_data | length / number_cols) | ceil }} {% endset%}
-<div class="flex flex-row justify-center flex-wrap mx-auto mt-{{margin_top}} mb-{{margin_bottom}} mb-5 mx-4 max-w-max px-4 py-4"
-    id="info_card_container">
-    {% set min_w_css = "min-w-1/" + number_cols %}
-    {% for item in loc_data %}
-        <div class="flex box_style px-2 py-2 my-1 mx-1">
-            <a class="font-bold underline" href="{{item.href}}" target="_blank">{{item.name}}</a>
-            <div class="ml-1 w-6 h-6">
-                {{ icon("external_link") }}
+{% for category, cat_items in loc_data %}
+    <div class="container mx-auto flex justify-center font-black text-gray-700 bg-white">
+        {{category| safe}}
+    </div>
+    
+    <div class="flex flex-row justify-center flex-wrap mx-auto mb-5 mx-4 sm:max-w-max min-w-full px-4">
+        {% set min_w_css = "min-w-1/" + number_cols %}
+        {% for item in cat_items %}
+            <div class="box_style px-2 py-2 my-1 mx-1 min-w-full sm:min-w-min">
+                <a class="flex justify-between" href="{{item.href}}" target="_blank">
+                    <div class="justify-start truncate">
+                        {{item.name}}
+                    </div>
+                    <div class="ml-1 w-6 h-6 justify-end">
+                        {{ icon("external_link") }}
+                    </div>
+                </a>
             </div>
-        </div>
-    {% endfor %}
-</div>
+        {% endfor %}
+    </div>
+{% endfor %}
 {% endmacro %}
 
 {# --------------------------- #}
