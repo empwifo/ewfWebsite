@@ -64,6 +64,33 @@ $(document).ready(function(){
       $("#info_card_right").addClass("invisible");
   })
 
+  $(".category_toggle_button").click(function(){
+    var id = $(this).attr("id");
+    var data_holder = $("#data_"+id);
+    
+    var target_height = 0
+    if (data_holder.hasClass("invisible")){
+      data_holder.height(0)
+      target_height = data_holder.get(0).scrollHeight;
+    }
+
+    var isexpanding = false
+    if (data_holder.hasClass("invisible")){
+      isexpanding = true
+      data_holder.toggleClass("invisible")
+      data_holder.toggleClass("h-0")
+    }
+    
+    data_holder.animate({height: target_height}, 200, function(){
+      if (!isexpanding){
+        data_holder.toggleClass("invisible")
+        data_holder.toggleClass("h-0")
+      }
+    });
+
+    $(this).children().toggleClass("hidden");
+  });
+
   $("#info_card_left").click(function(){
     var current_visible_card = $("#info_card_container > .active");
     if (current_visible_card.prev().length == 0)
