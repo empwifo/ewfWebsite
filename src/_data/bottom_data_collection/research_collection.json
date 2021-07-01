@@ -16,9 +16,9 @@
             "category": "Universität Duisburg-Essen"
         },
         {
-            "name": "Verhaltensbasierte Sozialpolitik",
+            "name": "Quantitative Wirtschaftspolitik",
             "href": "https://www.bsp.ovgu.de/",
-            "category": "Otto-von-Guericke-Universität Magdeburg"
+            "category": "Universität Duisburg-Essen"
         },
         {
             "name": "Internationale Wirtschaftsbeziehungen",
@@ -78,6 +78,91 @@
         {
             "name": "Makroökonomie",
             "href": "https://www.wiwi2.tu-dortmund.de/wiwi/mak/de/lehrstuhl/team/PROFESSOR/MAK-PHJU.html",
+            "category": "TU Dortmund"
+        },
+        {
+            "name": "Experimentelle Wirtschaftsforschung",
+            "href": "https://www.expwifo.wiwi.uni-due.de/",
+            "category": "Universität Duisburg-Essen"
+        },
+        {
+            "name": "Wirtschaftspolitik",
+            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/wp/de/lehrstuhl/index.html",
+            "category": "TU Dortmund"
+        },
+        {
+            "name": "Makroökonomik",
+            "href": "https://www.wiwi.ruhr-uni-bochum.de/jpmakro/index.html.de",
+            "category": "Ruhr-Universität Bochum"
+        },
+        {
+            "name": "Applied Economics",
+            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/ae/de/lehrstuhl/",
+            "category": "TU Dortmund"
+        },
+        {
+            "name": "Künstliche Intelligenz",
+            "href": "https://www-ai.cs.tu-dortmund.de/allgemein.html",
+            "category": "TU Dortmund"
+        },
+        {
+            "name": "Quantitative Methoden in den Wirtschaftswissenschaften",
+            "href": "https://www.qmw.msm.uni-due.de/startseite/",
+            "category": "Universität Duisburg-Essen"
+        },
+        {
+            "name": "Klimawandel in Entwicklungsländern",
+            "href": "https://www.rwi-essen.de/forschung-und-beratung/klimawandel-in-entwicklungslaendern/publications/",
+            "category": "RWI Essen"
+        },
+        {
+            "name": "Finance",
+            "href": "https://finance.wiwi.tu-dortmund.de/",
+            "category": "TU Dortmund"
+        },
+        {
+            "name": "Internationale Rechnungslegung und Wirtschaftsprüfung",
+            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/irw/de/einrichtung/",
+            "category": "TU Dortmund"
+        },
+        {
+            "name": "Umwelt und Ressourcen",
+            "href": "https://www.rwi-essen.de/forschung-und-beratung/umwelt-und-ressourcen/",
+            "category": "RWI Essen"
+        },
+        {
+            "name": "Applied Microeconomics",
+            "href": "https://www.wiwi.ruhr-uni-bochum.de/appliedmicro/index.html.en",
+            "category": "Ruhr-Universität Bochum"
+        },
+        {
+            "name": "Makroökonomik",
+            "href": "https://www.ruhr-uni-bochum.de/mak/index.html.de",
+            "category": "Ruhr-Universität Bochum"
+        },
+        {
+            "name": "Innovationsökonomik und –politik",
+            "href": "https://www.wiwi.ruhr-uni-bochum.de/inno/index.html.de",
+            "category": "Ruhr-Universität Bochum"
+        },
+        {
+            "name": "Empirische Makroökonomik",
+            "href": "https://www.wiwi.ruhr-uni-bochum.de/empmak/index.html.de",
+            "category": "Ruhr-Universität Bochum"
+        },
+        {
+            "name": "Gesundheit",
+            "href": "https://www.rwi-essen.de/forschung-und-beratung/gesundheit/",
+            "category": "RWI Essen"
+        },
+        {
+            "name": "Volkswirtschaftslehre",
+            "href": "https://www.vwl.msm.uni-due.de/startseite/",
+            "category": "Universität Duisburg-Essen"
+        },
+        {
+            "name": "Wirtschafts- und Sozialstatistik",
+            "href": "https://www.statistik.tu-dortmund.de/iwus.html",
             "category": "TU Dortmund"
         }
     ],
