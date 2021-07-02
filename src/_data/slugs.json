@@ -3,7 +3,7 @@
         "research": "forschung",
         "teaching": "lehre",
         "contact": "kontakt",
-        "home": "home",
+        "home": "",
         "imprint": "impressum",
         "privacypolicy": "datenschutzerklärung"
     },
@@ -11,7 +11,7 @@
         "research": "research",
         "teaching": "teaching",
         "contact": "contact",
-        "home": "home",
+        "home": "",
         "imprint": "imprint",
         "privacypolicy": "privacypolicy"
     }

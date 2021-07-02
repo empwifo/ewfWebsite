@@ -11,17 +11,17 @@
             </a>
         </div>
         <div class="flex lg:hidden justify-end my-auto pr-6">
-            <button id="nav-toggle"
-                class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light sm:hover:text-white sm:hover:border-white">
-                <svg class="h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <title>Menu</title>
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
-                </svg>
+            <button class="text-gray-500 w-10 h-10 relative focus:outline-none bg-white" id="nav-toggle">
+                <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+                    <span aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform -translate-y-1.5 transition duration-500 ease-in-out" id="hamburger_top"></span>
+                    <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-current transition-opacity duration-500 ease-in-out"  id="hamburger_center"></span>
+                    <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-current transform translate-y-1.5 transition duration-500 ease-in-out"  id="hamburger_bottom"></span>
+                </div>
             </button>
         </div>
     </div>
     <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block relative">
-        <ul class="menu-list-style lg:visible menu-fadeOut" id="nav-content">
+        <ul class="menu-list-style lg:visible invisible" id="nav-content">
             <li class="mr-3">
                 <div class="{{macros.anim_hover_grow('scale-110')}} w-min">
                     {{ macros.menuItem("home", "", "home") }}
@@ -47,12 +47,12 @@
                 <ul class="list-reset justify-end flex-1 items-center ml-4">
                     <li class="ml-4">
                         <div class="{{macros.anim_hover_grow('scale-110')}} w-min">
-                            <a href="/de">Deutsch</a>
+                            <a href="/de/{{slugs.de[title]}}">Deutsch</a>
                         </div>
                     </li>
                     <li class="ml-4 mt-2">
                         <div class="{{macros.anim_hover_grow('scale-110')}} w-min">
-                            <a href="/en">English</a>
+                            <a href="/en/{{slugs.en[title]}}">English</a>
                         </div>
                     </li>
                 </ul>
@@ -78,9 +78,3 @@
         </ul>
     </div>
 </nav>
-<script>
-    document.getElementById("nav-toggle").onclick = function () {
-        document.getElementById("nav-content").classList.toggle("menu-fadeIn");
-        document.getElementById("nav-content").classList.toggle("menu-fadeOut");
-    };
-</script>

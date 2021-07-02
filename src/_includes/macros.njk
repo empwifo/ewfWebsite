@@ -201,7 +201,7 @@
     </div>
 {% endif %}
 
-<div class="flex lg:flex-wrap flex-grow flex-nowrap justify-start lg:justify-center mt-{{margin_top}} mb-{{margin_bottom}} mb-5 mx-4 md:mx-28 overflow-x-hidden"
+<div class="flex lg:flex-wrap flex-grow flex-nowrap justify-start lg:justify-center mt-{{margin_top}} mb-{{margin_bottom}} mb-5 px-4 md:px-28 overflow-x-hidden"
     id="info_card_container">
 {% set item_index = 0 %}
 
@@ -322,9 +322,9 @@
     <div class="flex flex-row justify-center flex-wrap mx-auto mb-5 mx-4 sm:max-w-max min-w-full px-4 sm:visible sm:h-auto invisible h-0" id="data_category-{{loop.index}}">
         {% set min_w_css = "min-w-1/" + number_cols %}
         {% for item in cat_items %}
-            <div class="box_style px-2 py-2 my-2 mx-1 min-w-min">
-                <a class="flex justify-between place-self-center" href="{{item.href}}" target="_blank">
-                    <div class="justify-center sm:truncate overflow-auto content-center text-center">
+            <div class="box_style px-2 py-2 my-2 mx-2 min-w-min hidden sm:block">
+                <a class="flex flex-shrink justify-between place-self-center" href="{{item.href}}" target="_blank">
+                    <div class="justify-center sm:truncate overflow-auto content-center text-center font-medium">
                         {{item.name}}
                     </div>
                     <div class="ml-1 w-6 h-6 justify-end hidden sm:block">

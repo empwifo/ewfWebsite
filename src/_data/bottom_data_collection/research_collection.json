@@ -116,11 +116,6 @@
             "category": "RWI Essen"
         },
         {
-            "name": "Finance",
-            "href": "https://finance.wiwi.tu-dortmund.de/",
-            "category": "TU Dortmund"
-        },
-        {
             "name": "Internationale Rechnungslegung und Wirtschaftsprüfung",
             "href": "https://www.wiwi2.tu-dortmund.de/wiwi/irw/de/einrichtung/",
             "category": "TU Dortmund"
@@ -163,6 +158,36 @@
         {
             "name": "Wirtschafts- und Sozialstatistik",
             "href": "https://www.statistik.tu-dortmund.de/iwus.html",
+            "category": "TU Dortmund"
+        },
+        {
+            "name": "Finance",
+            "href": "https://finance.wiwi.tu-dortmund.de/",
+            "category": "TU Dortmund"
+        },
+        {
+            "name": "Energiewirtschaft",
+            "href": "https://www.ewl.wiwi.uni-due.de/",
+            "category": "Universität Duisburg-Essen"
+        },
+        {
+            "name": "Umwelt- und Innovationspolitik",
+            "href": "https://www.wiwi.ruhr-uni-bochum.de/uipol/index.html.de",
+            "category": "Ruhr-Universität Bochum"
+        },
+        {
+            "name": "Stochastik und Analysis",
+            "href": "http://www.mathematik.tu-dortmund.de/lsiv/",
+            "category": "TU Dortmund"
+        },
+        {
+            "name": "Behavioral Economics",
+            "href": "https://www.be.msm.uni-due.de/startseite/",
+            "category": "Universität Duisburg-Essen"
+        },
+        {
+            "name": "Öffentliche Finanzen",
+            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/of/de/einrichtung/",
             "category": "TU Dortmund"
         }
     ],
