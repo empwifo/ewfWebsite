@@ -24,6 +24,34 @@ function expand_element_toggle(element, size=""){
 
 $(document).ready(function(){
   var prev_window_width = $(window).width();
+  
+  $("#nav-toggle").click(function(){
+    var data_holder = $("#nav-content")
+    
+    var target_height = 0
+    if (data_holder.hasClass("invisible")){
+      data_holder.height(0)
+      target_height = data_holder.get(0).scrollHeight;
+    }
+
+    var isexpanding = false
+    if (data_holder.hasClass("invisible")){
+      isexpanding = true
+      data_holder.toggleClass("invisible")
+      data_holder.toggleClass("h-0")
+    }
+    
+    data_holder.animate({height: target_height+10}, 100, function(){
+      if (!isexpanding){
+        data_holder.toggleClass("invisible")
+        data_holder.toggleClass("h-0")
+      }
+    });
+    // hamburger menu animation
+    $('#hamburger_top').toggleClass("-translate-y-1.5").toggleClass("rotate-45")
+    $('#hamburger_center').toggleClass("opacity-0")
+    $('#hamburger_bottom').toggleClass("translate-y-1.5").toggleClass("-rotate-45")
+  })
 
   $(".expandLink").click(function(){
     var id = $(this).attr("id")
@@ -64,6 +92,38 @@ $(document).ready(function(){
       $("#info_card_right").addClass("invisible");
   })
 
+  $(".category_toggle_button").click(function(){
+    var id = $(this).attr("id");
+    var data_holder = $("#data_"+id);
+
+    data_holder.children().toggleClass("hidden")
+    
+    var target_height = 0
+    if (data_holder.hasClass("invisible")){
+      data_holder.height(0)
+      target_height = data_holder.get(0).scrollHeight;
+    }
+
+    var isexpanding = false
+    if (data_holder.hasClass("invisible")){
+      isexpanding = true
+      data_holder.toggleClass("invisible")
+      data_holder.toggleClass("h-0")
+    }
+    
+    data_holder.animate({height: target_height}, 200, function(){
+      if (!isexpanding){
+        data_holder.toggleClass("invisible")
+        data_holder.toggleClass("h-0")
+      }
+      // removing style to handle transition between 
+      // different layouts (on screen rotate) better
+      data_holder.removeAttr("style")
+    });
+
+    $(this).children().toggleClass("hidden");
+  });
+
   $("#info_card_left").click(function(){
     var current_visible_card = $("#info_card_container > .active");
     if (current_visible_card.prev().length == 0)
@@ -76,11 +136,13 @@ $(document).ready(function(){
     current_visible_card.toggleClass("active");
     current_visible_card.prev().toggleClass("active");
 
-    if ($("#info_card_container > .active").prev().length == 0)
+    if ($("#info_card_container > .active").prev().length == 0){
       $('#info_card_left').addClass("invisible");
+    }
     
-    if ($("#info_card_container > .active").next().length > 0)
+    if ($("#info_card_container > .active").next().length > 0){
       $("#info_card_right").removeClass("invisible");
+    }
   })
 
   $(window).resize(function(e){
