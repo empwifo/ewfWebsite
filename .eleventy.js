@@ -70,11 +70,12 @@ module.exports = (config) => {
         return filtered
     });
 
-    config.addNunjucksAsyncShortcode("ImageAsync", async function(src, callback) {    
-        
-        if (!src.startsWith("/src") || src.startsWith("src"))
+    config.addNunjucksAsyncShortcode("ImageAsync", async function(src, callback) {
+        if (!src.startsWith("/src") && !src.startsWith("src"))
             src = "src" + src
-        
+
+        if (src.startsWith("/"))
+            src = src.substring(1);
         
         let stats = await Image(src, {
           widths: [null],
@@ -92,9 +93,12 @@ module.exports = (config) => {
       });
     
     config.addNunjucksShortcode("ImageSync", function imageShortcode(src) {
-        if (!src.startsWith("/src") || src.startsWith("src"))
+        if (!src.startsWith("/src") && !src.startsWith("src"))
             src = "src" + src
         
+        if (src.startsWith("/"))
+            src = src.substring(1);
+
         let options = {
             widths: [null],
             formats: ["webp"],

@@ -41,7 +41,7 @@ $(document).ready(function(){
       data_holder.toggleClass("h-0")
     }
     
-    data_holder.animate({height: target_height}, 500, function(){
+    data_holder.animate({height: target_height+10}, 100, function(){
       if (!isexpanding){
         data_holder.toggleClass("invisible")
         data_holder.toggleClass("h-0")
@@ -116,6 +116,9 @@ $(document).ready(function(){
         data_holder.toggleClass("invisible")
         data_holder.toggleClass("h-0")
       }
+      // removing style to handle transition between 
+      // different layouts (on screen rotate) better
+      data_holder.removeAttr("style")
     });
 
     $(this).children().toggleClass("hidden");

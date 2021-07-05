@@ -291,11 +291,6 @@
     {% endif %}
 {% endif %}
 
-{% set batch_size = 3 %}
-{% if data.settings.items_per_row %}
-    {% set batch_size = data.settings.number_columns %}
-{% endif %}
-
 {% if title != "" and loc_data | length > 0 %}
     <div class="flex container mx-auto mb-4 flex items-center justify-center pt-8 md:text-3xl text-2xl font-black text-gray-700 bg-white {{visibility}}">
         {{ title }}
@@ -309,7 +304,7 @@
 {% set loc_data = loc_data | filterAfterKey("category") %}
 
 {% for category, cat_items in loc_data %}
-    <div class="container mx-auto flex sm:justify-center justify-between font-black text-gray-700 bg-white mb-1">
+    <div class="container mx-auto flex sm:justify-center justify-between font-black md:text-lg text-gray-700 bg-white mb-1">
         <div>
             {{category| safe}}
         </div>
@@ -324,7 +319,7 @@
         {% for item in cat_items %}
             <div class="box_style px-2 py-2 my-2 mx-2 min-w-min hidden sm:block">
                 <a class="flex flex-shrink justify-between place-self-center" href="{{item.href}}" target="_blank">
-                    <div class="justify-center sm:truncate overflow-auto content-center text-center font-medium">
+                    <div class="justify-center sm:truncate overflow-auto content-center text-center">
                         {{item.name}}
                     </div>
                     <div class="ml-1 w-6 h-6 justify-end hidden sm:block">
@@ -369,7 +364,7 @@
     {{ title }}
 </div>
 {# "max-w-prose" -> use the same width as the prose container, that holds the markdown text #}
-<div class="flex flex-col space-y-4 mx-8 my-8 sm:mx-auto items-center justify-center sm:max-w-prose">
+<div class="flex flex-col space-y-4 mx-4 my-8 sm:mx-auto items-center justify-center sm:max-w-prose">
     {% for item in loc_data %}    
         <div class="flex flex-col box_style px-4 py-4 justify-center min-w-full">
             <div class="flex flex-row">

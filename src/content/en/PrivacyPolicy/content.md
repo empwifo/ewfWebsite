@@ -1,81 +1,81 @@
-Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:
+The responsible person in terms of data protection laws, in particular the EU General Data Protection Regulation (DSGVO), is:
 
-[Verantwortlicher]
+Responsible
 
-## Ihre Betroffenenrechte
+## Your data subject rights
 
-Unter den angegebenen Kontaktdaten unseres Datenschutzbeauftragten können Sie jederzeit folgende Rechte ausüben:
+You can exercise the following rights at any time using the contact details provided for our data protection officer:
 
-*   Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung (Art. 15 DSGVO),
-*   Berichtigung unrichtiger personenbezogener Daten (Art. 16 DSGVO),
-*   Löschung Ihrer bei uns gespeicherten Daten (Art. 17 DSGVO),
-*   Einschränkung der Datenverarbeitung, sofern wir Ihre Daten aufgrund gesetzlicher Pflichten noch nicht löschen dürfen (Art. 18 DSGVO),
-*   Widerspruch gegen die Verarbeitung Ihrer Daten bei uns (Art. 21 DSGVO) und
-*   Datenübertragbarkeit, sofern Sie in die Datenverarbeitung eingewilligt haben oder einen Vertrag mit uns abgeschlossen haben (Art. 20 DSGVO).
+* Information about your data stored by us and its processing (Art. 15 DSGVO),
+* Correction of incorrect personal data (Art. 16 DSGVO),
+* Deletion of your data stored by us (Art. 17 DSGVO),
+* Restriction of data processing if we are not yet allowed to delete your data due to legal obligations (Art. 18 DSGVO),
+* objection to the processing of your data by us (Art. 21 DSGVO) and
+* Data portability, provided that you have consented to the data processing or have concluded a contract with us (Art. 20 DSGVO).
 
-Sofern Sie uns eine Einwilligung erteilt haben, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen.
+If you have given us consent, you can revoke it at any time with effect for the future.
 
-Sie können sich jederzeit mit einer Beschwerde an eine Aufsichtsbehörde wenden, z. B. an die zuständige Aufsichtsbehörde des Bundeslands Ihres Wohnsitzes oder an die für uns als verantwortliche Stelle zuständige Behörde.
+You may at any time lodge a complaint with a supervisory authority, e.g. the competent supervisory authority in the federal state of your residence or the authority responsible for us as the controller.
 
-Eine Liste der Aufsichtsbehörden (für den nichtöffentlichen Bereich) mit Anschrift finden Sie unter: [https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html](https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html).
+A list of supervisory authorities (for the non-public sector) with address can be found at the following [Link]([Link](https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html)).
 
-## Erfassung allgemeiner Informationen beim Besuch unserer Website
+## Collection of general information when visiting our website.
 
-### Art und Zweck der Verarbeitung:
+### Nature and purpose of processing:
 
-Wenn Sie auf unsere Website zugreifen, d.h., wenn Sie sich nicht registrieren oder anderweitig Informationen übermitteln, werden automatisch Informationen allgemeiner Natur erfasst. Diese Informationen (Server-Logfiles) beinhalten etwa die Art des Webbrowsers, das verwendete Betriebssystem, den Domainnamen Ihres Internet-Service-Providers, Ihre IP-Adresse und ähnliches.
+When you access our website, i.e., when you do not register or otherwise submit information, information of a general nature is automatically collected. This information (server log files) includes, for example, the type of web browser, the operating system used, the domain name of your Internet service provider, your IP address and the like.
 
-Sie werden insbesondere zu folgenden Zwecken verarbeitet:
+In particular, they are processed for the following purposes:
 
-*   Sicherstellung eines problemlosen Verbindungsaufbaus der Website,
-*   Sicherstellung einer reibungslosen Nutzung unserer Website,
-*   Auswertung der Systemsicherheit und -stabilität sowie
-*   zur Optimierung unserer Website.
+* Ensuring a smooth connection setup of the website,
+* Ensuring a smooth use of our website,
+* evaluating system security and stability, and
+* to optimize our website.
 
-Wir verwenden Ihre Daten nicht, um Rückschlüsse auf Ihre Person zu ziehen. Informationen dieser Art werden von uns ggfs. anonymisiert statistisch ausgewertet, um unseren Internetauftritt und die dahinterstehende Technik zu optimieren.
+We do not use your data to draw conclusions about your person. Information of this kind will be statistically evaluated anonymously by us, if necessary, in order to optimize our website and the technology behind it.
 
-### Rechtsgrundlage und berechtigtes Interesse:
+### Legal basis and legitimate interest:
 
-Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an der Verbesserung der Stabilität und Funktionalität unserer Website.
+The processing is carried out pursuant to Art. 6 (1) lit. f DSGVO on the basis of our legitimate interest in improving the stability and functionality of our website.
 
-### Empfänger:
+### Recipients:
 
-Empfänger der Daten sind ggf. technische Dienstleister, die für den Betrieb und die Wartung unserer Webseite als Auftragsverarbeiter tätig werden.
+Recipients of the data may be technical service providers who act as order processors for the operation and maintenance of our website.
 
-### Speicherdauer:
+### Storage period:
 
-Die Daten werden gelöscht, sobald diese für den Zweck der Erhebung nicht mehr erforderlich sind. Dies ist für die Daten, die der Bereitstellung der Website dienen, grundsätzlich der Fall, wenn die jeweilige Sitzung beendet ist.
+The data will be deleted as soon as it is no longer required for the purpose for which it was collected. This is generally the case for data used to provide the website when the respective session has ended.
 
-### Bereitstellung vorgeschrieben oder erforderlich:
+### Provision prescribed or required:
 
-Die Bereitstellung der vorgenannten personenbezogenen Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Ohne die IP-Adresse ist jedoch der Dienst und die Funktionsfähigkeit unserer Website nicht gewährleistet. Zudem können einzelne Dienste und Services nicht verfügbar oder eingeschränkt sein. Aus diesem Grund ist ein Widerspruch ausgeschlossen.
+The provision of the aforementioned personal data is not required by law or contract. However, without the IP address, the service and functionality of our website cannot be guaranteed. In addition, individual services and services may not be available or may be limited. For this reason, an objection is excluded.
 
-## SSL-Verschlüsselung
+## SSL encryption
 
-Um die Sicherheit Ihrer Daten bei der Übertragung zu schützen, verwenden wir dem aktuellen Stand der Technik entsprechende Verschlüsselungsverfahren (z. B. SSL) über HTTPS.
-
-* * *
-
-## Information über Ihr Widerspruchsrecht nach Art. 21 DSGVO
-
-### Einzelfallbezogenes Widerspruchsrecht
-
-Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung Sie betreffender personenbezogener Daten, die aufgrund Art. 6 Abs. 1 lit. f DSGVO (Datenverarbeitung auf der Grundlage einer Interessenabwägung) erfolgt, Widerspruch einzulegen; dies gilt auch für ein auf diese Bestimmung gestütztes Profiling im Sinne von Art. 4 Nr. 4 DSGVO.
-
-Legen Sie Widerspruch ein, werden wir Ihre personenbezogenen Daten nicht mehr verarbeiten, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen, oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.
-
-### Empfänger eines Widerspruchs
-
-[Widerspruchsrecht - Ansprechpartner]
+To protect the security of your data during transmission, we use state-of-the-art encryption methods (e.g. SSL) via HTTPS.
 
 * * *
 
-## Änderung unserer Datenschutzbestimmungen
+## Information about your right of objection according to Art. 21 DSGVO
 
-Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z.B. bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.
+### Individual right of objection
 
-## Fragen an den Datenschutzbeauftragten
+You have the right to object at any time, on grounds relating to your particular situation, to the processing of personal data relating to you which is carried out on the basis of Art. 6(1)(f) DSGVO (data processing on the basis of a balance of interests); this also applies to profiling based on this provision within the meaning of Art. 4 No. 4 DSGVO.
 
-Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an die für den Datenschutz verantwortliche Person in unserer Organisation:
+If you object, we will no longer process your personal data unless we can demonstrate compelling legitimate grounds for the processing which override your interests, rights and freedoms, or the processing serves to assert, exercise or defend legal claims.
 
-[Kontakt-Datenschutzbeauftragter]
+### Recipients of an objection
+
+Right to object - contact person
+
+* * *
+
+## Changes to our privacy policy
+
+We reserve the right to adapt this data protection statement so that it always complies with the current legal requirements or in order to implement changes to our services in the data protection statement, e.g. when introducing new services. The new data protection statement will then apply to your next visit.
+
+## Questions for the data protection officer
+
+If you have any questions about data protection, please send us an e-mail or contact the person responsible for data protection in our organization directly:
+
+Contact data protection officer
