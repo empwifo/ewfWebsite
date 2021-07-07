@@ -216,13 +216,18 @@
             {% set active = "" %}
         {% endif %}
 
+        {% set image_height = 12 %}
+        {% if "image_size" in item %}
+            {% set image_height = item.image_size %}
+        {% endif %}
+
         <div class="info-card-item-style lg:{{min_w_css_lg}} xl:{{min_w_css_xl}} px-2 pb-5 {{active}}" id="infocard-{{item_index}}">
             <div class="box_style relative min-h-full px-0 md:px-4 pt-4">
                 <div class="flex justify-start px-4 mt-3">
                     {% if item.href %}
                         <a href="{{item.href | trim }}" target="_blank">
                             {% if item.image %}
-                                <img src="{% ImageSync item.image %}" class="object-scale-down h-12 {{anim_hover_grow(scale='scale-110') }}">
+                                <img src="{% ImageSync item.image %}" class="object-scale-down h-{{image_height}} {{anim_hover_grow(scale='scale-110') }}">
                             {% endif %}
                         </a>
                     {% endif %}
@@ -235,7 +240,7 @@
                         <p class="mb-8">{{item.short}}</p>
                     {% endif %}
                 </div>
-                <div class="absolute bottom-0 right-0 mr-4 mb-4 hidden lg:block">
+                <div class="absolute bottom-0 right-0 mr-4 mb-4">
                     {% if item.href and item.short %}
                         <div class="{{anim_hover_grow()}}">
                             <a href="{{item.href | trim }}" target="_blank">
@@ -381,7 +386,9 @@
                     <div class="flex flex-row justify-between">
                         <div class="flex flex-row justify-start">
                             <div class="font-black mr-4 text-lg sm:text-xl">
-                                {{ item.title }}
+                                <a href="{{item.href}}" target="_blank">
+                                    {{ item.title }}
+                                </a>
                             </div>
                         </div>
                         <div  class=" justify-end {{anim_hover_grow() }}">

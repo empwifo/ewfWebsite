@@ -14,7 +14,7 @@
             <button class="text-gray-500 w-10 h-10 relative focus:outline-none bg-white" id="nav-toggle">
                 <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
                     <span aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform -translate-y-1.5 transition duration-500 ease-in-out" id="hamburger_top"></span>
-                    <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-current transition-opacity duration-500 ease-in-out"  id="hamburger_center"></span>
+                    <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-current transition-opacity duration-200 ease-in-out"  id="hamburger_center"></span>
                     <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-current transform translate-y-1.5 transition duration-500 ease-in-out"  id="hamburger_bottom"></span>
                 </div>
             </button>
@@ -61,12 +61,12 @@
     </div>
     <div class="hidden w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block pr-10" id="nav-content">
         <ul class="list-reset lg:flex justify-end flex-1 items-center ml-4 mt-2 divide-y divide-gray-300 lg:divide-y-0">
-            <li class="dropdown relative mr-6 {{macros.anim_hover_grow('scale-110')}}">
+            <li class="dropdown relative mr-6">
                 <div class="w-6 h-6">
                     {{ macros.icon("language") }}
                 </div>
                 <div class="dropdown-menu top-0 absolute left-0 hidden h-auto flex pt-6 mt-4">
-                    <ul class="block w-full bg-white text-gray-700 shadow-lg divide-gray-300 divide-y p-b text-xl">
+                    <ul class="block w-full bg-white text-gray-700 shadow-lg border-1 rounded-md border-gray-100 divide-gray-300 divide-y p-b text-xl">
                         <li class="mx-2 py-2 sm:hover:text-gray-400"><a class="block" href="/de/{{slugs.de[title]}}">Deutsch</a></li>
                         <li class="mx-2 py-2 sm:hover:text-gray-400"><a class="block" href="/en/{{slugs.en[title]}}">English</a></li>
                     </ul>

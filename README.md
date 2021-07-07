@@ -155,6 +155,18 @@ Da hier zb. die englische Liste leer ist, würde auf der englischen Seite, die d
 Unter **settings** und **items_per_row** kann defniert werden wieviele Karten maximal in einer Reihe angezeigt werden sollen. Die Karten vergrößern und verkleinern sich entsprechend der Bildschrimgröße und wieviele Elemente in der aktuellen Reihe sind. Für Mobile Geräte, wird immer nur das erste Element angezeigt. Mit hilfe von Navigations-Tasten kann durch die Elemente durch iteriert werden.
 Mit dem Setting **title** kann die jeweilige Überschrift festgelegt werden und **position** bestimmt ob sich die die Karten oben oder unten aufhalten (Einstellungsmöglichkeiten: **top** und **bottom**).
 
+Für jede Info-Karte kann ein Bild hinterlegt werden das oben in der Karte angezeigt wird. Dabei ist die Standart Höhe 3 [rem](https://www.w3.org/TR/css-values-3/#font-relative-lengths). Dies wird durch das CSS Framework Tailwindcss durch die Größe **12** angegeben. Um das Bild nun zu vergrößern, kann eine eigene Höhe angeben werden. Welche Werte erlaubt sind kann aus [dieser Tabelle](https://tailwindcss.com/docs/height#class-reference) entnommen werden. In der JSON Datei sollte immer das führende "h-" weggelassen werden. Geändert werden kann die Höhe eines Bildes für ein Element indem man für das JSON Element den Key **"image_size"** mit passenden value hinzufügt, z.B.:
+```
+{
+    "name": "Universitätsallianz Ruhr ",
+    "image": "/assets/images/logos/uaruhrlogo.png",
+    "image_size": "16"
+    "href": "https://www.uaruhr.de/",
+    "short": "Kurzbeschreibung"
+}
+```
+Falls der Key nicht vorhanden ist (Standart) wird eine Höhe von **12** gewählt.
+
 Die Konfigurationsdateien für die Informationskarten liegen unter **src/_data/info_cards/**. In diesem Ordner finden sich drei verschiedene JSON Dateien, die entsprechend ihren Namens nach die Inhalte der Karten für die entsprechende Seite steuern.
 
 ### Linksammlung

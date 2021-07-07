@@ -184,6 +184,16 @@
             "name": "Öffentliche Finanzen",
             "href": "https://www.wiwi2.tu-dortmund.de/wiwi/of/de/einrichtung/",
             "category": "TU Dortmund"
+        },
+        {
+            "name": "Wirtschaftspolitik und Angewandte Ökonometrie",
+            "href": "https://www.wiwi.ruhr-uni-bochum.de/wipooek/index.html.de",
+            "category": "Ruhr-Universität Bochum"
+        },
+        {
+            "name": "Health Economics",
+            "href": "https://www.wiwi.ruhr-uni-bochum.de/health/index.html.de",
+            "category": "Ruhr-Universität Bochum"
         }
     ],
     "en": [
@@ -371,6 +381,16 @@
             "name": "Public Economics",
             "href": "https://www.wiwi2.tu-dortmund.de/wiwi/of/en/institution/index.html",
             "category": "TU Dortmund"
+        },
+        {
+            "name": "Economic Policy and Applied Econometrics",
+            "href": "https://www.wiwi.ruhr-uni-bochum.de/wipooek/index.html.en",
+            "category": "Ruhr-Universität Bochum"
+        },
+        {
+            "name": "Health Economics",
+            "href": "https://www.wiwi.ruhr-uni-bochum.de/health/index.html.en",
+            "category": "Ruhr-Universität Bochum"
         }
     ],
     "settings": {
