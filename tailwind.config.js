@@ -27,6 +27,9 @@ module.exports = {
                 '1/2': '45%',
                 '1/1': '99%'
             },
+            height: {
+                'header': '320px'
+            },
             transitionProperty: {
                 'height': 'height'
                }

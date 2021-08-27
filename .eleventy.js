@@ -79,17 +79,17 @@ module.exports = (config) => {
         
         let stats = await Image(src, {
           widths: [null],
-          formats: ["webp"],
+          formats: ["webp", "jpg"],
           urlPath: "/assets/images/",
           outputDir: "./dist/assets/images/",
           sharpWebpOptions: {
               "quality": 80
           }
         });
-        
-        let srcOut = stats["webp"][0];   
+
+        let srcMain = stats["webp"][0];
     
-        return srcOut.url
+        return srcMain.url
       });
     
     config.addNunjucksShortcode("ImageSync", function imageShortcode(src) {
@@ -101,7 +101,7 @@ module.exports = (config) => {
 
         let options = {
             widths: [null],
-            formats: ["webp"],
+            formats: ["webp", "jpeg"],
             urlPath: "/assets/images/",
             outputDir: "./dist/assets/images/",
             sharpWebpOptions: {
@@ -116,9 +116,17 @@ module.exports = (config) => {
           decoding: "async",
         };
         // get metadata even the images are not fully generated
-        metadata = Image.statsSync(src, options);
-        return metadata["webp"][0].url;
+        let metadata = Image.statsSync(src, options);
+        let srcMain = metadata["webp"][0];
+        
+        return srcMain.url
     });
+
+    config.addFilter("fallbackImage", function(url, fallbackExtension) {
+        url = url.replace(/\.[^/.]+$/, "")
+        url = url + "." + fallbackExtension
+        return url
+    })
 
     return {
         dir: {

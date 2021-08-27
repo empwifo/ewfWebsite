@@ -12,7 +12,15 @@
 {% endif %}
 
 {% set src_opt %}{% ImageSync src %}{% endset %}
-<img class="rounded-md {{size_class}}" src="{{ src_opt }}" alt="{{alt}}">
+{% set src_opt_fallback %}{{ src_opt | fallbackImage(image_settings["image_fallback_type"]) }}{% endset %}
+
+<picture>
+    <source srcset="{{ src_opt }}" type="image/webp">
+    <source srcset="{{ src_opt_fallback }}" type="image/jpeg"> 
+    <img class="rounded-md {{size_class}}" src="{{ src_opt_fallback }}" alt="{{alt}}">
+</picture>
+
+<!--img class="rounded-md {{size_class}}" src="{{ src_opt }}" alt="{{alt}}"!-->
 {% endmacro %}
 
 {% macro getUIelem(slug, icon_type, textClass="") %}
@@ -108,7 +116,13 @@
 <div class="col-auto"> 
     <div class="flex flex-row">
         {% if data.image %}
-            <img src="{% ImageSync data.image %}" class="object-scale-down h-10 object-left">
+            {% set src_opt %}{% ImageSync data.image %}{% endset %}
+            {% set src_opt_fallback %}{{ src_opt | fallbackImage(image_settings["image_fallback_type"]) }}{% endset %}    
+            <picture>
+                <source srcset="{{ src_opt }}" type="image/webp">
+                <source srcset="{{ src_opt_fallback }}" type="image/jpeg"> 
+                <img class="object-scale-down h-10 object-left" src="{{ src_opt_fallback }}" alt="{{alt}}">
+            </picture>
         {% else %}
             <h1 class="lg:text-2xl text-xl font-bold">{{data.title}}</h1>
         {% endif %}
@@ -227,7 +241,13 @@
                     {% if item.href %}
                         <a href="{{item.href | trim }}" target="_blank">
                             {% if item.image %}
-                                <img src="{% ImageSync item.image %}" class="object-scale-down h-{{image_height}} {{anim_hover_grow(scale='scale-110') }}">
+                                {% set src_opt %}{% ImageSync item.image %}{% endset %}
+                                {% set src_opt_fallback %}{{ src_opt | fallbackImage(image_settings["image_fallback_type"]) }}{% endset %}    
+                                <picture>
+                                    <source srcset="{{ src_opt }}" type="image/webp">
+                                    <source srcset="{{ src_opt_fallback }}" type="image/jpeg"> 
+                                    <img class="object-scale-down h-{{image_height}} {{anim_hover_grow(scale='scale-110') }}" src="{{ src_opt_fallback }}" alt="{{alt}}">
+                                </picture>
                             {% endif %}
                         </a>
                     {% endif %}

@@ -11,7 +11,13 @@
         </span>
         <span class="inline-flex justify-center mb-2 sm:mt-0  sm:mx-10">
           <a href="https://www.uaruhr.de/", target="_blank">
-            <img src="{% ImageAsync '/assets/images/logos/uaruhrlogo.png' %}" width="100">
+            {% set src_opt %}{% ImageSync '/assets/images/logos/uaruhrlogo.png' %}{% endset %}
+            {% set src_opt_fallback %}{{ src_opt | fallbackImage(image_settings["image_fallback_type"]) }}{% endset %}    
+            <picture>
+                <source srcset="{{ src_opt }}" type="image/webp">
+                <source srcset="{{ src_opt_fallback }}" type="image/jpeg"> 
+                <img width="100" src="{{ src_opt_fallback }}">
+            </picture>
           </a>
         </span>
         <div class="sm:hidden flex justify-center mt-4" id="button_up_mbl">
