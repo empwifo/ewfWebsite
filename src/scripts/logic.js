@@ -171,10 +171,10 @@ $(document).ready(function(){
           active_banner.toggleClass("hidden").toggleClass("active_banner_img");
         })
 
-        var next_banner_index = 0
+        var next_banner_index = Math.floor(Math.random() * slider.length);
 
-        if (index+1 < slider.length)
-          next_banner_index = index+1;
+        //if (index+1 < slider.length)
+        // next_banner_index = index+1;
 
         $(slider[next_banner_index]).toggleClass("active_banner_img").toggleClass("hidden");
         $(slider[next_banner_index]).find("img").css({opacity: 0.0}).animate({opacity: 1}, 3000)
@@ -183,7 +183,7 @@ $(document).ready(function(){
       }
 
     });
-  }, 30000)
+  }, 20000)
   
 
 });
