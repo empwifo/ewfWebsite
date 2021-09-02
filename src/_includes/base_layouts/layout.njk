@@ -21,14 +21,27 @@
         <main class="flex-initial md:overflow-y-auto" id="mainContainer">
             {% include 'base_layouts/header.njk' %}
             <div id="mainpage">
-                {% set src_opt %}{% ImageSync banner_images[title] %}{% endset %}
-                {% set src_opt_fallback %}{{ src_opt | fallbackImage(image_settings["image_fallback_type"]) }}{% endset %}    
-                <picture>
-                    <source srcset="{{ src_opt }}" type="image/webp">
-                    <source srcset="{{ src_opt_fallback }}" type="image/jpeg"> 
-                    <img class="lg:pt-24 w-full" src="{{ src_opt_fallback }}" alt="{{alt}}">
-                </picture>
+                <div id="banner_images_slider" class="relative lg:h-headerlg md:h-headermd h-headersm">
+                {% for banner_img in banner_images.slideshow %}
+                    {% set src_opt %}{% ImageSync banner_img.url %}{% endset %}
+                    {% set src_opt_fallback %}{{ src_opt | fallbackImage(image_settings["image_fallback_type"]) }}{% endset %}
                     
+                    {% set hidden_flag = "hidden" %}
+                    {% if loop.index == 1 %}
+                        {% set hidden_flag = "active_banner_img" %}
+                    {% endif %}
+                    <div class="{{hidden_flag}} absolute w-full">
+                        <picture>
+                            <source srcset="{{ src_opt }}" type="image/webp">
+                            <source srcset="{{ src_opt_fallback }}" type="image/jpeg"> 
+                            <img class="lg:pt-24 w-full lg:h-headerlg md:h-headermd h-headersm object-cover" src="{{ src_opt_fallback }}" alt="{{alt}}">
+                        </picture>
+                        <div class="absolute bottom-0 right-0 mr-2 mb-2 bg-white opacity-70 px-2 rounded-lg md:text-base text-sm">
+                            &copy {{banner_img.license}}
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
                 {{ content | safe }}
             </div>
             {% include 'base_layouts/footer.njk' %}

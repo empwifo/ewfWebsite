@@ -159,6 +159,31 @@ $(document).ready(function(){
     $('#info_card_container').children().removeClass("active");
     $('#infocard-1').addClass("active");
   });
+
+
+  // slide show logic
+  setInterval(function() {
+    var slider = $("#banner_images_slider").children();
+    slider.each(function(index){
+      if ($(this).hasClass("active_banner_img")){
+        var active_banner = $(this);
+        active_banner.find("img").css({opacity: 1}).animate({opacity: 0.0}, 3000, function(){
+          active_banner.toggleClass("hidden").toggleClass("active_banner_img");
+        })
+
+        var next_banner_index = 0
+
+        if (index+1 < slider.length)
+          next_banner_index = index+1;
+
+        $(slider[next_banner_index]).toggleClass("active_banner_img").toggleClass("hidden");
+        $(slider[next_banner_index]).find("img").css({opacity: 0.0}).animate({opacity: 1}, 3000)
+
+        return false;
+      }
+
+    });
+  }, 30000)
   
 
 });

@@ -1,8 +1,32 @@
 {
-    "home": "/assets/images/banner/banner_home.jpg",
-    "research": "/assets/images/banner/banner_research.jpg",
-    "teaching": "/assets/images/banner/banner_teaching.jpg",
-    "imprint": "/assets/images/banner/banner_imprint.jpg",
-    "contact": "/assets/images/banner/banner_contact.jpg",
-    "privacypolicy": "/assets/images/banner/banner_privacy.jpg"
+    "slideshow": [
+        {
+            "url": "/assets/images/banner/campus_dues_1.jpg",
+            "license": "Universität Duisburg-Essen"
+        },
+        {
+            "url": "/assets/images/banner/campus_dues_2.jpg",
+            "license": "Universität Duisburg-Essen"
+        },
+        {
+            "url": "/assets/images/banner/campus_dues_3.jpg",
+            "license": "Universität Duisburg-Essen"
+        },
+        {
+            "url": "/assets/images/banner/campus_dues_4.jpg",
+            "license": "Universität Duisburg-Essen"
+        },
+        {
+            "url": "/assets/images/banner/campus_dues_5.jpg",
+            "license": "Universität Duisburg-Essen"
+        },
+        {
+            "url": "/assets/images/banner/campus_dues_6.jpg",
+            "license": "Universität Duisburg-Essen"
+        },
+        {
+            "url": "/assets/images/banner/campus_dues_7.jpg",
+            "license": "Universität Duisburg-Essen"
+        }
+    ]
 }
