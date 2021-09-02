@@ -1,6 +1,18 @@
 {
     "slideshow": [
         {
+            "url": "/assets/images/banner/banner_rub_1.jpg",
+            "license": "Ruhr-Universität Bochum"
+        },
+        {
+            "url": "/assets/images/banner/banner_rub_2.jpg",
+            "license": "Ruhr-Universität Bochum"
+        },
+        {
+            "url": "/assets/images/banner/banner_rub_3.jpg",
+            "license": "Ruhr-Universität Bochum"
+        },
+        {
             "url": "/assets/images/banner/banner_dues_1.jpg",
             "license": "Universität Duisburg-Essen"
         },
