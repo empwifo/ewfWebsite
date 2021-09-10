@@ -35,6 +35,18 @@
         {
             "url": "/assets/images/banner/banner_dues_6.jpg",
             "license": "Universität Duisburg-Essen"
+        },
+        {
+            "url": "/assets/images/banner/banner_tu_1.jpg",
+            "license": "Roland Baege"
+        },
+        {
+            "url": "/assets/images/banner/banner_tu_2.jpg",
+            "license": "Peter Sondermann"
+        },
+        {
+            "url": "/assets/images/banner/banner_tu_3.jpg",
+            "license": "Roland Baege"
         }
     ]
 }
