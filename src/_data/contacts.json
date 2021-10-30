@@ -1,44 +1,12 @@
 {
     "contacts": [
         {
-            "title": "Ruhr Universität Bochum",
-            "adress": "Universitätsstraße 150\n44801 Bochum",
-            "web": "https://www.ruhr-uni-bochum.de/de",
-            "phone": "0234 32201",
-            "mail": "webteam@uv.rub.de",
-            "image": "/assets/images/logos/RUB.jpg"
-        },
-        {
-            "title": "Technische Universität Dortmund",
-            "phone": "(0231) 755-1",
-            "mail": "presse@tu-dortmund.de",
-            "adress": "August-Schmidt-Straße 1\n44227 Dortmund",
-            "web": "https://www.tu-dortmund.de/",
-            "image": "/assets/images/logos/tudortmundlogo.png"
-        },
-        {
-            "title": "Universität Duisburg-Essen",
-            "adress": "Campus Duisburg\nFortsthausweg 2\n47057 Duisburg\n\nCampus Essen\nUniverstätsstraße 2\n45141 Essen",
-            "phone": "+49(0)203 37-91800",
-            "mail": "webredaktion@uni-due.de",
-            "web": "https://www.uni-due.de/",
-            "image": "/assets/images/logos/unidulogo.png"
-        },
-        {
-            "title": "RWI Essen",
+            "title": "Prf. Dr. Thomas K. Bauer",
             "adress": "Hohenzollernstraße 1-3\n45128 Essen",
-            "phone": "0201 / 81 49-0",
-            "mail": "rwi@rwi-essen.de",
-            "web": "https://www.rwi-essen.de/",
+            "phone": "+49 (201) 8149-264",
+            "mail": "thomas.bauer@rwi-essen.de",
+            "web": "https://www.rwi-essen.de/bauer",
             "image": "/assets/images/logos/rwi_logo.jpg"
-        },
-        {
-            "title": "UA Ruhr",
-            "adress": "Dr. Hans Stallmann\nUV/Raum 344\nUniversitätsstraße 150\n44780 Bochum",
-            "phone": "+49(0)234/32-27892",
-            "mail": "hans.stallmann@uaruhr.de",
-            "web": "https://www.uaruhr.de/kontakt.html.de",
-            "image": "/assets/images/logos/uaruhrlogo.png"
         }
     ]
 }
