@@ -11,10 +11,7 @@ jobs:
     steps:
       - name: Git Checkout
         uses: actions/checkout@v2
-      - name: Build
-        uses: TartanLlama/actions-eleventy@v1.2
-        with:
-          install_dependencies: true
+      - run: npm build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
