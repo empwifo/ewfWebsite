@@ -34,7 +34,7 @@
                         <picture>
                             <source srcset="{{ src_opt }}" type="image/webp">
                             <source srcset="{{ src_opt_fallback }}" type="image/jpeg"> 
-                            <img class="lg:pt-24 w-full lg:h-headerlg md:h-headermd h-headersm object-cover" src="{{ src_opt_fallback }}" alt="{{alt}}">
+                            <img class="lg:pt-24 w-full lg:h-headerlg md:h-headermd h-headersm object-cover" src="{{ src_opt_fallback }}" alt="{{alt}}" loading="lazy">
                         </picture>
                         <div class="absolute bottom-0 right-0 mr-2 mb-2 bg-white opacity-70 px-2 rounded-lg md:text-base text-sm">
                             &copy {{banner_img.license}}
