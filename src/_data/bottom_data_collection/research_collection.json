@@ -2,7 +2,7 @@
     "de": [
         {
             "name": "Empirische Wirtschaftsforschung",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/empwifo/index.html.de",
+            "href": "https://www2.wiwi.rub.de/lehrstuehle/empirische-wirtschaftsforschung/",
             "category": "Ruhr-Universität Bochum"
         },
         {
@@ -11,18 +11,13 @@
             "category": "Universität Duisburg-Essen"
         },
         {
-            "name": "Empirische Gesundheitsökonomik",
-            "href": "https://www.hcm.wiwi.uni-due.de/",
-            "category": "Universität Duisburg-Essen"
-        },
-        {
-            "name": "Quantitative Wirtschaftspolitik",
-            "href": "https://www.bsp.ovgu.de/",
+            "name": "Experimentelle Wirtschaftsforschung",
+            "href": "https://www.exp.wiwi.uni-due.de/",
             "category": "Universität Duisburg-Essen"
         },
         {
             "name": "Internationale Wirtschaftsbeziehungen",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/iwb/index.html.de",
+            "href": "https://www2.wiwi.rub.de/lehrstuehle/internationale-wirtschaftsbeziehungen/",
             "category": "Ruhr-Universität Bochum"
         },
         {
@@ -31,33 +26,28 @@
             "category": "Universität Duisburg-Essen"
         },
         {
-            "name": "Ökonometrie",
+            "name": "Ökonometrie und Finanzmarktökonometrie",
             "href": "https://www.oek.wiwi.uni-due.de/",
             "category": "Universität Duisburg-Essen"
         },
         {
-            "name": "Technologiemanagement",
-            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/tm/de/einrichtung/",
+            "name": "Technologie, Innovation und Entrepreneurship",
+            "href": "https://tie.wiwi.tu-dortmund.de/",
             "category": "TU Dortmund"
         },
         {
             "name": "Energieökonomik und angewandte Ökonometrie",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/energy/index.html.de",
+            "href": "https://www2.wiwi.rub.de/lehrstuehle/energieoekonomik-und-angewandte-oekonometrie/",
             "category": "Ruhr-Universität Bochum"
         },
         {
-            "name": "Accounting & Finance",
-            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/af/de/einrichtung/",
-            "category": "TU Dortmund"
-        },
-        {
-            "name": "Quantitative Analyse",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/statoek/index.html.de",
+            "name": "Statistik / Ökonometrie",
+            "href": "https://www2.wiwi.rub.de/lehrstuehle/statistik-oekonometrie/",
             "category": "Ruhr-Universität Bochum"
         },
         {
             "name": "Urbane, Regionale und Internationale Wirtschaftsbeziehungen",
-            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/uri/de/index.html",
+            "href": "https://uri.wiwi.tu-dortmund.de/",
             "category": "TU Dortmund"
         },
         {
@@ -72,27 +62,22 @@
         },
         {
             "name": "Makroökonomie",
-            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/mak/de/lehrstuhl/index.html",
+            "href": "https://makro.wiwi.tu-dortmund.de/",
             "category": "TU Dortmund"
         },
         {
-            "name": "Experimentelle Wirtschaftsforschung",
-            "href": "https://www.expwifo.wiwi.uni-due.de/",
-            "category": "Universität Duisburg-Essen"
-        },
-        {
-            "name": "Wirtschaftspolitik",
-            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/wp/de/lehrstuhl/index.html",
+            "name": "Empirische Wirtschaftsforschung",
+            "href": "https://ewf.wiwi.tu-dortmund.de/",
             "category": "TU Dortmund"
         },
         {
             "name": "Makroökonomik",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/jpmakro/index.html.de",
+            "href": "https://www2.wiwi.rub.de/lehrstuehle/makrooekonomik/",
             "category": "Ruhr-Universität Bochum"
         },
         {
             "name": "Applied Economics",
-            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/ae/de/lehrstuhl/",
+            "href": "https://ae.wiwi.tu-dortmund.de/",
             "category": "TU Dortmund"
         },
         {
@@ -106,43 +91,28 @@
             "category": "Universität Duisburg-Essen"
         },
         {
-            "name": "Klimawandel in Entwicklungsländern",
-            "href": "https://www.rwi-essen.de/forschung-und-beratung/klimawandel-in-entwicklungslaendern/publications/",
-            "category": "RWI Essen"
-        },
-        {
             "name": "Internationale Rechnungslegung und Wirtschaftsprüfung",
-            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/irw/de/einrichtung/",
+            "href": "https://irwp.wiwi.tu-dortmund.de/",
             "category": "TU Dortmund"
         },
         {
             "name": "Umwelt und Ressourcen",
-            "href": "https://www.rwi-essen.de/forschung-und-beratung/umwelt-und-ressourcen/",
+            "href": "https://www.rwi-essen.de/forschung-beratung/kompetenzbereiche/umwelt-und-ressourcen",
             "category": "RWI Essen"
         },
         {
             "name": "Applied Microeconomics",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/appliedmicro/index.html.en",
-            "category": "Ruhr-Universität Bochum"
-        },
-        {
-            "name": "Makroökonomik",
-            "href": "https://www.ruhr-uni-bochum.de/mak/index.html.de",
-            "category": "Ruhr-Universität Bochum"
-        },
-        {
-            "name": "Innovationsökonomik und –politik",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/inno/index.html.de",
+            "href": "https://www2.wiwi.rub.de/lehrstuehle/applied-microeconomics/",
             "category": "Ruhr-Universität Bochum"
         },
         {
             "name": "Empirische Makroökonomik",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/empmak/index.html.de",
+            "href": "https://www2.wiwi.rub.de/lehrstuehle/empirische-makrooekonomik/",
             "category": "Ruhr-Universität Bochum"
         },
         {
             "name": "Gesundheit",
-            "href": "https://www.rwi-essen.de/forschung-und-beratung/gesundheit/",
+            "href": "https://www.rwi-essen.de/forschung-beratung/kompetenzbereiche/gesundheit",
             "category": "RWI Essen"
         },
         {
@@ -152,7 +122,7 @@
         },
         {
             "name": "Wirtschafts- und Sozialstatistik",
-            "href": "https://www.statistik.tu-dortmund.de/iwus.html",
+            "href": "https://lwus.statistik.tu-dortmund.de/",
             "category": "TU Dortmund"
         },
         {
@@ -167,7 +137,7 @@
         },
         {
             "name": "Umwelt- und Innovationspolitik",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/uipol/index.html.de",
+            "href": "https://www2.wiwi.rub.de/lehrstuehle/umwelt-und-innovationspolitik/",
             "category": "Ruhr-Universität Bochum"
         },
         {
@@ -176,221 +146,186 @@
             "category": "TU Dortmund"
         },
         {
-            "name": "Behavioral Economics",
-            "href": "https://www.be.msm.uni-due.de/startseite/",
-            "category": "Universität Duisburg-Essen"
-        },
-        {
             "name": "Öffentliche Finanzen",
-            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/of/de/einrichtung/",
+            "href": "https://of.wiwi.tu-dortmund.de/",
             "category": "TU Dortmund"
         },
         {
             "name": "Wirtschaftspolitik und Angewandte Ökonometrie",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/wipooek/index.html.de",
+            "href": "https://www2.wiwi.rub.de/lehrstuehle/wirtschaftspolitik-und-angewandte-oekonometrie/",
             "category": "Ruhr-Universität Bochum"
         },
         {
-            "name": "Health Economics",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/health/index.html.de",
+            "name": "Health Economics and Health Policy",
+            "href": "https://www2.wiwi.rub.de/lehrstuehle/health-economics/",
             "category": "Ruhr-Universität Bochum"
         }
     ],
     "en": [
         {
             "name": "Empirical Economics",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/empwifo/index.html.en",
-            "category": "Ruhr-Universität Bochum"
+            "href": "https://www2.wiwi.rub.de/en/chairs/empirische-wirtschaftsforschung-en/",
+            "category": "Ruhr-University Bochum"
         },
         {
             "name": "Statistics",
-            "href": "https://www.stat.wiwi.uni-due.de/",
-            "category": "Universität Duisburg-Essen"
+            "href": "https://www.stat.wiwi.uni-due.de/en/", 
+            "category": "University of Duisburg-Essen"
         },
         {
             "name": "Empirical Health Care Management",
             "href": "https://www.hcm.wiwi.uni-due.de/en/",
-            "category": "Universität Duisburg-Essen"
+            "category": "University of Duisburg-Essen"
         },
         {
-            "name": "Quantitative Economic Policy",
-            "href": "https://www.wipo.wiwi.uni-due.de/en/profile/",
-            "category": "Universität Duisburg-Essen"
-        },
-        {
-            "name": "International Economics",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/iwb/index.html.en",
-            "category": "Ruhr-Universität Bochum"
+            "name": "Experimentelle Wirtschaftsforschung",
+            "href": "https://www.exp.wiwi.uni-due.de/",
+            "category": "University of Duisburg-Essen"
         },
         {
             "name": "International Economics",
-            "href": "https://www.iwb.wiwi.uni-due.de/",
-            "category": "Universität Duisburg-Essen"
+            "href": "https://www2.wiwi.rub.de/en/chairs/internationale-wirtschaftsbeziehungen/",
+            "category": "Ruhr-University Bochum"
         },
         {
-            "name": "Econometrics",
+            "name": "International Economics",
+            "href": "https://www.iwb.wiwi.uni-due.de/en/",
+            "category": "University of Duisburg-Essen"
+        },
+        {
+            "name": "Econometrics and Financial Econometrics",
             "href": "https://www.oek.wiwi.uni-due.de/en/",
-            "category": "Universität Duisburg-Essen"
+            "category": "University of Duisburg-Essen"
         },
         {
-            "name": "Technology & Management",
-            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/tm/en/institution/index.html",
-            "category": "TU Dortmund"
+            "name": "Technology, Innovation and Entrepreneurship",
+            "href": "https://tie.wiwi.tu-dortmund.de/en/",
+            "category": "TU Dortmund University"
         },
         {
             "name": "Energy Economics and Applied Econometrics",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/energy/index.html.en",
-            "category": "Ruhr-Universität Bochum"
-        },
-        {
-            "name": "Accounting & Finance",
-            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/af/en/institution/index.html",
-            "category": "TU Dortmund"
+            "href": "https://www2.wiwi.rub.de/en/chairs/energy-economics-and-applied-econometrics-en/",
+            "category": "Ruhr-University Bochum"
         },
         {
             "name": "Statistics / Econometrics",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/statoek/index.html.en",
-            "category": "Ruhr-Universität Bochum"
+            "href": "https://www2.wiwi.rub.de/en/chairs/statistik-oekonometrie-en/",
+            "category": "Ruhr-University Bochum"
         },
         {
-            "name": "Urban, Regional, and International Economics",
-            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/uri/en/institution/index.html",
-            "category": "TU Dortmund"
+            "name": "Urban, Regional and International Economics",
+            "href": "https://uri.wiwi.tu-dortmund.de/en/",
+            "category": "TU Dortmund University"
         },
         {
             "name": "Finance",
             "href": "https://www.finance.msm.uni-due.de/en/home/",
-            "category": "Universität Duisburg-Essen"
+            "category": "University of Duisburg-Essen"
         },
         {
             "name": "Finance",
             "href": "https://www.fin.wiwi.uni-due.de/en/",
-            "category": "Universität Duisburg-Essen"
-        },
-        {
-            "name": "Business and social statistics",
-            "href": "https://www.statistik.tu-dortmund.de/eng-iwus.html",
-            "category": "TU Dortmund"
+            "category": "University of Duisburg-Essen"
         },
         {
             "name": "Macroeconomics",
-            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/mak/en/chair/index.html",
-            "category": "TU Dortmund"
+            "href": "https://makro.wiwi.tu-dortmund.de/en/",
+            "category": "TU Dortmund University"
         },
         {
-            "name": "Experimantal Economic Research",
-            "href": "https://www.expwifo.wiwi.uni-due.de/en/",
-            "category": "Universität Duisburg-Essen"
-        },
-        {
-            "name": "Economic Policy",
-            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/wp/en/chair/index.html",
-            "category": "TU Dortmund"
+            "name": "Empirical Economic Research",
+            "href": "https://ewf.wiwi.tu-dortmund.de/en/",
+            "category": "TU Dortmund University"
         },
         {
             "name": "Macroeconomics",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/jpmakro/index.html.en",
-            "category": "Ruhr-Universität Bochum"
+            "href": "https://www2.wiwi.rub.de/en/chairs/makrooekonomik-en/",
+            "category": "Ruhr-University Bochum"
         },
         {
             "name": "Applied Economics",
-            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/ae/en/chair/index.html",
-            "category": "TU Dortmund"
+            "href": "https://ae.wiwi.tu-dortmund.de/en/",
+            "category": "TU Dortmund University"
         },
         {
             "name": "Artificial Intelligence",
             "href": "https://www-ai.cs.tu-dortmund.de/allgemein.html",
-            "category": "TU Dortmund"
+            "category": "TU Dortmund University"
         },
         {
-            "name": "Quantitative methods in economics",
-            "href": "https://www.qmw.msm.uni-due.de/startseite/",
-            "category": "Universität Duisburg-Essen"
-        },
-        {
-            "name": "Climate Change in Developing Countries",
-            "href": "https://en.rwi-essen.de/forschung-und-beratung/klimawandel-in-entwicklungslaendern/publications/",
-            "category": "RWI Essen"
+            "name": "Applied Econometrics",
+            "href": "https://www.qmw.msm.uni-due.de/en/home/",
+            "category": "University of Duisburg-Essen"
         },
         {
             "name": "International Accounting and Auditing",
-            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/irw/en/institution/index.html",
-            "category": "TU Dortmund"
+            "href": "https://irwp.wiwi.tu-dortmund.de/en/",
+            "category": "TU Dortmund University"
         },
         {
             "name": "Environment and Resources",
-            "href": "https://en.rwi-essen.de/forschung-und-beratung/umwelt-und-ressourcen/",
+            "href": "https://www.rwi-essen.de/en/research-advice/departments/environment-and-resources",
             "category": "RWI Essen"
         },
         {
             "name": "Applied Microeconomics",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/appliedmicro/index.html.en",
-            "category": "Ruhr-Universität Bochum"
+            "href": "https://www2.wiwi.rub.de/en/chairs/applied-microeconomics/",
+            "category": "Ruhr-University Bochum"
         },
         {
-            "name": "Macroeconomics",
-            "href": "https://www.ruhr-uni-bochum.de/mak/index.html.en",
-            "category": "Ruhr-Universität Bochum"
-        },
-        {
-            "name": "Innovation Economics and Policy",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/inno/index.html.en",
-            "category": "Ruhr-Universität Bochum"
-        },
-        {
-            "name": "Empirical Macroeconomics",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/empmak/index.html.de",
-            "category": "Ruhr-Universität Bochum"
+            "name": "Empirische Makroökonomik",
+            "href": "https://www2.wiwi.rub.de/en/chairs/empirische-makrooekonomik-en/",
+            "category": "Ruhr-University Bochum"
         },
         {
             "name": "Health Economics",
-            "href": "https://en.rwi-essen.de/forschung-und-beratung/gesundheit/",
+            "href": "https://www.rwi-essen.de/en/research-advice/departments/health-economics",
             "category": "RWI Essen"
         },
         {
             "name": "Economics",
             "href": "https://www.vwl.msm.uni-due.de/en/home/",
-            "category": "Universität Duisburg-Essen"
+            "category": "University of Duisburg-Essen"
         },
+		{
+			"name": "Business and Social Sta­tis­tics", 
+			"href": "https://lwus.statistik.tu-dortmund.de/en/", 
+			"category": "TU Dortmund University"
+		},
         {
             "name": "Finance",
             "href": "https://finance.wiwi.tu-dortmund.de/en/",
-            "category": "TU Dortmund"
+            "category": "TU Dortmund University"
         },
         {
-            "name": "Chair for Management Science and Energy Economics",
+            "name": "Management Science and Energy Economics",
             "href": "https://www.ewl.wiwi.uni-due.de/en/",
-            "category": "Universität Duisburg-Essen"
+            "category": "University of Duisburg-Essen"
         },
         {
-            "name": "Environmental and innovation policy",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/uipol/index.html.de",
-            "category": "Ruhr-Universität Bochum"
+            "name": "Umwelt- und Innovationspolitik",
+            "href": "https://www2.wiwi.rub.de/en/chairs/umwelt-und-innovationspolitik-en/",
+            "category": "Ruhr-University Bochum"
         },
         {
             "name": "Stochastics and Analysis",
             "href": "http://www.mathematik.tu-dortmund.de/lsiv/",
-            "category": "TU Dortmund"
-        },
-        {
-            "name": "Behavioral Economics",
-            "href": "https://www.be.msm.uni-due.de/en/cover-page/",
-            "category": "Universität Duisburg-Essen"
+            "category": "TU Dortmund University"
         },
         {
             "name": "Public Economics",
-            "href": "https://www.wiwi2.tu-dortmund.de/wiwi/of/en/institution/index.html",
-            "category": "TU Dortmund"
+            "href": "https://of.wiwi.tu-dortmund.de/en/",
+            "category": "TU Dortmund University"
         },
         {
             "name": "Economic Policy and Applied Econometrics",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/wipooek/index.html.en",
-            "category": "Ruhr-Universität Bochum"
+            "href": "https://www2.wiwi.rub.de/en/chairs/wirtschaftspolitik-und-angewandte-oekonometrie-en/",
+            "category": "Ruhr-University Bochum"
         },
         {
-            "name": "Health Economics",
-            "href": "https://www.wiwi.ruhr-uni-bochum.de/health/index.html.en",
-            "category": "Ruhr-Universität Bochum"
+            "name": "Health Economics and Health Policy",
+            "href": "https://www2.wiwi.rub.de/en/chairs/health-economics-en/",
+            "category": "Ruhr-University Bochum"
         }
     ],
     "settings": {
