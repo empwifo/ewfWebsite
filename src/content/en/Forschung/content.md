@@ -18,4 +18,35 @@ Common to all three perspectives is the use of data to answer their respective r
 
 With the competence field EWF, the relevant activities are brought together under a common umbrella, thus achieving an increased international visibility. Existing activities will be coordinated and further cooperation will be generated. The competence field thus also serves as a nucleus for further joint projects. Current joint projects are listed below.
 
+<h2 id="Ethics_Commission" style="padding-top: 110px; margin-top: -110px;">Economic Ethics Commission of the University Alliance Ruhr and RWI </h3>
+
+Research projects in economic research increasingly use experimental methods and survey techniques that rely on human participation as test subjects or interview partners. The Faculty of Business and Economics at TU Dortmund University, the Faculty of Economics at Ruhr-University Bochum, the Faculty of Business Administration and Mercator School of Management at the University of Duisburg-Essen, and the RWI – Leibniz Institute for Economic Research recognize the unique relationship between researcher and participant, along with the associated responsibilities. They ensure that the dignity and integrity of participants are maintained throughout the research. All appropriate measures are taken to protect the well-being of research participants and to eliminate any individual risks associated with their involvement.
+
+In this context, the participating institutions have established a joint commission, which researchers from the affiliated faculties and RWI can consult to assess the ethical aspects of their research. This body is named the "_Economic Ethics Commission of the University Alliance Ruhr and RWI_" (hereafter referred to as the Commission). The Commission exclusively focuses on evaluating the ethical aspects of research projects conducted or supervised by researchers within this field.
+
+<h3 style="text-align: center;">Please Note</h3>
+
+- Only members of the Faculty of Business and Economics at TU Dortmund University, the Faculty of Economics at Ruhr-University Bochum, the Faculty of Business Administration and Mercator School of Management at the University of Duisburg-Essen, and the RWI – Leibniz Institute for Economic Research may submit applications.
+- Applications can only be submitted before the start of the study or experiment.
+- Research projects involving invasive or medical procedures cannot be reviewed by this Commission. In such cases, applications must be submitted to the Ethics Commission of the Medical Faculty.
+- Two forms are available for application submission:
+  1. First, check if your research project requires an ethical review at all. Please use this [checklist](/assets/documents/Checklist_for_Exempt_Status_en.pdf) for guidance. If you can answer all questions with “no,” send the signed checklist to [Thomas.Bauer@rwi-essen.de](mailto:Thomas.Bauer@rwi-essen.de). You will then receive a letter of no objection from the Commission.
+  2. If you answer one or more questions with “yes” or “unsure,” please complete the [application form](/assets/documents/Antragsformular_en.pdf) and send it with the required documents to the above email address. Please refer to the [guidelines for submitting the application](/assets/documents/Hinweise_zur_Antragstellung_en.pdf) when completing your application.
+
+
+### Members 
+
+- Prof. Dr. Thomas K. Bauer (Ruhr-University Bochum and RWI)
+- Dr. Gerrit Köchling (TU Dortmund University)
+- Prof. Eugen Kovac, Ph.D. (University of Duisburg-Essen)
+- Prof. Dr. Martin Nienhaus (Ruhr-University Bochum)
+- Prof. Dr. Sebastian Otten (University of Duisburg-Essen)
+- Prof. Dr. Peter N. Posch (TU Dortmund University)
+- Prof. Dr. Joachim Prinz (University of Duisburg-Essen)
+- Philip Raatz (RWI)
+- Prof. Dr. Jürgen Wasem (University of Duisburg-Essen)
+
+### Rules of Procedure: 
+[Rules of Procedure](/assets/documents/20240306_Geschaeftsordnung_Ethikkommission_UAR.pdf)
+
 ***

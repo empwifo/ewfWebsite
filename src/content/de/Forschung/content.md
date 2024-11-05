@@ -18,4 +18,34 @@ Allen drei Perspektiven gemein ist die Nutzung von Daten zur Beantwortung ihrer 
 
 Mit dem Kompetenzfeld EWF werden die einschlägigen Aktivitäten unter einer gemeinsamen Klammer zusammengefasst und hierdurch eine erhöhte internationale Sichtbarkeit erreicht. Die bestehenden Aktivitäten werden koordiniert und weitergehende Kooperationen erzeugt. Das Kompetenzfeld dient so auch als Nukleus weiterer Verbundprojekte. Aktuelle gemeinsame Projekte sind folgend aufgelistet.
 
+<h2 id="Ethikkommission" style="padding-top: 110px; margin-top: -110px;">Wirtschaftswissenschaftliche Ethikkommission der Universitätsallianz Ruhr und des RWI </h3>
+
+Forschungsprojekte der ökonomischen Forschung verwenden zunehmend experimentelle Methoden und Befragungstechniken, die auf die Teilnahme von Menschen als Versuchspersonen oder Interviewpartner angewiesen sind. Die Fakultät Wirtschaftswissenschaften der TU Dortmund, Fakultät für Wirtschaftswissenschaft der Ruhr-Universität Bochum, Fakultät für Wirtschaftswissenschaften und Mercator School of Management der Universität Duisburg-Essen und das RWI – Leibniz-Institut für Wirtschaftsforschung e.V. sind sich der Besonderheit der Beziehung zwischen Versuchsleiter/in bzw. Untersucher/in und Versuchsteilnehmer/in und der daraus resultierenden Verantwortung bewusst. Sie stellen sicher, dass durch die Forschung Würde und Integrität der teilnehmenden Personen nicht beeinträchtigt werden. Sie treffen alle geeigneten Maßnahmen, das Wohl der an der Forschung teilnehmenden Personen zu gewährleisten und mit der Forschung verbundene individuelle Risiken der teilnehmenden Personen auszuschalten.
+
+Vor diesem Hintergrund haben die beteiligten Institutionen eine gemeinsame Kommission eingerichtet, die von den an den beteiligten Fakultäten und dem RWI tätigen Forscherinnen und Forschern zur Beurteilung ethischer Aspekte ihrer Forschung hinzugezogen werden kann. Diese führt die Bezeichnung "_Wirtschaftswissenschaftliche Ethikkommission der Universitätsallianz Ruhr und des RWI_" (nachstehend Kommission). Die Kommission beschränkt sich ausschließlich auf die Beurteilung ethischer Aspekte von Forschungsvorhaben, die von Forscherinnen und Forschern dieses Fachbereichs durchgeführt oder betreut werden.
+
+<h3 style="text-align: center;">Zu beachten</h3>
+
+- Nur Mitglieder der Fakultät Wirtschaftswissenschaften der TU Dortmund, der Fakultät für Wirtschaftswissenschaft der Ruhr Universität Bochum, der Fakultät für Wirtschaftswissenschaften und der Mercator School of Management der Universität Duisburg-Essen und des RWI - Leibniz-Institut für Wirtschaftsforschung e.V. können Anträge stellen.
+- Anträge können nur vor Beginn der Studie bzw. des Experiments gestellt werden.
+- Forschungsvorhaben, die invasive oder medizinische Eingriffe vorsehen, können von dieser Kommission nicht geprüft werden. Ein entsprechender Antrag muss bei der Ethikkommission der Medizinischen Fakultät eingereicht werden.
+- Zur Antragstellung stehen Ihnen zwei Formulare zur Verfügung: 
+	1. Bitte überprüfen Sie zunächst, ob für Ihr Forschungsprojekt überhaupt eine ethische Begutachtung erfordert. Nutzen Sie dazu bitte diese [Prüfliste](/assets/documents/Checklist_for_Exempt_Status_de.pdf). Sofern Sie alle Fragen mit „nein“ beantworten können, senden Sie die unterschriebene Prüfliste bitte an [Thomas.Bauer@rwi-essen.de](mailto:Thomas.Bauer@rwi-essen.de). Ihnen wird dann eine Unbedenklichkeitsbescheinigung der Kommission zugestellt.
+	2. Wenn Sie eine oder mehrere Fragen mit „ja“ oder „weiß nicht“ beantworten, füllen Sie bitte das [Antragsformular](/assets/documents/Antragsformular_de.pdf) aus und senden dieses mit den erforderlichen Unterlagen an die o.g. Email-Adresse. Beachten sie bitte bei der Bearbeitung des Antrags die [Hinweise zur Antragstellung](/assets/documents/Hinweise_zur_Antragstellung.pdf). 
+	
+### Mitglieder
+
+- Prof. Dr. Thomas K. Bauer (Ruhr-Universität Bochum und RWI)
+- Dr. Gerrit Köchling (TU Dortmund)
+- Prof. Eugen Kovac, Ph.D. (Universität Duisburg-Essen)
+- Prof. Dr. Martin Nienhaus (Ruhr-Universität Bochum)
+- Prof. Dr. Sebastian Otten (Universität Duisburg-Essen)
+- Prof. Dr. Peter N. Posch (TU Dortmund)
+- Prof. Dr. Joachim Prinz (Universität Duisburg-Essen)
+- Philip Raatz (RWI)
+- Prof. Dr. Jürgen Wasem (Universität Duisburg-Essen)
+
+### Geschäftsordnung: 
+[Geschäftsordnung](/assets/documents/20240306_Geschaeftsordnung_Ethikkommission_UAR.pdf)
+
 ***

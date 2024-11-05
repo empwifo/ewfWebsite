@@ -8,6 +8,7 @@ module.exports = (config) => {
     //config.addPassthroughCopy({"src/assests": "assets"});
     config.addPassthroughCopy({"src/scripts": "scripts"});
     config.addPassthroughCopy({"src/_redirects": ""});
+	config.addPassthroughCopy({"src/assets/documents": "assets/documents"})
     config.setFrontMatterParsingOptions({
         excerpt: true,
         excerpt_seperator: "<!-- excerpt -->"
