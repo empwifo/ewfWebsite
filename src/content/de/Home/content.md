@@ -1,6 +1,11 @@
 {% import 'macros.njk' as macros with context %}
 
 ***
+## Gemeinsame Ethikkommission
+[Link zur Ethikkommission](/de/forschung/index#Ethikkommission)
+
+
+## Empirische Wirtschaftsforschung 
 Innerhalb der Wirtschaftswissenschaften kommt der empirischen Wirtschaftsforschung eine immer größere Bedeutung zu. Aktuelle Debatten über Ursachen und Folgen sozialer und wirtschaftlicher Entwicklungen sowie über die Ausrichtung der Wirtschaftspolitik basieren in zunehmendem Maß auf den Ergebnissen empirischer Forschung. Im Kompetenzfeld Empirische Wirtschaftsforschung (EWF) arbeiten aktuell rund einhundert Forscherinnen und Forscher der drei UA Ruhr-Universitäten und des RWI – Leibniz-Institut für Wirtschaftsforschung sowie in etwa die gleiche Anzahl an Promovierenden an für die empirische Wirtschaftsforschung einschlägigen Themen. Strategisches Ziel dieser Kooperation ist es, das Kompetenzfeld EWF durch die Bündelung exzellenter Forschung als international sichtbares Zentrum für empirische wirtschaftswissenschaftliche Forschung zu etablieren.
 
 {{ macros.image("/src/assets/images/logos/ewflogo.png", "ewf logo", "medium") }}
